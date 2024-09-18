@@ -20,7 +20,7 @@ Programmierung über UF2 Bootloader
    im Falle des *Cytron – Maker Pi RP2040* auch ein Python Derivat für kleine
    eingebettete Systeme namens **CircuitPython**. Dieses Derivat zeichnet sich
    im Gegensatz zu *MicroPython* durch ein verbessertes Benutzererlebnis aus
-   und bietet auch das **dauerhafte Speichern von Python Scrips** in deinem
+   und bietet auch das **dauerhafte Speichern von Python-Scripts** in deinem
    MCU-Board.
 
    Die Schritte in dieser Übung versetzen dich also nicht nur in die Lage,
@@ -29,7 +29,7 @@ Programmierung über UF2 Bootloader
    wird von Nerds auch gerne als *unbricking* bezeichnet.
 
    Wir werden sehen, wie elegant und einfach eine Programmierung des Flash ohne
-   Spezialhilfsmittel, wie *JTAG oder SWD In-Cirgut-Debuggern*, durch einfaches
+   Spezialhilfsmittel, wie *JTAG oder SWD In-Circuit-Debuggern*, durch einfaches
    *Drag and Drop* oder *Datei kopieren* ist. Dieser Vorgang ist Alltagsarbeit
    von Embedded Software Entwicklern (nicht nur Makern und Hobbyisten), wenn
    eigene in C/C++ oder Rust geschriebene Programme in den Flash am RP2040
