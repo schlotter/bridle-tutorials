@@ -55,7 +55,7 @@ Testen der Benutzer-LED und Taste
       solche Umgebung auch auf deinem eigenen Host-PC einrichten.
       **Aber Achtung:** wir empfehlen dir eindringlich die Arbeit unter Linux.
       Anleitungen dazu findest du in der
-      :ref:`Bride Dokumentation <bridle:gs_installing>` und im
+      :ref:`Bridle-Dokumentation <bridle:gs_installing>` und im
       :ref:`Zephyr Getting Started Guide <zephyr:getting_started>`
 
 .. rubric:: Wissenswertes
@@ -65,20 +65,20 @@ Wenn du dich zunehmend mit Zephyr beschäftigst, wirst du lernen, dass hinter de
 Mikrocontroller und Computer steckt. Vielmehr handelt es sich um ein ganzes
 Ökosystem an Softwarequellen, Bibliotheken, Subsystemen, Werkzeugen, Regeln und
 Projektstrukturen sowie der dazugehörigen Dokumentation.
-Der :ref:`Zephyr Glossar <zephyr:glossary>` bietet dir zu den wichtigsten, auch
+Das :ref:`Zephyr-Glossar <zephyr:glossary>` bietet dir zu den wichtigsten, auch
 von uns hier benutzten, Begriffen einen ersten kompakten Überblick. Wir wollen
 an dieser Stelle die wichtigsten Begriffe und damit verbundenen Methoden
 :spelling:ignore:`bzw.` Funktionen kurz erläutern.
 
 :Applikation :spelling:ignore:`vs.` Board:
    Zephyr unterscheidet strikt zwischen (1) den Softwarequellen für eine
-   :term:`Applikation <zephyr:application>` und (2) den Hardware abhängigen
+   :term:`Applikation <zephyr:application>` und (2) den hardware-abhängigen
    Softwarequellen, allgemein einem :term:`Board <zephyr:board>` zugeordnet.
-   Prinzipbedingt liegt es auf der Hand, dass man die verschiedenen Hardware
+   Prinzipbedingt liegt es auf der Hand, dass man die verschiedenen hardware-
    abhängigen Softwarequellen niemals alleine für sich übersetzen und zur
    Ausführung bringen kann. Es wird immer ein applikativer Softwareteil
    benötigt, eine Applikation, auch wenn diese nur aus einer leeren ``main()``
-   Funktion besteht. Eine **gewöhliche Zephyr Firmware** muss mit **Benennung
+   Funktion besteht. Eine **gewöhnliche Zephyr-Firmware** muss mit **Benennung
    eines Boards und einer Applikation** übersetzt werden. Die Dokumentation von
    Bridle und Zephyr pflegt entsprechende Listen:
 
@@ -126,14 +126,14 @@ an dieser Stelle die wichtigsten Begriffe und damit verbundenen Methoden
    Hindernis entgegengewirkt und das **Meta-Werkzeug** :program:`west`
    etabliert. Dir wird dieses Werkzeug im Folgende begegnen, um:
 
-   - eine Zephyr Firmware "zu bauen": :program:`west build …`
-   - eine Zephyr Firmware "auszuliefern": :program:`west flash …`
+   - eine Zephyr-Firmware "zu bauen": :program:`west build …`
+   - eine Zephyr-Firmware "auszuliefern": :program:`west flash …`
 
    Darüber hinaus gibt es viele weitere *Standardeinstiege* über West, so
    z.B. :program:`west manifest` für das Thema SCM oder :program:`west twister`
    für Softwaretests, egal welchen Typs.
 
-   Es sei an dieser Stelle nur kurz auf die entsprechende Passage in der Zephyr
+   Es sei an dieser Stelle nur kurz auf die entsprechende Passage in der Zephyr-
    Dokumentation verwiesen: :ref:`zephyr:getting_started_run_sample`.
 
 :West Workspace:
