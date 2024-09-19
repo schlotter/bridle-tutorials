@@ -1,7 +1,7 @@
 .. rubric:: Durchführung
 
 Hole deinen **Terminalemulator** in den Vordergrund und **stelle sicher**,
-das du nach einem Reset (``RST`` Taste kurz gedrückt), folgendes siehst:
+dass du nach einem Reset (``RST`` Taste kurz gedrückt) Folgendes siehst:
 
 .. parsed-literal::
    :class: code
@@ -88,7 +88,7 @@ Schauen wir uns zunächst den Syntax des Kommando :bcy:`gpio` an. Gib ein::
 .. rubric:: Information über GPIO Leitungen
 
 Beginnen wir mit einer Übersicht aller in deiner Zephyr Laufzeitumgebung
-verfügbaren GPIO Leitungen, gib ein::
+verfügbaren GPIO Leitungen. Gib ein::
 
    gpio info
 
@@ -182,7 +182,7 @@ der in aller Regel am häufigsten anzutreffenden ``gpio@40014000 6``.
 
 Nun kann man also mit dem konkreten Gerätenamen ``gpio@40014000`` auch eine
 Übersicht der durch diese benannte HW-Instanz verfügbaren GPIO Leitungen
-anzeigen lassen, gib ein::
+anzeigen lassen. Gib ein::
 
    gpio info gpio@40014000
 
@@ -232,7 +232,7 @@ anzeigen lassen, gib ein::
               28    GROVE74_ADC2
               29    VMOTOR_ADC3
 
-Die Anzahl ist natürlich sie selbe, nur die Sortierung erfolgt nun nach
+Die Anzahl ist natürlich die selbe, nur die Sortierung erfolgt nun nach
 tatsächlichen **Leitungsnummern** (*Pin*). Der symbolische Leitungsname,
 wenn vorhanden, steht an zweiter Stelle.
 
@@ -249,9 +249,9 @@ dann weiter mit einer Taste (Eingang).
 .. image:: /_images/symbol-doing-vi.*
    :class: sidecar
 
-.. rubric:: zusätzlich angeschlossene LED
+.. rubric:: Zusätzlich angeschlossene LED
 
-Die *zusätzlich angeschlossene LED*, das Modul **Seeed Studio – Grove - LED**,
+Die *zusätzlich angeschlossene LED*, das Modul **Seeed Studio – Grove – LED**,
 ist mit dem Stecker **GROVE 3** verbunden. Die darauf befindliche LED ist an
 diesem Stecker an **Pin 4** angeschlossen. Das ist auf dem MCU-Board mit **GP5**
 (ein Name aus der Dokumentation des Mikrocontrollers) gekennzeichnet und wird
@@ -298,9 +298,9 @@ und mit :bcy:`gpio set … 0` wieder ausgeschaltet.
 .. image:: /_images/symbol-doing-vi.*
    :class: sidecar
 
-.. rubric:: zusätzlich angeschlossene Taste
+.. rubric:: Zusätzlich angeschlossene Taste
 
-Die *zusätzlich angeschlossene Taste*, das Modul **Seeed Studio – Grove -
+Die *zusätzlich angeschlossene Taste*, das Modul **Seeed Studio – Grove –
 Button**, ist mit dem Stecker **GROVE 2** verbunden. Die darauf befindliche
 Taste ist an diesem Stecker an **Pin 4** angeschlossen. Das ist auf dem
 MCU-Board mit **GP3** und wird auch als *Serial Data Out* Leitung des ``SPI0``
@@ -355,7 +355,7 @@ Grundsätzlich sind die Taste auf deinem MCU-Board an der Leitung **GP21**
    :header-rows: 1
 
    * - Cytron – Maker Pi RP2040 (**GP21**)
-     - Seeed Studio – Grove - Button (**GP3**)
+     - Seeed Studio – Grove – Button (**GP3**)
 
    * - Auf dem MCU-Board wird die Taste an **GP21** beim Drücken nach Masse (GND)
        geschaltet. Der aktive Pegel für das *asserting* des logischen Werts '1'
