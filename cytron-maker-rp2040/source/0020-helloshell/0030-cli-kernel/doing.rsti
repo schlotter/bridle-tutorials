@@ -1,7 +1,7 @@
 .. rubric:: Durchführung
 
 Hole deinen **Terminalemulator** in den Vordergrund und **stelle sicher**,
-das du nach einem Reset (``RST`` Taste kurz gedrückt), folgendes siehst:
+dass du nach einem Reset (``RST`` Taste kurz gedrückt) Folgendes siehst:
 
 .. parsed-literal::
    :class: code
@@ -23,7 +23,7 @@ das du nach einem Reset (``RST`` Taste kurz gedrückt), folgendes siehst:
    :class: sidecar
 
 Zunächst wollen wir uns Klarheit über die aktuell laufende Version des Kerns
-von Zephyr verschaffen, gib ein::
+von Zephyr verschaffen. Gib ein::
 
    kernel version
 
@@ -51,7 +51,7 @@ von Zephyr verschaffen, gib ein::
 Du wirst bereits mitbekommen haben, dass in deinem *West Workspace* auf deinem
 *Host-PC* nicht nur Zephyr als Quelle vorliegt, sondern auch das *Downstream
 Projekt* **Bridle**. Auch dieses stellt eine ähnliche Funktion für die
-Ermittlung dessen aktuell benutzter Version zur Verfügung, gib ein::
+Ermittlung dessen aktuell benutzter Version zur Verfügung. Gib ein::
 
    bridle version
 
@@ -77,8 +77,8 @@ Ermittlung dessen aktuell benutzter Version zur Verfügung, gib ein::
    :class: sidecar
 
 Darüber hinaus kann das Kommando :bcy:`bridle` neben der eigenen auch
-die Version des aktuell laufenden Kerns von Zephyr ermitteln und anzeigen,
-gib ein::
+die Version des aktuell laufenden Kerns von Zephyr ermitteln und anzeigen.
+Gib ein::
 
    bridle info
 
@@ -107,7 +107,7 @@ gib ein::
 Das waren noch sehr triviale Informationen. Im Alltag wird es aber mitunter
 wichtiger sein zu erfahren, wie lange ein System denn schon seit seinem
 initialen Start läuft. Hierfür bietet sich das Unterkommando
-:bcy:`kernel uptime` an, gib ein::
+:bcy:`kernel uptime` an. Gib ein::
 
    kernel uptime
 
