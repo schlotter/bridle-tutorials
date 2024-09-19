@@ -20,8 +20,8 @@ Shell-Zugriff einrichten
 
    Dieses Beispiel basiert auf der Zephyr :ref:`zephyr:shell_api`, einem
    speziellen :ref:`Zephyr OS Service <zephyr:os_services>`. Es wird durch
-   Bridle bereitgestellt und kann dir eine Vorlage für deine Erweiterung der
-   Zephyr Shell mit eigenen Kommandos dienen, solltest du diese einmal in
+   Bridle bereitgestellt und kann dir als eine Vorlage für deine Erweiterung
+   der Zephyr Shell mit eigenen Kommandos dienen, solltest du diese einmal in
    deinen eigenen Produkten einbauen wollen oder müssen.
 
    Wir werden ein sehr simples "Bridle Shell Kommando" gleich im Anschluss, in
@@ -43,7 +43,7 @@ Dienste wären zum Beispiel:
 - :ref:`zephyr:sensing_api` – *Sensor Fusion* (extrem neu und nicht final)
 - :ref:`zephyr:rtio_api` (extrem neu und nicht final)
 
-Die meisten davon basieren mehr oder weniger Vorlagen aus der Linux Kernel
+Die meisten davon basieren mehr oder weniger auf Vorlagen aus der Linux Kernel
 Entwicklung und folgen auch diesen Prinzipien.
 
 Nicht an dieser Stelle, aber in späteren Übungen werden wir tiefer in die API
@@ -63,7 +63,7 @@ wortwörtlich eine **"Schnittstelle für das System"**! Sie wird und darf nicht
 als Teil einer Applikation gesehen werden. Sollte die Console also durch reale
 Hardware, also eine u.U. nur einmalig vorhandene Ressource realisiert sein,
 dann darf eine Applikationsschicht diese Hardwareeinheit nicht mehr für ihre
-Zweck benutzen (z.B. ein proprietäres Protokoll mit einem Host-PC sprechen, weil
+Zwecke benutzen (z.B. ein proprietäres Protokoll mit einem Host-PC sprechen, weil
 ja gerade so schön über USB da eine Verbindung existiert). Andersherum gilt
 natürlich auch, **die Shell ist nicht die Console**, aber eine Shell kann von
 einer Console abhängen und diese aktiv nutzen. Dann ist die Shell aber nicht
