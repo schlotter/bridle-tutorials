@@ -1,7 +1,7 @@
 .. rubric:: Durchführung
 
 Hole deinen **Terminalemulator** in den Vordergrund und **stelle sicher**,
-das du nach einem Reset (``RST`` Taste kurz gedrückt), folgendes siehst:
+dass du nach einem Reset (``RST`` Taste kurz gedrückt) Folgendes siehst:
 
 .. parsed-literal::
    :class: code
@@ -127,9 +127,9 @@ Versuch war es aber wert.
 
 .. ..... INFO ...............................................................
 
-Nachdem nun deine ADC ordentlich eingestellt ist (es war ja nur die Auflösung)
-kann man nun eine erste Messungen durchführen. Wie du aus dem Devicetree weiter
-oben entnehmen kannst, existieren an dieser ADC insgesamt 4 Kanälen. Alle diese
+Nachdem nun dein ADC ordentlich eingestellt ist (es war ja nur die Auflösung)
+kann man nun eine erste Messung durchführen. Wie du aus dem Devicetree weiter
+oben entnehmen kannst, existieren an diesem ADC insgesamt 4 Kanäle. Alle diese
 Kanäle werden eine Wandlung mit der voreingestellten **Auflösung von 12-bit**
 und einer **Signalverstärkung von '1'** gegen die interne Referenzspannung
 durchführen. Die **interne Referenzspannung** ist hier, wie allgemein in
@@ -169,7 +169,7 @@ benutzt. Die folgende Übersicht gibt dir die wichtigsten Informationen dazu.
    :header-rows: 1
 
    * - Cytron – Maker Pi RP2040 (**ADC3**)
-     - Seeed Studio – Grove - Potentiometer (**ADC2**)
+     - Seeed Studio – Grove – Potentiometer (**ADC2**)
 
    * - .. image:: /_images/doing/cytron-maker-pi-rp2040-sch-adc3.*
           :align: center
@@ -184,9 +184,9 @@ benutzt. Die folgende Übersicht gibt dir die wichtigsten Informationen dazu.
        Zahlenwert für eine Spannung von **Uₐ₃ ≈ Uₘ ÷ 2** erhalten:
 
      - An deinem MCU-Board hast du *zusätzlich* das Modul **Seeed Studio –
-       Grove - Potentiometer** *angeschlossen*, am Steckverbinder **GROVE 7**.
+       Grove – Potentiometer** *angeschlossen*, am Steckverbinder **GROVE 7**.
        Damit ist der **ADC Kanal 2** für die Messung einer von dir variierbaren
-       Spannung durch drehen an diesem veränderlichen Widerstand möglich. Die
+       Spannung durch Drehen an diesem veränderlichen Widerstand möglich. Die
        maximale Spannung kann dabei den Wert von **3,3V ⊧ VCC** annehmen. Der
        minimale Wert entspricht der Masse und beträgt **0V ⊧ GND**:
 
@@ -211,7 +211,7 @@ benutzt. Die folgende Übersicht gibt dir die wichtigsten Informationen dazu.
 .. image:: /_images/symbol-doing-vi.*
    :class: sidecar
 
-.. rubric:: aktuelle Motorspannung überprüfen
+.. rubric:: Aktuelle Motorspannung überprüfen
 
 Die **Messspannung Uₐ₃ ≈ 2,4V** an ADC Kanal 3 (**ADC3**), zur Überprüfung der
 Motorspannung *Uₘ ≈ 4,8V*, ist konstant und kann mit dem äquivalenten Zahlenwert
@@ -249,7 +249,7 @@ Die Motorspannung ist :spelling:ignore:`ca.` 4,8V.
 .. image:: /_images/symbol-doing-vi.*
    :class: sidecar
 
-.. rubric:: zusätzlich angeschlossenes Potentiometer
+.. rubric:: Zusätzlich angeschlossenes Potentiometer
 
 Die **Messspannung Uₐ₂** an ADC Kanal 2 (**ADC2**) hängt von der Position des
 *zusätzlich angeschlossenen Potentiometers* am Stecker **GROVE 7** ab und kann
