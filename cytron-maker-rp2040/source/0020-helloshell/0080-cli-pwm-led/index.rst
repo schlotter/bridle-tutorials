@@ -24,7 +24,7 @@ Shell-Kommando ``pwm`` für LED
    auf die Ebene der Signalmodulation und können uns über die abstrakten Zwänge
    der LED API hinweg setzten.
 
-   Somit wird es dir möglich, nicht nur die eine einzige *Dignose-LED an GP7*
+   Somit wird es dir möglich, nicht nur die eine einzige *Diagnose-LED an GP7*
    zu steuern, sondern eine beliebig andere. So zum Beispiel die zusätzlich
    angeschlossenen **externe LED** am Steckverbinder **GROVE 3**.
 
@@ -34,7 +34,7 @@ Die :ref:`Zephyr PWM API <zephyr:pwm_api>` unterstützt die wichtigsten
 funktionalen Eigenschaften einer PWM. Das sind: *Period* in Zyklen, Mikro- oder
 Nanosekunden und *Pulse* in Zyklen, Mikro- oder Nanosekunden. Alle diese
 Eigenschaften sind für jeden einzelnen PWM Kanal in einem System durch das Shell
-Kommando :bcy:`pwm` zugänglich. **Hardware spezifische Einstellungen**, wie
+Kommando :bcy:`pwm` zugänglich. **Hardware-spezifische Einstellungen**, wie
 Vorteiler oder Pin-Zuordnungen, **können ausschließlich im Devicetree definiert
 werden.**
 
