@@ -1,7 +1,7 @@
 .. rubric:: Durchführung
 
 Hole deinen **Terminalemulator** in den Vordergrund und **stelle sicher**,
-das du nach einem Reset (``RST`` Taste kurz gedrückt), folgendes siehst:
+dass du nach einem Reset (``RST`` Taste kurz gedrückt) Folgendes siehst:
 
 .. parsed-literal::
    :class: code
@@ -156,7 +156,7 @@ kleiner 100% eingestellt wird.
 .. image:: /_images/symbol-doing-vi.*
    :class: sidecar
 
-.. rubric:: zusätzlich angeschlossenen LED
+.. rubric:: Zusätzlich angeschlossene LED
 
 Wollen wir zum Abschluss die Behauptung überprüfen, dass man mit der Zephyr
 PWM API nicht nur die eine einzige *Diagnose-LED an GP7 (PWM Kanal 7)* steuern
@@ -217,7 +217,7 @@ Wir wollen in diesem Kapitel bei den Grundlagen bleiben.
 .. admonition:: Gut zu wissen
    :class: info
 
-   Du, als Firmware Entwickler, müsstest noch die jeweilige *"Verdrahtung"*
+   Du, als Firmware-Entwickler, müsstest noch die jeweilige *"Verdrahtung"*
    als **Hardwaredefinition in einem Devicetree Overlay** hinzufügen.
 
    Das bedeutet, aber nicht, dass du nun wie in herkömmlichen RTOS Projekten
