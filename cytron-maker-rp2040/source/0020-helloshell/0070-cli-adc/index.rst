@@ -9,8 +9,8 @@ Shell-Kommando ``adc``
 
 .. topic:: Übersicht
 
-   **Analog to Digital Converter** – oder kurz nur **ADC** – dient der
-   Umsetzung analoger Eingangssignale in einen digitalen Datenstrom. Sie setzt
+   Ein **Analog to Digital Converter** – oder kurz nur **ADC** – dient der
+   Umsetzung analoger Eingangssignale in einen digitalen Datenstrom. Dieser setzt
    zeit- und wert-kontinuierliche Signale in zeit- und wert-diskrete Folgen
    von natürlichen ganzen Zahlen um, eine numerische Quantisierung. Das
    zugehörige Kommando :bcy:`adc` mit seinen Unterkommandos ist eine direkte
@@ -24,7 +24,7 @@ Markt bekannten funktionalen Eigenschaften von ADCs. Das sind:
 *Acquisition-Resolution*, *Acquisition-Reference*, *Acquisition-Time*,
 *Acquisition-Oversampling*, *Signal-Gain*, *Signal-Negation*,
 *Signal-Differential* und *Multiple-Channels*. Alle diese Eigenschaften
-sind für jede einzelne ADC in einem System durch das Shell Kommando :bcy:`adc`
+sind für jede einzelne ADC in einem System durch das Shell-Kommando :bcy:`adc`
 zugänglich, vorausgesetzt, die ADCs wurden auch im jeweiligen Devicetree für
 Zephyr definiert. In dem von dir benutzten MCU-Board, dem *Cytron – Maker Pi
 RP2040*, wurde das für die ADC im Mikrocontroller getan. Im Devicetree findet
