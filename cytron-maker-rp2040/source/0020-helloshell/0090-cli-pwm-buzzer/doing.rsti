@@ -1,7 +1,7 @@
 .. rubric:: Durchführung
 
 Hole deinen **Terminalemulator** in den Vordergrund und **stelle sicher**,
-das du nach einem Reset (``RST`` Taste kurz gedrückt), folgendes siehst:
+dass du nach einem Reset (``RST`` Taste kurz gedrückt) Folgendes siehst:
 
 .. parsed-literal::
    :class: code
