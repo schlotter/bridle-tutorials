@@ -44,7 +44,7 @@ der PWM Kanäle im RP2040 bezogen auf den Buzzer:
      };
    };
 
-Der Buzzer ist also an **GP22** angeschlossen, am zugehörige **PWM Kanal 6**:
+Der Buzzer ist also an **GP22** angeschlossen, am zugehörigen **PWM Kanal 6**:
 
 .. table::
    :align: center
