@@ -50,7 +50,7 @@ Referenzen
    https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf
 
 .. _`RP2040 Technical Documentation`:
-   https://www.raspberrypi.com/documentation/microcontrollers/rp2040.html
+   https://www.raspberrypi.com/documentation/microcontrollers/silicon.html#rp2040
 
 .. _`RP2040 Minimal Design Example (KiCAD)`:
    https://datasheets.raspberrypi.com/rp2040/Minimal-KiCAD.zip
@@ -67,3 +67,5 @@ Referenzen
 .. |Cytron Maker Pi RP2040| replace::
    :ref:`Supported Boards ⯈ Cytron Technologies ⯈ Cytron Maker RP2040 <bridle:cytron_maker_pi_rp2040>`
    🗁 Maker Pi RP2040
+
+.. vi: ft=rst ai ts=3 et sw=3 sta
