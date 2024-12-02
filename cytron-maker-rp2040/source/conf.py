@@ -281,18 +281,18 @@ html_theme_options = {
 extlinks_detect_hardcoded_links = True
 extlinks = {
     'wiki': ('https://de.wikipedia.org/wiki/%s', '[Wiki: %s]'),
-    'bridle': ('https://bridle.tiac-systems.net/doc/latest/bridle/%s', '[Bridle: %s]'),
-    'zephyr': ('https://bridle.tiac-systems.net/doc/latest/zephyr/%s', '[Zephyr: %s]'),
-    'zephyr-us': ('https://docs.zephyrproject.org/latest/%s', '[Zephyr (upstream): %s]'),
+    'bridle': ('https://bridle.tiac-systems.net/doc/3.6/bridle/%s', '[Bridle: %s]'),
+    'zephyr': ('https://bridle.tiac-systems.net/doc/3.6/zephyr/%s', '[Zephyr: %s]'),
+    'zephyr-us': ('https://docs.zephyrproject.org/3.6.0/%s', '[Zephyr (upstream): %s]'),
 }
 
 # -- Options for intersphinx extension ---------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#configuration
 
 intersphinx_mapping = {
-    'bridle': ('https://bridle.tiac-systems.net/doc/latest/bridle', None),
-    'zephyr': ('https://bridle.tiac-systems.net/doc/latest/zephyr', None),
-    'zephyr-us': ('https://docs.zephyrproject.org/latest', None),
+    'bridle': ('https://bridle.tiac-systems.net/doc/3.6/bridle', None),
+    'zephyr': ('https://bridle.tiac-systems.net/doc/3.6/zephyr', None),
+    'zephyr-us': ('https://docs.zephyrproject.org/3.6.0', None),
 }
 
 # -- Options for todo extension ----------------------------------------------
