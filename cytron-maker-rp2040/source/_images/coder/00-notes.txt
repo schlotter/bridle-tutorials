@@ -5,7 +5,7 @@ mkdir workspace
 pushd workspace
 ______________________________________________________________________________
 
-west init -m https://github.com/tiacsys/bridle --mr main
+west init -m https://github.com/tiacsys/bridle --mr v3.6-branch
 west update --fetch always
 ______________________________________________________________________________
 
@@ -15,6 +15,13 @@ ______________________________________________________________________________
 
 west zephyr-export
 west bridle-export
+______________________________________________________________________________
+
+wget https://github.com/tiacsys/bridle-tutorials/raw/main/cytron-maker-rp2040/source/_assets/grove_i2c-bmp280@77.overlay
+wget https://github.com/tiacsys/bridle-tutorials/raw/main/cytron-maker-rp2040/source/_assets/rp2040-adc23.overlay
+wget https://github.com/tiacsys/bridle-tutorials/raw/main/cytron-maker-rp2040/source/_assets/makerpi-btn_gp3.overlay
+wget https://github.com/tiacsys/bridle-tutorials/raw/main/cytron-maker-rp2040/source/_assets/makerpi-led_gp5.overlay
+wget https://github.com/tiacsys/bridle-tutorials/raw/main/cytron-maker-rp2040/source/_assets/makerpi-pwm_gp5.overlay
 ______________________________________________________________________________
 
 popd
