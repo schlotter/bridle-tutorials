@@ -218,6 +218,16 @@ request if it's still a work in progress. Here are a few guidelines to follow:
 
 ## Tips
 
+Inspect Sphinx inventory file:
+
+```bash
+$ sphobjinv suggest https://bridle.tiac-systems.net/doc/latest/bridle/objects.inv console -su
+$ sphobjinv suggest https://bridle.tiac-systems.net/doc/latest/zephyr/objects.inv console -su
+$ sphobjinv suggest https://bridle.tiac-systems.net/doc/latest/kconfig/objects.inv console -su
+$ sphobjinv suggest https://bridle.tiac-systems.net/doc/latest/devicetree/objects.inv console -su
+$ sphobjinv suggest https://docs.zephyrproject.org/latest/objects.inv console -su
+```
+
 To run a subset of tests:
 
 ```bash

@@ -22,6 +22,7 @@ sphinxcontrib-spelling = "^8"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4"
+sphobjinv = "^2.3"
 
 [build-system]
 requires = ["poetry-core"]
