@@ -64,7 +64,7 @@ also eine wichtige Information für dein **Software Configuration Management**.
           :align: center
 
 Du kannst hier schon erkennen, dass die Softwarequellen von Zephyr aus einer
-Seitenlinie stammen, Branch-Name ``tiacsys/main``. Das **West Manifest** wird
+Seitenlinie stammen, Branch-Name |zephyr_branch|. Das **West Manifest** wird
 von dem Projekt (Verzeichnis) :file:`bridle` vorgegeben, wie zu erwarten war.
 
 Du hast nun auch die Möglichkeit, das West Manifest genauer zu untersuchen.

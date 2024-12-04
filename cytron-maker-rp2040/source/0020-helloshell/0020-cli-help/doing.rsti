@@ -301,7 +301,7 @@ Dann lass uns das machen::
 Wenn dich die Implementierung dieses Kommandos interessiert, dann schaue dir
 später in aller Ruhe den Quellcode an – es ist nur eine kurze Datei:
 
-   https://github.com/tiacsys/bridle/blob/main/subsys/shell/modules/cmd_hello.c
+   |bridle_shell_cmd_hello_c|
 
 -----------------------------------------------------------------------------
 

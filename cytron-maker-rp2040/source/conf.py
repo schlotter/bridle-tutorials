@@ -11,6 +11,12 @@ import sphinx
 from datetime import date
 
 
+# -- Variable setup ----------------------------------------------------------
+
+bridle_release = '3.6'
+zephyr_release = '3.6'
+zephyr_us_version = '3.6.0'
+
 # -- Path setup --------------------------------------------------------------
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -91,7 +97,11 @@ basename: str = 'bridle-tutorial'
 namespace: str = 'net.tiac-systems.doc.learning.tutorial.cytron-maker-rp2040.'
 namespace += version + '.'
 
+# Overview ---------------------------------------------------------------------
+
 logcfg.info(project + ' ' + release, color='yellow')
+logcfg.info('With Bridle {}'.format(bridle_release), color='green')
+logcfg.info('With Zephyr {} (upstream: {})'.format(zephyr_release, zephyr_us_version), color='green')
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -144,6 +154,28 @@ rst_prolog = '''
 .. |gxp_name_s| replace:: :strong:`{gxp_name}`
 .. meta::
    :keywords: {keywords}
+.. |bridle_release| replace:: v{bridle_release}
+.. |bridle_release_tt| replace:: ``v{bridle_release}``
+.. |bridle_release_em| replace:: *v{bridle_release}*
+.. |bridle_release_number| replace:: {bridle_release}
+.. |bridle_release_number_tt| replace:: ``{bridle_release}``
+.. |bridle_release_number_em| replace:: *{bridle_release}*
+.. |bridle_branch| replace:: ``v{bridle_release}-branch``
+.. |bridle_shell_cmd_hello_c| replace:: https://github.com/tiacsys/bridle/blob/v{bridle_release}-branch/subsys/shell/modules/cmd_hello.c
+.. |zephyr_release| replace:: v{zephyr_release}
+.. |zephyr_release_tt| replace:: ``v{zephyr_release}``
+.. |zephyr_release_em| replace:: *v{zephyr_release}*
+.. |zephyr_release_number| replace:: {zephyr_release}
+.. |zephyr_release_number_tt| replace:: ``{zephyr_release}``
+.. |zephyr_release_number_em| replace:: *{zephyr_release}*
+.. |zephyr_branch| replace:: ``tiacsys/v{zephyr_release}-branch``
+.. |zephyr_us_version| replace:: v{zephyr_us_version}
+.. |zephyr_us_version_tt| replace:: ``v{zephyr_us_version}``
+.. |zephyr_us_version_em| replace:: *v{zephyr_us_version}*
+.. |zephyr_us_version_number| replace:: {zephyr_us_version}
+.. |zephyr_us_version_number_tt| replace:: ``{zephyr_us_version}``
+.. |zephyr_us_version_number_em| replace:: *{zephyr_us_version}*
+.. |zephyr_us_branch| replace:: ``v{zephyr_release}-branch``
 '''.format(
     docsrc = DOCSRC,
     docstat = docstat,
@@ -162,6 +194,9 @@ rst_prolog = '''
     contactweb = contactweb,
     gxp_name = gxp_name,
     keywords = keywords,
+    bridle_release = bridle_release,
+    zephyr_release = zephyr_release,
+    zephyr_us_version = zephyr_us_version,
 )
 
 rst_epilog = '''
@@ -281,18 +316,18 @@ html_theme_options = {
 extlinks_detect_hardcoded_links = True
 extlinks = {
     'wiki': ('https://de.wikipedia.org/wiki/%s', '[Wiki: %s]'),
-    'bridle': ('https://bridle.tiac-systems.net/doc/3.6/bridle/%s', '[Bridle: %s]'),
-    'zephyr': ('https://bridle.tiac-systems.net/doc/3.6/zephyr/%s', '[Zephyr: %s]'),
-    'zephyr-us': ('https://docs.zephyrproject.org/3.6.0/%s', '[Zephyr (upstream): %s]'),
+    'bridle': ('https://bridle.tiac-systems.net/doc/{}/bridle/%s'.format(bridle_release), '[Bridle: %s]'),
+    'zephyr': ('https://bridle.tiac-systems.net/doc/{}/zephyr/%s'.format(zephyr_release), '[Zephyr: %s]'),
+    'zephyr-us': ('https://docs.zephyrproject.org/{}/%s'.format(zephyr_us_version), '[Zephyr (upstream): %s]'),
 }
 
 # -- Options for intersphinx extension ---------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#configuration
 
 intersphinx_mapping = {
-    'bridle': ('https://bridle.tiac-systems.net/doc/3.6/bridle', None),
-    'zephyr': ('https://bridle.tiac-systems.net/doc/3.6/zephyr', None),
-    'zephyr-us': ('https://docs.zephyrproject.org/3.6.0', None),
+    'bridle': ('https://bridle.tiac-systems.net/doc/{}/bridle'.format(bridle_release), None),
+    'zephyr': ('https://bridle.tiac-systems.net/doc/{}/zephyr'.format(zephyr_release), None),
+    'zephyr-us': ('https://docs.zephyrproject.org/{}'.format(zephyr_us_version), None),
 }
 
 # -- Options for todo extension ----------------------------------------------
