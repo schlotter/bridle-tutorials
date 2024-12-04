@@ -7,7 +7,7 @@ license = "LICENSE"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = ">=3.8,<4"
+python = ">=3.10,<4"
 semver = "^3"
 gitpython = "^3"
 sphinx = "^7"
