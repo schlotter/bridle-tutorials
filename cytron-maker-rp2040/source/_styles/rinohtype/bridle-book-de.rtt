@@ -21,8 +21,10 @@ parts =
 stylesheet = bridle.rts
 language = de
 
-[SectionTitles]
-contents = 'Inhalt'
+[STRINGS]
+@contents = 'Inhalt'
+@caution = 'Vorsichtig!'
+@warning = 'Warnungen bitte beachten'
 
 [VARIABLES]
 paper_size = A4
