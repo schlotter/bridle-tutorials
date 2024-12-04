@@ -21,7 +21,7 @@ Referenzen
 
 - `Bridle Documentation`_
 
-  - `ARM Boards ⯈ Cytron Maker RP2040`_
+  - |Cytron Maker Pi RP2040|
 
 .. target-notes::
 
@@ -64,5 +64,6 @@ Referenzen
 .. _`Bridle Documentation`:
    https://bridle.tiac-systems.net/
 
-.. _`ARM Boards ⯈ Cytron Maker RP2040`:
-   https://bridle.tiac-systems.net/doc/latest/bridle/boards/arm/cytron_rp2040/doc/index.html
+.. |Cytron Maker Pi RP2040| replace::
+   :external+bridle:ref:`Supported Boards ⯈ ARM Boards ⯈ Cytron Maker RP2040 <cytron_maker_pi_rp2040>`
+   🗁 Maker Pi RP2040
