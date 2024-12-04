@@ -4,15 +4,15 @@
 repos:
 
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v3.13.0
+    rev: v4.0.0
     hooks:
       - id: commitizen
         stages: [commit-msg]
       - id: commitizen-branch
-        stages: [push]
+        stages: [pre-push]
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
+    rev: v5.0.0
     hooks:
       - id: trailing-whitespace
         exclude: ".gitignore"
@@ -32,7 +32,7 @@ repos:
       - id: detect-private-key
 
   - repo: https://github.com/executablebooks/mdformat
-    rev: 0.7.17
+    rev: 0.7.19
     hooks:
       - id: mdformat        # CommonMark compliant Markdown formatter
         additional_dependencies:
@@ -41,7 +41,7 @@ repos:
           - mdformat-black  # plugin for Blacken Python code blocks
 
   - repo: https://github.com/rstcheck/rstcheck
-    rev: v6.2.0
+    rev: v6.2.4
     hooks:
       - id: rstcheck        # Checks syntax of reStructuredText
         additional_dependencies: [sphinx]
