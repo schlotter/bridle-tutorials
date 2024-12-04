@@ -51,11 +51,25 @@ are proposing a feature:
 
 ## System Requirements
 
-The ideal development environment is a Linux based system. A current Ubuntu
-LTS, i.e. 22.04 or 20.04, is recommended and should be used. Windows 10 or 11
+The ideal development environment is a Linux based system. A current Ubuntu LTS,
+i.e. 24.04, 22.04 or 20.04, is recommended and should be used. Windows 10 or 11
 as well as MacOS are conceivable but are not preferred or recommended. Most
 notations are written in such a way that these systems could also be used in
 theory.
+
+### How to install newer Python 3 in Ubuntu LTS
+
+Lates Python releases are easy to install in all current Ubuntu releases
+by using the popular [Deadsnakes PPA][deadsnakes-ppa]:
+
+```bash
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+```
+
+See also:
+[How to install Python 3.10 in Ubuntu][ubhb-202101-install-py310-ubuntu], or
+[How to install Python 3.12 in Ubuntu][ubhb-202305-install-py312-ubuntu].
 
 ### System packages for Python 3
 
@@ -109,12 +123,12 @@ Ready to contribute? Here's how to set yourself up for local development.
    [Python 3 virtual environment](https://docs.python.org/3/library/venv.html):
 
    ```bash
-   $ python3 -m venv --prompt="$(basename $(pwd))[$(python3 --version)]" \
+   $ python3.10 -m venv --prompt="$(basename $(pwd))[$(python3.10 --version)]" \
                      --clear --copies .venv
    $ source .venv/bin/activate
 
-   $ pip3 install --upgrade pip setuptools
-   $ pip3 install --upgrade poetry
+   $ pip3.10 install --upgrade pip setuptools
+   $ pip3.10 install --upgrade poetry
    ```
 
 1. Install the project dependencies with [Poetry](https://python-poetry.org):
@@ -159,7 +173,7 @@ Ready to contribute? Here's how to set yourself up for local development.
 
    ```bash
    $ make -C cytron-maker-rp2040 html
-   $ python3 -m http.server -d cytron-maker-rp2040/build/html 8000
+   $ python3.10 -m http.server -d cytron-maker-rp2040/build/html 8000
    $ xdg-open http://localhost:8000/
    ```
 
@@ -219,8 +233,11 @@ Release workflow in GitHub. The next version will be based on
 [python-semantic-release](https://python-semantic-release.readthedocs.io/en/latest/index.html)
 via a GitHub action.~~ **NOT YET**
 
+[deadsnakes-ppa]: https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa
 [gh-issues]: https://github.com/tiacsys/bridle-tutorials/issues
 [rst-doc]: https://docutils.sourceforge.io/rst.html
 [rst-primer]: https://www.sphinx-doc.org/en/master/usage/restructuredtext
 [sphinx-doc]: https://www.sphinx-doc.org/
 [sphinx-primer]: https://lpn-doc-sphinx-primer.readthedocs.io/
+[ubhb-202101-install-py310-ubuntu]: https://ubuntuhandbook.org/index.php/2021/01/install-python-3-10-alpha-ubuntu-20-04-ubuntu-18-04
+[ubhb-202305-install-py312-ubuntu]: https://ubuntuhandbook.org/index.php/2023/05/install-python-3-12-ubuntu
