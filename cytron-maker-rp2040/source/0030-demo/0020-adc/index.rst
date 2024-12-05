@@ -6,7 +6,7 @@ ADC Werte auslesen und anzeigen
 .. sidebar:: Ziel
 
    Übersetzen, programmieren und spielen mit dem Zephyr Treiber Beispiel
-   :doc:`zephyr:samples/drivers/adc/README`
+   :doc:`zephyr:samples/drivers/adc/adc_dt/README`
 
 .. topic:: Übersicht
 

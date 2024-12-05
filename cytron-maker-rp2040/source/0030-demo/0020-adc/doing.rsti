@@ -23,7 +23,7 @@ wieder in deinem West Workspace und enthält folgendes:
 Steckverbinder **GROVE 7**) und 3 (halbe Motorspannung) werden dem **höchst
 Zephyr spezifischen Knoten** :ref:`zephyr,user <zephyr:dt-zephyr-user>` als
 Eigenschaft ``io-channels`` zugänglich gemacht. Die C-Quellen des Zephyr Treiber
-Beispiels :doc:`zephyr:samples/drivers/adc/README` erwarten genau diese
+Beispiels :doc:`zephyr:samples/drivers/adc/adc_dt/README` erwarten genau diese
 Eigenschaft um die generischen Funktionen mit den richtigen Werten zu
 parametrisieren. Der Rest sind notwendige Konfigurationen für die zu benutzenden
 ADC Kanäle, die man ebenso deklarativ aufschreibt.
@@ -48,11 +48,11 @@ ADC Kanäle, die man ebenso deklarativ aufschreibt.
    :class: sidecar
 
 Hole deine **Online-Sitzung von VS Code** wieder in den Vordergrund und **baue
-die Zephyr UF2 Firmware** ``zephyr/samples/drivers/adc`` zusammen mit dem
-Devicetree Overlay :file:`rp2040-adc23.overlay`, gib ein::
+die Zephyr UF2 Firmware** ``zephyr/samples/drivers/adc/adc_dt`` zusammen mit
+dem Devicetree Overlay :file:`rp2040-adc23.overlay`, gib ein::
 
    west build -p -b cytron_maker_pi_rp2040        -S usb-console \
-              zephyr/samples/drivers/adc                         \
+              zephyr/samples/drivers/adc/adc_dt                  \
            -- -DEXTRA_DTC_OVERLAY_FILE=$(pwd)/rp2040-adc23.overlay
 
 -----------------------------------------------------------------------------

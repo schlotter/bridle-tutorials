@@ -25,4 +25,4 @@
 
    * - **Software:**
      - Du wirst eine neue Zephyr UF2 Firmware bauen, das Zephyr Beispiel
-       :doc:`zephyr:samples/drivers/adc/README`.
+       :doc:`zephyr:samples/drivers/adc/adc_dt/README`.
