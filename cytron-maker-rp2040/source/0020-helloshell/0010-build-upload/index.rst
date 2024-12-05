@@ -40,8 +40,8 @@ Dienste wären zum Beispiel:
 - :ref:`zephyr:ipc_service_api` und :ref:`zephyr:zbus`
 - :ref:`zephyr:storage_reference` und :ref:`zephyr:file_system_api`
 - :ref:`zephyr:cryptography`
-- :ref:`zephyr:sensing_api` – *Sensor Fusion* (extrem neu und nicht final)
-- :ref:`zephyr:rtio_api` (extrem neu und nicht final)
+- :ref:`zephyr:sensing` – *Sensor Fusion* (extrem neu und nicht final)
+- :ref:`zephyr:rtio` (extrem neu und nicht final)
 
 Die meisten davon basieren mehr oder weniger Vorlagen aus der Linux Kernel
 Entwicklung und folgen auch diesen Prinzipien.

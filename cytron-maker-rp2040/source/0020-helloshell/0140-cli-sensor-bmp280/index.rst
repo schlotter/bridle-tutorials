@@ -12,8 +12,7 @@ Shell-Kommando ``sensor`` für Drucksensor (BMP280)
    In dieser Übung lernst du den allgemeinen Umgang mit Sensoren unter Zephyr
    kennen. Helfen wird dir hierbei das Kommando :bcy:`sensor` mit seinen
    Unterkommandos. Dieses ist eine direkte Abbildung auf die zugrundeliegende
-   Zephyr API, siehe dazu auch :ref:`zephyr:sensor_api` in der Zephyr
-   Dokumentation.
+   Zephyr API, siehe dazu auch :ref:`zephyr:sensor` in der Zephyr Dokumentation.
 
    Du wirst dabei sehr schnell in die Zwänge von Zephyr geraten, deine Hardware
    genauer zu deklarieren. Das lösen wir gemeinsam auf und versuchen dich somit
@@ -21,11 +20,10 @@ Shell-Kommando ``sensor`` für Drucksensor (BMP280)
 
 .. rubric:: Wissenswertes
 
-Die :ref:`Zephyr Sensor API <zephyr:sensor_api>` ist eine weitere abstrakte API
-und unterstützt die wichtigsten funktionalen Eigenschaften für die Beschaffung
-von Daten aus sensorischen Baugruppen. Das sind: *Channels*, *Values*,
-*Fetching*, *Async-Read*, *Triggers*, *Configuration-and-Attributes* und
-*Processing-Data*.
+Die :ref:`Zephyr Sensor API <zephyr:sensor>` ist eine weitere abstrakte API und
+unterstützt die wichtigsten funktionalen Eigenschaften für die Beschaffung von
+Daten aus sensorischen Baugruppen. Das sind: *Channels*, *Values*, *Fetching*,
+*Async-Read*, *Triggers*, *Configuration-and-Attributes* und *Processing-Data*.
 
 Das von dir benutzte MCU-Board kennt für sich selbst keinerlei sensorische
 Bauelemente. Dennoch hattest du seit der Übung in :ref:`hs-cli-i2c-scan` mit
