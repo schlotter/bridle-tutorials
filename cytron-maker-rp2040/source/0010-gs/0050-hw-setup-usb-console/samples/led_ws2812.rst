@@ -2,7 +2,7 @@ RGB LED Testmuster über USB-CDC/ACM Console
 ###########################################
 
 Nun wollen wir zum Abschluss des ersten Kapitels unserer Übungen das
-:doc:`zephyr:samples/drivers/led_ws2812/README` Beispiel von Zephyr mit
+:doc:`zephyr:samples/drivers/led_strip/README` Beispiel von Zephyr mit
 Ausgaben über die USB-CDC/ACM Console bauen und überprüfen.
 
 -----------------------------------------------------------------------------
@@ -21,7 +21,7 @@ Zephyr UF2 Firmware** mit dem zusätzlichen Parameter :program:`-S usb-console`,
 gib ein::
 
    west build -p -b cytron_maker_pi_rp2040        -S usb-console \
-              zephyr/samples/drivers/led_ws2812
+              zephyr/samples/drivers/led_strip
 
 -----------------------------------------------------------------------------
 

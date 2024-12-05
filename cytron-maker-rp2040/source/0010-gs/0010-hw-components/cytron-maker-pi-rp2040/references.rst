@@ -65,5 +65,5 @@ Referenzen
    https://bridle.tiac-systems.net/
 
 .. |Cytron Maker Pi RP2040| replace::
-   :external+bridle:ref:`Supported Boards ⯈ ARM Boards ⯈ Cytron Maker RP2040 <cytron_maker_pi_rp2040>`
+   :ref:`Supported Boards ⯈ Cytron Technologies ⯈ Cytron Maker RP2040 <bridle:cytron_maker_pi_rp2040>`
    🗁 Maker Pi RP2040
