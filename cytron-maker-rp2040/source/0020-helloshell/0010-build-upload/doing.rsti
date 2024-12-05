@@ -23,11 +23,13 @@ Motoren kann an jedem der 4 Pfostenleisten betrieben werden.
 
 .. figure:: /_images/doing/cytron-maker-pi-rp2040-vin.*
    :name: cytron-maker-pi-rp2040-vin
+   :align: center
 
    Schraubklemme für ``Vin`` auf dem *Cytron – Maker Pi RP2040*
 
 .. figure:: /_images/doing/cytron-maker-pi-rp2040-servo.*
    :name: cytron-maker-pi-rp2040-servo
+   :align: center
 
    Pfostenleisten für Servo Motoren auf dem *Cytron – Maker Pi RP2040*
 
