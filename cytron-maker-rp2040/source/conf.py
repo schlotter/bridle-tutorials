@@ -13,9 +13,9 @@ from datetime import date
 
 # -- Variable setup ----------------------------------------------------------
 
-bridle_release = '3.6'
-zephyr_release = '3.6'
-zephyr_us_version = '3.6.0'
+bridle_release = '3.7'
+zephyr_release = '3.7'
+zephyr_us_version = '3.7.0'
 
 online_ide_entry = 'https://coder.meetup.mp-labs.de/'
 
