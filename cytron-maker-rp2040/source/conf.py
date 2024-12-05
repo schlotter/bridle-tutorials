@@ -17,6 +17,8 @@ bridle_release = '3.6'
 zephyr_release = '3.6'
 zephyr_us_version = '3.6.0'
 
+online_ide_entry = 'https://coder.meetup.mp-labs.de/'
+
 # -- Path setup --------------------------------------------------------------
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -176,6 +178,7 @@ rst_prolog = '''
 .. |zephyr_us_version_number_tt| replace:: ``{zephyr_us_version}``
 .. |zephyr_us_version_number_em| replace:: *{zephyr_us_version}*
 .. |zephyr_us_branch| replace:: ``v{zephyr_release}-branch``
+.. |online_ide_entry| replace:: https://coder.meetup.mp-labs.de/
 '''.format(
     docsrc = DOCSRC,
     docstat = docstat,
@@ -197,6 +200,7 @@ rst_prolog = '''
     bridle_release = bridle_release,
     zephyr_release = zephyr_release,
     zephyr_us_version = zephyr_us_version,
+    online_ide_entry = online_ide_entry,
 )
 
 rst_epilog = '''
@@ -221,6 +225,7 @@ linkcheck_workers = 10
 linkcheck_anchors = False
 linkcheck_ignore = [
     'http://localhost:\d+/',
+    online_ide_entry,
 ]
 linkcheck_allowed_redirects = {
     'https://www.cytron.io/p-maker-pi-rp2040': 'https://www.cytron.io/p-maker-pi-rp2040-simplifying-robotics-with-raspberry-pi-rp2040',
