@@ -2,6 +2,13 @@
  * Tweaks and fixes for The Sphinx Immaterial HTML theme.
  */
 
+.md-typeset img[style],
+.md-typeset svg[style],
+.md-typeset video[style] {
+  height: auto !important;
+  max-width: 100% !important;
+}
+
 .md-typeset figure img {
   display: inline-block;
 }
