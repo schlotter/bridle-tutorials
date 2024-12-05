@@ -26,7 +26,7 @@ Referenzen
    https://datasheets.raspberrypi.com/debug/raspberry-pi-debug-probe-product-brief.pdf
 
 .. _`Raspberry Pi Debug Probe Documentation`:
-   https://raspberrypi.com/documentation/microcontrollers/debug-probe.html
+   https://www.raspberrypi.com/documentation/microcontrollers/debug-probe.html
 
 .. _`Raspberry Pi Debug Probe Connector Specification`:
    https://datasheets.raspberrypi.com/debug/debug-connector-specification.pdf

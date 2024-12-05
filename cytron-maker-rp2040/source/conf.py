@@ -225,14 +225,15 @@ linkcheck_workers = 10
 linkcheck_anchors = False
 linkcheck_ignore = [
     'http://localhost:\d+/',
+    'https://www.raspberrypi.com/.*',
     online_ide_entry,
 ]
 linkcheck_allowed_redirects = {
     'https://www.cytron.io/p-maker-pi-rp2040': 'https://www.cytron.io/p-maker-pi-rp2040-simplifying-robotics-with-raspberry-pi-rp2040',
     'https://rptl.io/debug-spec': 'https://datasheets.raspberrypi.com/debug/debug-connector-specification.pdf',
     'https://github.com/raspberrypi/picoprobe': 'https://github.com/raspberrypi/debugprobe',
-    r'https://de.wikipedia\.org/wiki/.*': r'https://de.wikipedia\.org/wiki/.*',
-    r'https://raspberrypi\.com/.*': r'https://www.raspberrypi\.com/.*',
+    'https://de.wikipedia\.org/wiki/.*': r'https://de.wikipedia\.org/wiki/.*',
+    'https://raspberrypi\.com/.*': r'https://www.raspberrypi\.com/.*',
 }
 
 # -- Options for PDF output --------------------------------------------------
