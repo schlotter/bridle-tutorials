@@ -24,6 +24,7 @@ hältst, um in den *UF2 Upload-Modus* (Bootloader) zu gelangen.
 
 .. figure:: /_images/doing/cytron-maker-pi-rp2040-boot.*
    :name: cytron-maker-pi-rp2040-boot
+   :align: center
 
    ``BOOT`` und ``RST`` Tasten auf dem *Cytron – Maker Pi RP2040*
 
@@ -66,6 +67,7 @@ hältst, um in den *UF2 Upload-Modus* (Bootloader) zu gelangen.
 
       * - .. image:: /_images/doing/w11-rpi-rp2-flash-nuke-copy.*
              :align: center
+             :scale: 100%
 
 #. Versetze dein MCU-Board wieder in den *UF2 Upload-Modus* (Bootloader).
 
@@ -78,15 +80,32 @@ hältst, um in den *UF2 Upload-Modus* (Bootloader) zu gelangen.
 
    von deinem Host-PC auf dein *MCU-Board* (folgende Abbildungen).
 
-   .. list-table::
-      :align: center
-      :width: 80%
-      :widths: 50, 50
+   .. only:: html
 
-      * - .. image:: /_images/doing/w11-rpi-rp2-circuitpy-copy.*
-             :align: center
-        - .. image:: /_images/doing/w11-rpi-rp2-circuitpy-upload.*
-             :align: center
+      .. list-table::
+         :align: center
+         :width: 80%
+         :widths: 50, 50
+
+         * - .. image:: /_images/doing/w11-rpi-rp2-circuitpy-copy.*
+                :align: center
+                :scale: 100%
+           - .. image:: /_images/doing/w11-rpi-rp2-circuitpy-upload.*
+                :align: center
+                :scale: 100%
+
+   .. only:: rinoh
+
+      .. list-table::
+         :align: center
+         :width: 80%
+
+         * - .. image:: /_images/doing/w11-rpi-rp2-circuitpy-copy.*
+                :align: center
+                :scale: 100%
+         * - .. image:: /_images/doing/w11-rpi-rp2-circuitpy-upload.*
+                :align: center
+                :scale: 100%
 
    Diese UF2 Firmware ist recht umfangreich und deutlich größer als ein
    Megabyte. Warte bitte, bis das Kopieren auf das Laufwerk erfolgreich
@@ -116,6 +135,7 @@ hältst, um in den *UF2 Upload-Modus* (Bootloader) zu gelangen.
 
       * - .. image:: /_images/doing/w11-circuitpy-ootb-demo-copy.*
              :align: center
+             :scale: 100%
 
 #. Dein MCU-Board muss jetzt wieder automatisch neu starten und sofort das
    originale OOTB Demo innerhalb von CiruitPython ausführen. Schaue und höre

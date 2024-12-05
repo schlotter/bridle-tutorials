@@ -16,29 +16,63 @@ Dort meldest du dich mit deinen persönlichen Zugangsdaten an und findest dann
 und du gelangst auf eine Übersicht mit einer Taste mit der Aufschrift
 **code-server** (*nicht "VS Code Desktop" !!!*). Drücke diese.
 
-.. list-table::
-   :align: center
-   :width: 80%
-   :widths: 20, 80
+.. only:: html
 
-   * - .. image:: /_images/coder/coder-dashboard-login.*
-          :align: center
-     - .. image:: /_images/coder/coder-dashboard-workspace.*
-          :align: center
+   .. list-table::
+      :align: center
+      :width: 80%
+      :widths: 20, 80
+
+      * - .. image:: /_images/coder/coder-dashboard-login.*
+             :align: center
+             :scale: 100%
+        - .. image:: /_images/coder/coder-dashboard-workspace.*
+             :align: center
+             :scale: 100%
+
+.. only:: rinoh
+
+   .. list-table::
+      :align: center
+      :width: 80%
+
+      * - .. image:: /_images/coder/coder-dashboard-login.*
+             :align: center
+             :scale: 33%
+      * - .. image:: /_images/coder/coder-dashboard-workspace.*
+             :align: center
+             :scale: 100%
 
 Daraufhin öffnet sich ein **neues WEB-Browser Fenster mit VS Code**. Bestätige
 die **Vertrauenswürdigkeit** und schalte dir das **Terminal** im unteren Panel
 ein. Wir empfehlen dir dringend, darin sofort in eine **Bash** zu wechseln.
 
-.. list-table::
-   :align: center
-   :width: 80%
-   :widths: 50, 50
+.. only:: html
 
-   * - .. image:: /_images/coder/code-server-virgin.*
-          :align: center
-     - .. image:: /_images/coder/code-server-bash.*
-          :align: center
+   .. list-table::
+      :align: center
+      :width: 80%
+      :widths: 50, 50
+
+      * - .. image:: /_images/coder/code-server-virgin.*
+             :align: center
+             :scale: 100%
+        - .. image:: /_images/coder/code-server-bash.*
+             :align: center
+             :scale: 100%
+
+.. only:: rinoh
+
+   .. list-table::
+      :align: center
+      :width: 80%
+
+      * - .. image:: /_images/coder/code-server-virgin.*
+             :align: center
+             :scale: 100%
+      * - .. image:: /_images/coder/code-server-bash.*
+             :align: center
+             :scale: 100%
 
 Nun kannst du in den vorbereiteten **West Workspace** wechseln, gebe ein::
 
@@ -62,6 +96,7 @@ also eine wichtige Information für dein **Software Configuration Management**.
 
    * - .. image:: /_images/coder/code-server-west-list.*
           :align: center
+          :scale: 100%
 
 Du kannst hier schon erkennen, dass die Softwarequellen von Zephyr aus einer
 Seitenlinie stammen, Branch-Name |zephyr_branch|. Das **West Manifest** wird
@@ -86,6 +121,7 @@ um unseren Spiegel auf GitHub unter :file:`https://github.com/tiacsys/zephyr`.
 
    * - .. image:: /_images/coder/code-server-west-manifest.*
           :align: center
+          :scale: 100%
 
 .. rubric:: Durchführung (allgemein)
 
@@ -133,6 +169,7 @@ symbolische Platzhalter benutzen, z.B. ``<board_name>``.
 
       * - .. image:: /_images/coder/code-server-uf2-download.*
              :align: center
+             :scale: 100%
 
 #. UF2 Firmware auf das MCU-Board **hochladen**
 
@@ -151,6 +188,7 @@ symbolische Platzhalter benutzen, z.B. ``<board_name>``.
 
       * - .. image:: /_images/doing/w11-rpi-rp2-zephyr-copy.*
              :align: center
+             :scale: 100%
 
 #. Ausführung auf dem MCU-Board **beobachten**
 

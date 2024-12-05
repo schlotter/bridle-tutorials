@@ -16,17 +16,38 @@
    zugeordnete Gerät gesucht, gefunden und ausgewählt werden; (3) beim Öffnen
    des ausgewählten Geräts in Tabby wird die Baud Rate auf 115200 eingestellt.
 
-   .. list-table::
-      :align: center
-      :width: 80%
-      :widths: 30, 30, 30
+   .. only:: html
 
-      * - .. image:: /_images/tabby/w11-rpi-dbgprobe-connected.*
-             :align: center
-        - .. image:: /_images/tabby/w11-rpi-dbgprobe-uart-console-open.*
-             :align: center
-        - .. image:: /_images/tabby/w11-rpi-dbgprobe-uart-console-select-baud.*
-             :align: center
+      .. list-table::
+         :align: center
+         :width: 80%
+         :widths: 30, 30, 30
+
+         * - .. image:: /_images/tabby/w11-rpi-dbgprobe-connected.*
+                :align: center
+                :scale: 100%
+           - .. image:: /_images/tabby/w11-rpi-dbgprobe-uart-console-open.*
+                :align: center
+                :scale: 100%
+           - .. image:: /_images/tabby/w11-rpi-dbgprobe-uart-console-select-baud.*
+                :align: center
+                :scale: 100%
+
+   .. only:: rinoh
+
+      .. list-table::
+         :align: center
+         :width: 80%
+
+         * - .. image:: /_images/tabby/w11-rpi-dbgprobe-connected.*
+                :align: center
+                :scale: 100%
+         * - .. image:: /_images/tabby/w11-rpi-dbgprobe-uart-console-open.*
+                :align: center
+                :scale: 100%
+         * - .. image:: /_images/tabby/w11-rpi-dbgprobe-uart-console-select-baud.*
+                :align: center
+                :scale: 100%
 
 #. Fahre mit den beiden kleinen Flachbandkabeln fort. Stelle die **Verbindung**
    zwischen dem **USB Debug-Adapter und dem MCU-Board** laut Abbildung her.
@@ -47,6 +68,7 @@
 
    .. figure:: /_images/doing/cytron-maker-pi-rp2040-power.*
       :name: cytron-maker-pi-rp2040-power
+      :align: center
 
       Stromversorgungsschalter auf dem *Cytron – Maker Pi RP2040*
 
@@ -68,6 +90,7 @@
 
       * - .. image:: /_images/tabby/w11-rpi-dbgprobe-uart-console-io-working.*
              :align: center
+             :scale: 100%
 
 #. Ja, in der Tat. Das ist Python! **Tippe doch einfach mal** ``help()`` **ein**,
    um zu überprüfen, dass dein Terminalemulator mit dem USB Debug-Adapter auch
