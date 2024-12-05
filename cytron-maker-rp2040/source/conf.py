@@ -108,13 +108,13 @@ logcfg.info('With Zephyr {} (upstream: {})'.format(zephyr_release, zephyr_us_ver
 
 build_sphinx = sphinx.__version__
 
-needs_sphinx = '7.1.2'
+needs_sphinx = '8.1.3'
 needs_extensions = {
     'sphinx.ext.extlinks':          needs_sphinx,
     'sphinx.ext.ifconfig':          needs_sphinx,
     'sphinx.ext.intersphinx':       needs_sphinx,
     'sphinx.ext.todo':              needs_sphinx,
-#   'sphinx_immaterial':            '0.11.10',
+#   'sphinx_immaterial':            '0.12.4',
     'sphinxcontrib.spelling':       '8.0.0',
 }
 
