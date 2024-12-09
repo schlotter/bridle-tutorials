@@ -1,14 +1,5 @@
-.. rst-class:: page-break
-
-   .. only:: rinoh
-
-      |nbsp|
-.. QUIRKS: Only with this dummy paragraph, the special rinohtype class
-   'page-break-paragraph' react as expected. But the '.. rubric::' directive
-   should also be handled as a 'ParagraphStyle' and trigger that class, But
-   it doesn't work as expected. Fix this later!
-
-.. rubric:: Durchführung
+Durchführung
+************
 
 #. Suche dir alle notwendigen Hardwarekomponenten aus der Box zusammen.
 
@@ -133,7 +124,8 @@
    oder falsch verbunden hast. Im Terminalemulator muss nun eine Ausgabe ähnlich
    zu ``Welcome to MicroPython!`` erscheinen.
 
-.. rubric:: Zugabe
+Zugabe unter Python
+===================
 
 Auch wenn wir uns hier (noch) nicht mit Python unter Zephyr beschäftigen, kannst
 du gerne die folgenden kleinen Beispiele direkt **in die MicroPython Console
@@ -159,7 +151,15 @@ einfach mit :kbd:`Ctrl-C` beendet werden.
 
       led.value(0)
 
-.. :Die letzte freie LED blinken lassen:
+Noch mehr Python
+================
+
+Nur wenn du wirklich gut vorankommst und dir auch sonst bisher nichts
+unverständlich erscheint, kannst du gerne auch noch ein paar komplexere
+Python Beispiele ausprobieren. Bedenke aber, dass wir lieber mit einer
+selber gebauten Zephyr Firmware und nicht mit MicroPython arbeiten wollen.
+
+:Die letzte freie LED blinken lassen:
 
    .. code-block:: Python
 
@@ -173,7 +173,7 @@ einfach mit :kbd:`Ctrl-C` beendet werden.
           first_led.toggle()
           time.sleep(1)
 
-.. :Alle 11 freien LEDs benutzen:
+:Alle 11 freien LEDs benutzen:
 
    .. code-block:: Python
 

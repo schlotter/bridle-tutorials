@@ -13,10 +13,14 @@ UART Console am PC
    deinem Host-PC und dem ersten UART (UART0) der MCU (RP2040) hergestellt. Mithilfe
    einer auf der MCU vorinstallierten Applikation wird die Verbindung überprüft.
 
+   .. rubric:: Terminalemulator
+
    Dazu benötigst du auf deinem Host-PC einen Terminalemulator deiner Wahl.
    Gängige Programme [*]_ sind z.B.: `Minicom`_, `Picocom`_, `GNU Screen`_,
    `Kermit`_, `goSerial`_, `Tabby`_, `PuTTY`_, `Tera Term`_,
    `PySerial (miniterm)`_, oder `web-serial-terminal`_.
+
+   .. rubric:: Rechte oder Treiber
 
    .. attention::
 

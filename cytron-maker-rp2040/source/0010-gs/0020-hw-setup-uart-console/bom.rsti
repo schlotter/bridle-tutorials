@@ -1,61 +1,63 @@
-.. rubric:: Ausrüstung
+.. admonition:: Ausrüstung
+   :class: page-break note
+   :collapsible: open
 
-.. list-table::
-   :class: longtable
-   :align: center
-   :width: 100%
-   :widths: 20, 80
-   :header-rows: 1
+   .. list-table::
+      :class: longtable
+      :align: center
+      :width: 100%
+      :widths: 20, 80
+      :header-rows: 1
 
-   * - Material
-     -
+      * - Material
+        -
 
-   * - .. image:: /_images/boms/red4power-r4-u007b-with-cable.*
-          :align: center
-     - **1x** USB-Hub mit Kabeln
+      * - .. image:: /_images/boms/red4power-r4-u007b-with-cable.*
+             :align: center
+        - **1x** USB-Hub mit Kabeln
 
-       *4-fach USB 2.0 Mini-Hub* für die Verbindung von deinem *Host-PC* zum
-       *MCU-Board* (grünes USB-Kabel) und den *Raspberry Pi – Debug Probe*
-       (orangenes USB-Kabel).
+          *4-fach USB 2.0 Mini-Hub* für die Verbindung von deinem *Host-PC* zum
+          *MCU-Board* (grünes USB-Kabel) und den *Raspberry Pi – Debug Probe*
+          (orangenes USB-Kabel).
 
-       .. tip::
+          .. tip::
 
-          **Den USB-Hub wirst du immer benötigen! Belasse ihn auch für alle
-          anderen Übungen in deinem Aufbau.**
+             **Den USB-Hub wirst du immer benötigen! Belasse ihn auch für alle
+             anderen Übungen in deinem Aufbau.**
 
-   * - .. image:: /_images/boms/cytron-maker-pi-rp2040.*
-          :align: center
-     - **1x** MCU-Board
+      * - .. image:: /_images/boms/cytron-maker-pi-rp2040.*
+             :align: center
+        - **1x** MCU-Board
 
-       *Cytron – Maker Pi RP2040* als Zielsystem für alle Übungen.
+          *Cytron – Maker Pi RP2040* als Zielsystem für alle Übungen.
 
-       .. tip::
+          .. tip::
 
-          **Das MCU-Board wirst du immer benötigen! Belasse es auch für alle
-          anderen Übungen in deinem Aufbau.**
+             **Das MCU-Board wirst du immer benötigen! Belasse es auch für alle
+             anderen Übungen in deinem Aufbau.**
 
-   * - .. image:: /_images/boms/seeed-110990028-grove-to-4wire-100mil-dupont-female-cable.*
-          :align: center
-     - **1x** Grove zu 4-fach 100mil DuPont (female), 20cm
+      * - .. image:: /_images/boms/seeed-110990028-grove-to-4wire-100mil-dupont-female-cable.*
+             :align: center
+        - **1x** Grove zu 4-fach 100mil DuPont (female), 20cm
 
-       Dieses Kabel ist Teil des MCU-Boards *Cytron – Maker Pi RP2040*.
+          Dieses Kabel ist Teil des MCU-Boards *Cytron – Maker Pi RP2040*.
 
-   * - .. image:: /_images/boms/raspberry-pi-debug-probe.*
-          :align: center
-     - **1x** USB Debug-Adapter mit UART
+      * - .. image:: /_images/boms/raspberry-pi-debug-probe.*
+             :align: center
+        - **1x** USB Debug-Adapter mit UART
 
-       *Raspberry Pi – Debug Probe* als USB-UART **nur** für die ersten Übungen.
+          *Raspberry Pi – Debug Probe* als USB-UART **nur** für die ersten Übungen.
 
-       .. note::
+          .. note::
 
-          **Den USB Debug-Adapter wirst du nur zu Beginn benötigen!** *Du wirst
-          lernen, wie man eine serielle Schnittstelle eleganter mit fertigen
-          Hilfsmitteln von Zephyr über USB bereitstellt.*
+             **Den USB Debug-Adapter wirst du nur zu Beginn benötigen!** *Du wirst
+             lernen, wie man eine serielle Schnittstelle eleganter mit fertigen
+             Hilfsmitteln von Zephyr über USB bereitstellt.*
 
-   * - .. image:: /_images/boms/raspberry-pi-debug-probe-to-3wire-100mil-dupont-male-cable.*
-          :align: center
-     - **1x** JST/SH zu 3-fach 100mil DuPont (male), 15cm
+      * - .. image:: /_images/boms/raspberry-pi-debug-probe-to-3wire-100mil-dupont-male-cable.*
+             :align: center
+        - **1x** JST/SH zu 3-fach 100mil DuPont (male), 15cm
 
-       Dieses Kabel ist Teil des USB Debug-Adapter *Raspberry Pi – Debug Probe*.
+          Dieses Kabel ist Teil des USB Debug-Adapter *Raspberry Pi – Debug Probe*.
 
 .. vi: ft=rst ai ts=3 et sw=3 sta
