@@ -1,56 +1,58 @@
-.. rubric:: Ausrüstung
+.. admonition:: Ausrüstung (zusätzliche Firmware Artefakte)
+   :class: page-break note
+   :collapsible: open
 
-.. list-table::
-   :class: longtable
-   :align: center
-   :width: 100%
-   :widths: 20, 80
-   :header-rows: 1
+   .. list-table::
+      :class: longtable
+      :align: center
+      :width: 100%
+      :widths: 20, 80
+      :header-rows: 1
 
-   * - Material
-     -
+      * - Material
+        -
 
-   * - **Hardware:**
-     - Du benötigst exakt die selben Dinge wie in der
-       :ref:`Übung zuvor <gs-setup-uart-console>`.
+      * - **Hardware:**
+        - Du benötigst exakt die selben Dinge wie in der
+          :ref:`Übung zuvor <gs-setup-uart-console>`.
 
-   * - **Software:**
-     - Du benötigst zusätzlich die folgenden Firmware-Dateien. Lade diese
-       vor Beginn der Übung herunter und speichere sie an einem Ort auf deinem
-       Host-PC, wo du sie auch sofort wiederfindest. Wenn du UI-affin bist,
-       empfehlen wir dir deinen Arbeitsbereich (Desktop) zu benutzen. Wenn du
-       mehr auf der Kommandozeile arbeitest, dann nutze doch ein Verzeichnis,
-       das du durch wenig Tippen erreichen kannst, z.B. :file:`~/Downloads`.
+      * - **Software:**
+        - Du benötigst zusätzlich die folgenden Firmware-Dateien. Lade diese
+          vor Beginn der Übung herunter und speichere sie an einem Ort auf deinem
+          Host-PC, wo du sie auch sofort wiederfindest. Wenn du UI-affin bist,
+          empfehlen wir dir deinen Arbeitsbereich (Desktop) zu benutzen. Wenn du
+          mehr auf der Kommandozeile arbeitest, dann nutze doch ein Verzeichnis,
+          das du durch wenig Tippen erreichen kannst, z.B. :file:`~/Downloads`.
 
-   * - *Flash Eraser*
-     - **Flash Resetting UF2 Firmware**
+      * - *Flash Eraser*
+        - **Flash Resetting UF2 Firmware**
 
-       | lokale Ablage:
-         :download:`flash_nuke.uf2 </_assets/flash_nuke.uf2>`
-       | Original Firmware auf `learn.adafruit.com <af-flash-resetting-uf2_>`_.
-       | Original Quellcode auf `GitHub <gh-rpi-pico-examples-flash-nuke_>`_.
+          | lokale Ablage:
+            :download:`flash_nuke.uf2 </_assets/flash_nuke.uf2>`
+          | Original Firmware auf `learn.adafruit.com <af-flash-resetting-uf2_>`_.
+          | Original Quellcode auf `GitHub <gh-rpi-pico-examples-flash-nuke_>`_.
 
-   * - *CircuitPython*
-     - **CircuitPython v8.2.9 – Englische Sprache**
+      * - *CircuitPython*
+        - **CircuitPython v8.2.9 – Englische Sprache**
 
-       | lokale Ablage:
-         :download:`CP-cytron_maker_pi_rp2040-en_US-8.2.9.uf2 </_assets/CP-cytron_maker_pi_rp2040-en_US-8.2.9.uf2>`
-       | Original Firmware auf `circuitpython.org <cp-cytron_maker_pi_rp2040_>`_.
+          | lokale Ablage:
+            :download:`CP-cytron_maker_pi_rp2040-en_US-8.2.9.uf2 </_assets/CP-cytron_maker_pi_rp2040-en_US-8.2.9.uf2>`
+          | Original Firmware auf `circuitpython.org <cp-cytron_maker_pi_rp2040_>`_.
 
-   * - *Python Scripts*
-     - **Das OOTB Demo Python Scipt und notwendige Module**
+      * - *Python Scripts*
+        - **Das OOTB Demo Python Scipt und notwendige Module**
 
-       | lokale Ablage:
-         :download:`CP-cytron_maker_pi_rp2040-ootb-demo.zip </_assets/CP-cytron_maker_pi_rp2040-ootb-demo.zip>`
-       | Original Quellcode auf `GitHub <gh-ootb-demo-code_>`_.
+          | lokale Ablage:
+            :download:`CP-cytron_maker_pi_rp2040-ootb-demo.zip </_assets/CP-cytron_maker_pi_rp2040-ootb-demo.zip>`
+          | Original Quellcode auf `GitHub <gh-ootb-demo-code_>`_.
 
-.. _af-flash-resetting-uf2:
-   https://learn.adafruit.com/intro-to-rp2040-pio-with-circuitpython/installing-circuitpython#flash-resetting-uf2-3083182
-.. _gh-rpi-pico-examples-flash-nuke:
-   https://github.com/raspberrypi/pico-examples/tree/master/flash/nuke
-.. _cp-cytron_maker_pi_rp2040:
-   https://circuitpython.org/board/cytron_maker_pi_rp2040
-.. _gh-ootb-demo-code:
-   https://github.com/CytronTechnologies/MAKER-PI-RP2040/tree/main/Examples/CircuitPython/Out-of-the-box%20Demo%20Code
+   .. _af-flash-resetting-uf2:
+      https://learn.adafruit.com/intro-to-rp2040-pio-with-circuitpython/installing-circuitpython#flash-resetting-uf2-3083182
+   .. _gh-rpi-pico-examples-flash-nuke:
+      https://github.com/raspberrypi/pico-examples/tree/master/flash/nuke
+   .. _cp-cytron_maker_pi_rp2040:
+      https://circuitpython.org/board/cytron_maker_pi_rp2040
+   .. _gh-ootb-demo-code:
+      https://github.com/CytronTechnologies/MAKER-PI-RP2040/tree/main/Examples/CircuitPython/Out-of-the-box%20Demo%20Code
 
 .. vi: ft=rst ai ts=3 et sw=3 sta

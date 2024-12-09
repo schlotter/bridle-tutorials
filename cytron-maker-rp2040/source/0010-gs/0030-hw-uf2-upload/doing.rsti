@@ -1,59 +1,12 @@
-.. rst-class:: page-break
-
-   .. only:: rinoh
-
-      |nbsp|
-.. QUIRKS: Only with this dummy paragraph, the special rinohtype class
-   'page-break-paragraph' react as expected. But the '.. rubric::' directive
-   should also be handled as a 'ParagraphStyle' and trigger that class, But
-   it doesn't work as expected. Fix this later!
-
-.. rubric:: UF2 Upload-Modus
-
-Wenn immer in dieser Anleitung der Text mit dem **UF2(RP2040) Symbol**
-gekennzeichnet ist, musst du dein **MCU-Board in den UF2 Upload-Modus**
-versetzen.
-
-.. image:: /_images/symbol-rp2040-uf2-rd.*
-   :class: sidecar
-
-Es ist sehr einfach, dein MCU-Board, das *Cytron – Maker Pi RP2040*, in den
-*UF2 Upload-Modus* zu versetzen, also den **On-Chip First Stage Bootloader**
-zu aktivieren. Während du die ``BOOT`` Taste gedrückt hältst (rechts neben der
-großen mit ``0`` gekennzeichneten RGB-LED), drücke die ``RST`` Taste (direkt
-unter den 13 kleinen LEDs) und lasse sie wieder los. Du wirst sehen, dass ein
-neues Laufwerk mit dem Namen :file:`RPI-RP2` auf deinem Host-PC erscheint. Das
-bedeutet, dass sich dein MCU-Board jetzt im *UF2 Upload-Modus* (Bootloader)
-befindet. Du kannst dein MCU-Board auch mit dem Schiebeschalter oberhalb der
-USB-Buchse aus- und wieder einschalten, während du die ``BOOT`` Taste gedrückt
-hältst, um in den *UF2 Upload-Modus* (Bootloader) zu gelangen.
-
-:numref:`cytron-maker-pi-rp2040-boot` zeigt dir die Positionen der beiden Tasten
-``BOOT`` und ``RST``. Wo du den Ein- und Ausschalter findest, hast du bereits in
-:numref:`cytron-maker-pi-rp2040-power` gesehen.
-
-.. figure:: /_images/doing/cytron-maker-pi-rp2040-boot.*
-   :name: cytron-maker-pi-rp2040-boot
-   :align: center
-
-   ``BOOT`` und ``RST`` Tasten auf dem *Cytron – Maker Pi RP2040*
-
-.. rst-class:: page-break
-
-   .. only:: rinoh
-
-      |nbsp|
-.. QUIRKS: Only with this dummy paragraph, the special rinohtype class
-   'page-break-paragraph' react as expected. But the '.. rubric::' directive
-   should also be handled as a 'ParagraphStyle' and trigger that class, But
-   it doesn't work as expected. Fix this later!
-
-.. rubric:: Durchführung
+Durchführung
+************
 
 #. Vorbereitung: Löschen des Flash-Inhalts
 
+   |nbsp|
+
    .. admonition:: Flash Resetting
-      :class: important green-thick-border
+      :class: green-thick-border important
 
       #. Versetze dein MCU-Board in den *UF2 Upload-Modus* (Bootloader).
 
@@ -83,18 +36,24 @@ hältst, um in den *UF2 Upload-Modus* (Bootloader) zu gelangen.
          erscheint, da im Permanentspeicher (Flash) des MCU-Board keine
          Firmware mehr vorhanden ist.
 
-   .. list-table::
-      :align: center
-      :width: 80%
+      .. list-table::
+         :align: center
+         :width: 80%
 
-      * - .. image:: /_images/doing/w11-rpi-rp2-flash-nuke-copy.*
-             :align: center
-             :scale: 100%
+         * - .. image:: /_images/doing/w11-rpi-rp2-flash-nuke-copy.*
+                :align: center
+                :scale: 100%
+
+   |nbsp|
 
 #. Versetze dein MCU-Board wieder in den *UF2 Upload-Modus* (Bootloader).
 
    .. image:: /_images/symbol-rp2040-uf2-rd.*
       :class: sidecar
+
+   |nbsp|
+
+   |nbsp|
 
 #. Kopiere jetzt die *CircuitPython UF2 Firmware*:
 
@@ -102,42 +61,51 @@ hältst, um in den *UF2 Upload-Modus* (Bootloader) zu gelangen.
 
    von deinem Host-PC auf dein *MCU-Board* (folgende Abbildungen).
 
-   .. only:: html
+   .. compound::
 
-      .. list-table::
-         :align: center
-         :width: 80%
-         :widths: 50, 50
+      .. only:: html
 
-         * - .. image:: /_images/doing/w11-rpi-rp2-circuitpy-copy.*
-                :align: center
-                :scale: 100%
-           - .. image:: /_images/doing/w11-rpi-rp2-circuitpy-upload.*
-                :align: center
-                :scale: 100%
+         .. list-table::
+            :align: center
+            :width: 80%
+            :widths: 50, 50
 
-   .. only:: rinoh
+            * - .. image:: /_images/doing/w11-rpi-rp2-circuitpy-copy.*
+                   :align: center
+                   :scale: 100%
+              - .. image:: /_images/doing/w11-rpi-rp2-circuitpy-upload.*
+                   :align: center
+                   :scale: 100%
 
-      .. list-table::
-         :align: center
-         :width: 80%
+      .. only:: rinoh
 
-         * - .. image:: /_images/doing/w11-rpi-rp2-circuitpy-copy.*
-                :align: center
-                :scale: 100%
-         * - .. image:: /_images/doing/w11-rpi-rp2-circuitpy-upload.*
-                :align: center
-                :scale: 100%
+         .. list-table::
+            :align: center
+            :width: 80%
 
-   Diese UF2 Firmware ist recht umfangreich und deutlich größer als ein
-   Megabyte. Warte bitte, bis das Kopieren auf das Laufwerk erfolgreich
-   abgeschlossen ist.
+            * - .. image:: /_images/doing/w11-rpi-rp2-circuitpy-copy.*
+                   :align: center
+                   :scale: 100%
+            * - .. image:: /_images/doing/w11-rpi-rp2-circuitpy-upload.*
+                   :align: center
+                   :scale: 100%
 
-   Danach startet dein MCU-Board automatisch neu und du wirst sehen, dass ein
-   neues Laufwerk mit dem Namen :file:`CIRCUITPY` auf deinem Host-PC erscheint.
+      Diese UF2 Firmware ist recht umfangreich und deutlich größer als ein
+      Megabyte. Warte bitte, bis das Kopieren auf das Laufwerk erfolgreich
+      abgeschlossen ist.
 
-   .. image:: /_images/symbol-rp2040-cpdsk-gn.*
-      :class: sidecar
+   |nbsp|
+
+   .. compound::
+
+      .. image:: /_images/symbol-rp2040-cpdsk-gn.*
+         :class: sidecar
+
+      Danach startet dein MCU-Board automatisch neu und du wirst sehen,
+      dass ein neues Laufwerk mit dem Namen :file:`CIRCUITPY` auf deinem
+      Host-PC erscheint.
+
+   |nbsp|
 
 #. Entpacke nun **den Inhalt** folgender **ZIP-Datei** auf deinem Host-PC:
 
@@ -147,15 +115,22 @@ hältst, um in den *UF2 Upload-Modus* (Bootloader) zu gelangen.
    :file:`CIRCUITPY`. Bereits **existierende Dateien und Verzsichnisse müssen**
    dabei **überschrieben werden**!
 
-   Nun befindet sich die *CircuitPython OOTB Demo* im Flash-Speicher des RP2040.
+   |nbsp|
 
-   .. list-table::
-      :align: center
-      :width: 80%
+   .. compound::
 
-      * - .. image:: /_images/doing/w11-circuitpy-ootb-demo-copy.*
-             :align: center
-             :scale: 100%
+      Nun befindet sich die *CircuitPython OOTB Demo*
+      im Flash-Speicher des RP2040.
+
+      .. list-table::
+         :align: center
+         :width: 80%
+
+         * - .. image:: /_images/doing/w11-circuitpy-ootb-demo-copy.*
+                :align: center
+                :scale: 100%
+
+   |nbsp|
 
 #. Dein MCU-Board muss jetzt manuell neu gestartet werden, indem du entweder
    kurz die ``RST``-Taste drückst, oder das Board mit dem ON-OFF-Schalter aus-
@@ -168,14 +143,18 @@ hältst, um in den *UF2 Upload-Modus* (Bootloader) zu gelangen.
    starten möchtest, kannst du das durch kurzes Drücken auf die ``RST`` Taste
    tun.
 
+   |nbsp|
+
 #. Abschluss: Löschen des Flash-Inhalts
 
    Wie bereits weiter oben erläutert, solltest du nach Abschluss dieser Aufgabe
    den Flash-Inhalt deines MCU-Boards wieder vollständig löschen, um
    unerwünschte Effekte auf die folgenden Übungen zu vermeiden:
 
+   |nbsp|
+
    .. admonition:: Flash Resetting
-      :class: important green-thick-border
+      :class: green-thick-border important
 
       #. Versetze dein MCU-Board in den *UF2 Upload-Modus* (Bootloader).
 
@@ -193,5 +172,7 @@ hältst, um in den *UF2 Upload-Modus* (Bootloader) zu gelangen.
          und somit auf das *MCU-Board*.
 
       #. Warte, bis der Flash komplett gelöscht ist.
+
+   |nbsp|
 
 .. vi: ft=rst ai ts=3 et sw=3 sta
