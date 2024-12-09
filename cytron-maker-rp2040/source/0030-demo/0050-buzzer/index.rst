@@ -12,9 +12,9 @@ Melodien auf dem Summer (Buzzer) abspielen
 
    Kommen wir zum Abschluss noch zu einer absolut entspannten Übung mit
    *"Hacker"* Potential. Du kannst dich noch an deine Spielereien mit dem
-   Zephyr Shell Kommando :BCY:`pwm` am Buzzer deines MCU-Boards in der
-   :ref:`Summer (Buzzer) Übung <hs-cli-pwm-buzzer>` erinnern. Dort hattest du
-   auch einfache Töne aus der C-Dur Tonleiter erzeugen können.
+   Zephyr Shell Kommando :bcy:`pwm` am Buzzer deines MCU-Boards in
+   :ref:`der Summer (Buzzer) Übung <hs-cli-pwm-buzzer>` erinnern. Dort
+   hattest du auch einfache Töne aus der C-Dur Tonleiter erzeugen können.
 
    Bridle stellt für Boards mit einem Summer ein Zephyr Shell basierendes
    Beispiel mit einem zusätzlichen :bcy:`buzzer` Kommando bereit. Das benutzen

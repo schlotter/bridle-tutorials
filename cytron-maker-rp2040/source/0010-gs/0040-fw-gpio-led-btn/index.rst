@@ -96,15 +96,15 @@ Testen der Benutzer-LED und Taste
 
    #. Beispiele und Demonstrationen:
 
-      - von :ref:`Bridle unterstützt<bridle:examples>`
-      - von :ref:`Bridle's Zephyr unterstützt<zephyr:samples-and-demos>`
-      - von :ref:`Zephyr upstream unterstützt<zephyr-us:samples-and-demos>`
+      - von :ref:`Bridle unterstützt <bridle:examples>`
+      - von :ref:`Bridle's Zephyr unterstützt <zephyr:samples-and-demos>`
+      - von :ref:`Zephyr upstream unterstützt <zephyr-us:samples-and-demos>`
 
    #. Boards:
 
-      - von :ref:`Bridle unterstützt<bridle:boards>`
-      - von :ref:`Bridle's Zephyr unterstützt<zephyr:boards>`
-      - von :ref:`Zephyr upstream unterstützt<zephyr-us:boards>`
+      - von :ref:`Bridle unterstützt <bridle:boards>`
+      - von :ref:`Bridle's Zephyr unterstützt <zephyr:boards>`
+      - von :ref:`Zephyr upstream unterstützt <zephyr-us:boards>`
 
 .. admonition:: :spelling:ignore:`West Meta Tool`
    :class: good-to-know note

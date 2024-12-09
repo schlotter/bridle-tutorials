@@ -16,7 +16,7 @@ das du nach einem Reset (``RST`` Taste kurz gedrückt), folgendes siehst:
 
 Der kleine Auszug aus dem Devicetree weiter oben zeigt dir, dass du in deiner
 aktuellen Zephyr Laufzeitumgebung einen Gerätenamen für die im Mikrocontroller
-vorhandene ADC vorfinden musst. Ein Blick zurück in die :ref:`Übung mit dem
+vorhandene ADC vorfinden musst. Ein Blick zurück in :ref:`die Übung mit dem
 Kommando device <hs-cli-device>` zeigt uns, dass der Name dieses ADC-Gerätes
 ``adc@4004c000`` lauten muss.
 

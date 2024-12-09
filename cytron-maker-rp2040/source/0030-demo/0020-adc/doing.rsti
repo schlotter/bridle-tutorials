@@ -5,7 +5,7 @@ Extra Devicetree Overlay für die ADC Kanäle 2 und 3
 ===================================================
 
 Du beginnst mit dem speziellen Devicetree Overlay. Du hast das Prinzip ja schon
-in der :ref:`zurückliegenden Übung <hs-cli-sensor-bmp280>` durchlaufen. Wir
+in :ref:`der zurückliegenden Übung <hs-cli-sensor-bmp280>` durchlaufen. Wir
 nutzen hier den Dateinamen :file:`rp2040-adc23.overlay`.
 
 .. compound::

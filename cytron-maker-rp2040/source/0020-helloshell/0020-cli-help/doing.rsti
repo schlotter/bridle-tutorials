@@ -208,7 +208,7 @@ Shell Backend
 -------------
 
 Das erste Unterkommando deutet auf eine sehr interessante Information hin.
-Hatten wir doch in der :ref:`vorangegangenen Übung <hs-build-upload>` gelernt,
+Hatten wir doch in :ref:`der vorangegangenen Übung <hs-build-upload>` gelernt,
 dass die *Shell* und das *Logging* koexistieren. Beide müssen sich unter
 Umständen die nur einmalig vorhandene Hardware über die *Console* teilen.
 

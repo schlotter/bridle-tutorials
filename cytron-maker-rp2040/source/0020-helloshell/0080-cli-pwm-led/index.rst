@@ -16,8 +16,8 @@ Shell-Kommando ``pwm`` für LED
    Abbildung auf die zugrundeliegende Zephyr API, siehe dazu auch
    :ref:`zephyr:pwm_api` in der Zephyr Dokumentation.
 
-   In dieser Übung finden wir zum Teil Antworten auf offene Fragen aus der
-   :ref:`zurückliegenden Übung <hs-cli-led>`, als es um die Zephyr LED API
+   In dieser Übung finden wir zum Teil Antworten auf offene Fragen aus
+   :ref:`der zurückliegenden Übung <hs-cli-led>`, als es um die Zephyr LED API
    ging. Du hattest dort bereits gelernt, dass es unterhalb der Zephyr LED
    API noch eine Abhängigkeit zu speziellen APIs oder Treibern in die Hardware
    gibt. In dieser Übung werden wir uns genau auf diese Ebene begeben, direkt

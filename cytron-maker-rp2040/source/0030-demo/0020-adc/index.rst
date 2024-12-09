@@ -10,7 +10,7 @@ ADC Werte auslesen und anzeigen
 
 .. topic:: Übersicht
 
-   Erinnere dich bitte an die :ref:`zurückliegende Übung <hs-cli-adc>`, als du
+   Erinnere dich bitte an :ref:`die zurückliegende Übung <hs-cli-adc>`, als du
    mit dem Zephyr Shell Kommando :bcy:`adc` am ADC Kanal 2 (**ADC2**) die über
    dem Potentiometer am Steckverbinder **GROVE 7** abfallende **Spannung Uₐ₂**
    manuell gemessen hattest.

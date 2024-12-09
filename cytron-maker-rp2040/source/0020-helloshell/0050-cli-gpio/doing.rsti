@@ -136,7 +136,7 @@ aus dem zugehörigen Devicetree des MCU-Boards stammen, zeigt diese Liste
 die tatsächlichen **Leitungsnummern** (*Pin*) an der zuständigen
 **GPIO HW-Instanz** (*Device*) an. Hier taucht nun das erste mal wieder
 ein spezieller Gerätename auf, den wir bereits in der Liste aller Geräte
-aus der :ref:`Übung zuvor <hs-cli-device>` gesehen haben. Das Kommando
+aus :ref:`der Übung zuvor <hs-cli-device>` gesehen haben. Das Kommando
 :bcy:`gpio` wird bei all seinen Unterkommandos immer einen Gerätenamen
 erwarten.
 

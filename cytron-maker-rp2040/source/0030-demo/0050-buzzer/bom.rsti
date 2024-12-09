@@ -13,8 +13,8 @@
         -
 
       * - **Hardware:**
-        - Du benötigst exakt die selben Dinge wie in der
-          :ref:`Übung zuvor <demo-zephyr-basic-servo>`.
+        - Du benötigst exakt die selben Dinge wie in
+          :ref:`der Übung zuvor <demo-zephyr-basic-servo>`.
 
       * - **Software:**
         - Du wirst eine neue Zephyr UF2 Firmware bauen, das Bridle Beispiel

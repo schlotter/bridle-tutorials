@@ -10,7 +10,7 @@ BME280 Sensor Werte auslesen und anzeigen
 
 .. topic:: Übersicht
 
-   In der :ref:`zurückliegende Übung <hs-cli-sensor-bmp280>` hattest du dir
+   In :ref:`der zurückliegende Übung <hs-cli-sensor-bmp280>` hattest du dir
    ein erstes eigenes Devicetree Overlay für die Deklaration des **Drucksensors
    BMP280** am I²C Bus deines MCU-Boards geschrieben. Das liegt in deinem West
    Workspace als Datei :file:`grove_i2c-bmp280@77.overlay`.

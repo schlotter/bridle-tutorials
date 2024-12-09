@@ -2,7 +2,7 @@ Durchführung
 ************
 
 Du wirst das bereits vorhandene Devicetree Overlay :file:`rp2040-adc23.overlay`
-aus der :ref:`vorherigen Übung <hs-cli-sensor-bmp280>` noch einmal benutzen,
+aus :ref:`der vorherigen Übung <hs-cli-sensor-bmp280>` noch einmal benutzen,
 um dir eine komplett neue **Zephyr UF2 Firmware** zu bauen und diese dann im
 Anschluss zu benutzen.
 

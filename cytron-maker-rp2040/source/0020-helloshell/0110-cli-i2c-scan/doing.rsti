@@ -285,7 +285,7 @@ erwartet haben, oder nicht?
    Mit dieser Übung hast du noch keinen wirklichen Datenzugriff auf ein I²C
    Gerät durchgeführt. Auch die :ref:`Zephyr I²C API <zephyr:i2c_api>` hast
    du nur indirekt für ein paar *"Spielereien"* mit dem I²C Protokoll für die
-   I²C Bus Scans benutzt. Erst ab der :ref:`folgenden Übung <hs-cli-i2c-aht20>`
+   I²C Bus Scans benutzt. Erst ab :ref:`der folgenden Übung <hs-cli-i2c-aht20>`
    wirst du direkte Zugriffe auf ein spezielles I²C Gerät durchführen.
 
    .. admonition:: WICHTIG

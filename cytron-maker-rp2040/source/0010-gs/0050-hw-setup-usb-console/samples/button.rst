@@ -1,8 +1,8 @@
 Button über USB-CDC/ACM Console
 *******************************
 
-**Vergewissere** dich zunächst, das das :program:`Button` Beispiel aus der
-:ref:`Übung zuvor <gs-gpio-led-btn>` weiterhin **in deinem bestehenden
+**Vergewissere** dich zunächst, das das :program:`Button` Beispiel aus
+:ref:`der Übung zuvor <gs-gpio-led-btn>` weiterhin **in deinem bestehenden
 Hardwareaufbau funktioniert**. Im Zweifel wiederholst du diesen kleinen
 Teil der vorherigen Übung nochmal.
 

@@ -25,7 +25,7 @@ das du nach einem Reset (``RST`` Taste kurz gedrückt), folgendes siehst:
    dann fehl, wenn die entsprechende Leitung im Mikrocontroller zuvor als
    digitaler Ausgang über die GPIO API konfiguriert wurde. Achte daher genau
    auf das durchgeführte Reset (``RST`` Taste kurz gedrückt) an deinem
-   MCU-Board, da du eventuell in der :ref:`Übung zuvor <hs-cli-gpio>` auch mit
+   MCU-Board, da du eventuell in :ref:`der Übung zuvor <hs-cli-gpio>` auch mit
    der LED an **GP7** (``GROVE73ULED0``) experimentiert hast.
 
    **Dieser Zustand der internen Signalverknüpfung im Mikrocontroller (pinmux)

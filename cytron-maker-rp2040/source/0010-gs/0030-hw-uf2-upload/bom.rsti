@@ -13,8 +13,8 @@
         -
 
       * - **Hardware:**
-        - Du benötigst exakt die selben Dinge wie in der
-          :ref:`Übung zuvor <gs-setup-uart-console>`.
+        - Du benötigst exakt die selben Dinge wie in
+          :ref:`der Übung zuvor <gs-setup-uart-console>`.
 
       * - **Software:**
         - Du benötigst zusätzlich die folgenden Firmware-Dateien. Lade diese

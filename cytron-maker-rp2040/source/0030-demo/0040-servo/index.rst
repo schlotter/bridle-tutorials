@@ -10,7 +10,7 @@ Servomotor hin und her bewegen
 
 .. topic:: Übersicht
 
-   Erinnere dich bitte an die :ref:`zurückliegende Übung <hs-cli-pwm-servo>`,
+   Erinnere dich bitte an :ref:`die zurückliegende Übung <hs-cli-pwm-servo>`,
    als du mit dem Zephyr Shell Kommando :bcy:`pwm` die Servomotoren manuell
    in Bewegung versetzt hast. Nun werden wir ein Zephyr Standard Beispiel für
    einen Servomotor dazu benutzen. Dieses nutzt ebenso den Devicetree als Basis
@@ -45,7 +45,7 @@ Servomotor hin und her bewegen
 
    Auf Ebene deines MCU-Boards *Cytron – Maker Pi RP2040* werden bereits die
    für alle 4 Servomotoren benutzten PWM Kanäle deklariert – du erinnerst dich
-   an die :ref:`zurückliegende Übung <hs-cli-pwm-servo>`?
+   an :ref:`die zurückliegende Übung <hs-cli-pwm-servo>`?
 
    Was dort noch nicht gesagt wurde, auch die 4 Servomotoren selbst werden
    deklarativ vorbereitet, um diese gezielt in einer Zephyr Applikation,

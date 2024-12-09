@@ -12,8 +12,8 @@
              sich die Abbildung auf der folgenden Seite.
 
    Im Verlauf dieser Übung werden an deinen aktuellen Aufbau aus
-   :numref:`gs-hw-setup-usb-console` aus der
-   :ref:`letzten Übung <gs-setup-usb-console>`
+   :numref:`gs-hw-setup-usb-console` aus
+   :ref:`der letzten Übung <gs-setup-usb-console>`
    weitere Komponenten angeschlossen. Das sind:
 
    - **zusätzliche Taste**: Grove – Button

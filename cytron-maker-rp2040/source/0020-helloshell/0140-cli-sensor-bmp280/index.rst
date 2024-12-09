@@ -38,7 +38,7 @@ Shell-Kommando ``sensor`` für BMP280
    *Configuration-and-Attributes* und *Processing-Data*.
 
    Das von dir benutzte MCU-Board kennt für sich selbst keinerlei sensorische
-   Bauelemente. Dennoch hattest du seit der Übung in :ref:`hs-cli-i2c-scan` mit
+   Bauelemente. Dennoch hattest du seit :ref:`der Übung <hs-cli-i2c-scan>` mit
    zwei Sensoren für Umweltdaten gearbeitet, der **BMP280** und der **AHT20**.
    Dir wird aber noch in Erinnerung sein, dass du diese **beiden Bauelemente
    zusätzlich** an das MCU-Board **angeschlossen** hast. Das nennt man **eine

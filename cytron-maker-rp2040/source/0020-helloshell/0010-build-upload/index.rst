@@ -10,7 +10,7 @@ Shell-Zugriff einrichten
 .. topic:: Übersicht
 
    Nun werden wir deutlich schneller! Die Grundlagen sind gelegt und mit dem
-   gelernten Handwerkszeug aus dem :ref:`vorherigen Kapitel <gettingstarted>`
+   gelernten Handwerkszeug aus :ref:`dem vorherigen Kapitel <gettingstarted>`
    werden wir in dieser "kurzen" Übung:
 
    - deinen Hardwareaufbau mit der USB-CDC/ACM Console mit zusätzlichen

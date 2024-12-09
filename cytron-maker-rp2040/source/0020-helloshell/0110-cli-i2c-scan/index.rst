@@ -25,7 +25,7 @@ Shell-Kommando ``i2c``
    Zephyr I²C API**.
 
    Du wirst in dieser Übung zunächst deine I²C Bus Struktur experimentell
-   erforschen, bevor du in der :ref:`folgenden Übung <hs-cli-i2c-bmp280>` auf
+   erforschen, bevor du in :ref:`der folgenden Übung <hs-cli-i2c-bmp280>` auf
    die Rohdaten in einem I²C Gerät zugreifen wirst.
 
 .. admonition:: Wissenswertes

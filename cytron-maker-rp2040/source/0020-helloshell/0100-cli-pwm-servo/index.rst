@@ -69,7 +69,7 @@ Shell-Kommando ``pwm`` für Servomotor
 
    .. rubric:: Wie gelingt es nun, mit einer PWM einen Servomotor zu bewegen?
 
-   Ähnlich wie in der :ref:`vorherigen Übung <hs-cli-pwm-led>` zur LED
+   Ähnlich wie in :ref:`der vorherigen Übung <hs-cli-pwm-led>` zur LED
    Helligkeit werden Servomotoren mit einer definierten **Impulsdauer**
    von **500µs bis 2,5ms** innerhalb einer **festen Periode von 20ms**
    (Grundfrequenz *fₚ = 50Hz*) gesteuert. Je nach Typ wird damit durch

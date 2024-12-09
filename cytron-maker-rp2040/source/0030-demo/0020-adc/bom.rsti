@@ -13,8 +13,8 @@
         -
 
       * - **Hardware:**
-        - Du benötigst exakt die selben Dinge wie in der
-          :ref:`Übung zuvor <demo-zephyr-sensor-bme280>`.
+        - Du benötigst exakt die selben Dinge wie in
+          :ref:`der Übung zuvor <demo-zephyr-sensor-bme280>`.
 
       * -
         - **Alternativ kannst du folgende Komponente benutzen:**

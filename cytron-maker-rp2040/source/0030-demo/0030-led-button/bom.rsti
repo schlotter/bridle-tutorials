@@ -13,8 +13,8 @@
         -
 
       * - **Hardware:**
-        - Du benötigst exakt die selben Dinge wie in der
-          :ref:`Übung zuvor <demo-zephyr-driver-adc>`.
+        - Du benötigst exakt die selben Dinge wie in
+          :ref:`der Übung zuvor <demo-zephyr-driver-adc>`.
 
       * - **Software:**
         - Du wirst neue Zephyr UF2 Firmware bauen, die Zephyr Beispiele

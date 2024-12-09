@@ -10,7 +10,7 @@ Shell-Kommando ``pwm`` für Summer (Buzzer)
 .. topic:: Übersicht
 
    Widmen wir uns nun einer weiteren Möglichkeit für den Einsatz der Zephyr
-   PWM API. Du hast in der :ref:`vorherigen Übung <hs-cli-pwm-led>` einen
+   PWM API. Du hast in :ref:`der vorherigen Übung <hs-cli-pwm-led>` einen
    PWM Kanal für die Änderung der LED Helligkeit benutzt. Dabei sollte dir
    aufgefallen sein, dass eine PWM Impulse erzeugt, also Schwingungen. Nutzen
    wir diese Erkenntnis nun aus, um solche Schwingungen für die Ausgabe von
@@ -74,7 +74,7 @@ Shell-Kommando ``pwm`` für Summer (Buzzer)
    für eine PCM und das nutzen wir aus.**
 
    Natürlich mit Abstrichen. Dazu schauen wir uns noch einmal kurz das
-   Zeitdiagramm aus der :ref:`vorherigen Übung <hs-cli-pwm-led>` an und
+   Zeitdiagramm aus :ref:`der vorherigen Übung <hs-cli-pwm-led>` an und
    wandeln es gleich etwas um. Anstatt nun innerhalb einer festen Periode
    die Dauer des Impulses zu ändern um damit die Energie im Signal (die
    effektive Spannung am Ausgang) zu steuern, werden wir nun einfach die

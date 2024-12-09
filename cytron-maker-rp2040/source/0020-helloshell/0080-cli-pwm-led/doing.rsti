@@ -63,7 +63,7 @@ MCU-Board Diagnose-LED an **GP7**
 =================================
 
 Versuchen wir also zunächst die Diagnose-LED an **GP7** :spelling:ignore:`bzw.`
-**PWM Kanal 7** wie in der :ref:`zurückliegenden Übung <hs-cli-led>`, als es
+**PWM Kanal 7** wie in :ref:`der zurückliegenden Übung <hs-cli-led>`, als es
 um die Zephyr LED API ging, nun mit der Zephyr PWM API zu schalten. Dort wurde
 die LED Helligkeit gestaffelt auf 10%, 50% und 100% gestellt. Diese Werte
 müssen wir zunächst gedanklich auf die notwendigen PWM Parameter der Periode

@@ -42,7 +42,7 @@ aufwändig.
 **Du kannst damit** aber bereits deine **Hardware** an sich **überprüfen – ohne
 einen speziellen Zephyr Sensor Treiber aktiviert haben zu müssen.** Die volle
 Funktion solltest du aber immer durch einen Treiber abbilden. Dazu kommen wir
-dann im Anschluss in der :ref:`folgenden Übung <hs-cli-sensor-bmp280>`.
+dann im Anschluss in :ref:`der folgenden Übung <hs-cli-sensor-bmp280>`.
 
 Für den Aufbau der I²C Kommandos schauen wir kurz auf die Registerbank im
 Sensor, im Datenblatt auf Seite 24 im Anschnitt *"4.2 Memory map"*:
@@ -53,7 +53,7 @@ Sensor, im Datenblatt auf Seite 24 im Anschnitt *"4.2 Memory map"*:
 
    Bosch BMP280 Datenblatt: *"I²C Register Memory Map"*
 
-So wie in der :ref:`Übung zuvor <hs-cli-i2c-aht20>` werden wir zunächst prüfen,
+So wie in :ref:`der Übung zuvor <hs-cli-i2c-aht20>` werden wir zunächst prüfen,
 ob der Sensor überhaupt am I²C Bus erreichbar ist (Register **id**), dann eine
 einzelne Messung starten (Register **ctrl_meas**), die Daten lesen (Register
 **temp_msb** bis **temp_xlsb**) und eine Berechnung durchführen.

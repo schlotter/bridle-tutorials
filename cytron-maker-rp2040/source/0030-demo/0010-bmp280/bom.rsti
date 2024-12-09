@@ -13,8 +13,8 @@
         -
 
       * - **Hardware:**
-        - Du benötigst exakt die selben Dinge wie in der
-          :ref:`Übung zuvor <hs-cli-sensor-bmp280>`.
+        - Du benötigst exakt die selben Dinge wie in
+          :ref:`der Übung zuvor <hs-cli-sensor-bmp280>`.
 
       * - **Software:**
         - Du wirst eine neue Zephyr UF2 Firmware bauen, das Zephyr Beispiel

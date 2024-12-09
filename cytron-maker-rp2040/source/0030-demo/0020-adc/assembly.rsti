@@ -8,17 +8,17 @@
       :widths: 70, 30
 
       * - Du arbeitest an der bereits aufgebauten und unveränderten Hardware aus
-          der :ref:`Übung zuvor <demo-zephyr-sensor-bme280>` weiter.
+          :ref:`der Übung zuvor <demo-zephyr-sensor-bme280>` weiter.
           Belasse alles so, wie es ist; ziehe nichts ab oder stecke etwas dazu.
           Es funktioniert ja gerade so gut.
 
           .. admonition:: WICHTIG
              :class: important
 
-             **Beachte bitte**, dass dein Hardwareaufbau bereits in der Übung
-             :ref:`hs-cli-i2c-scan` eine wesentliche Änderung erfahren hat.
-             **An deinem MCU-Board** sind jetzt **zwei externe I²C Module
-             angeschlossen!**
+             **Beachte bitte**, dass dein Hardwareaufbau bereits in
+             :ref:`der Übung <hs-cli-i2c-scan>` eine wesentliche Änderung
+             erfahren hat. **An deinem MCU-Board** sind jetzt
+             **zwei externe I²C Module angeschlossen!**
 
         - .. image:: /_images/assemblies/hs-hw-setup-zephyr-shell.*
              :align: center

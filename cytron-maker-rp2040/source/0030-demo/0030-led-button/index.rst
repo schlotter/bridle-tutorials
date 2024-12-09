@@ -14,9 +14,9 @@ Externe LED und Taste mit Standard Demos
 
 .. topic:: Übersicht
 
-   In dieser Übung nehmen wir noch einmal kurz das Ergebnis aus der
-   :ref:`zurückliegenden Übung <hs-cli-pwm-led>` mit den PWM Zugriffen auf
-   LEDs auf.
+   In dieser Übung nehmen wir noch einmal kurz das Ergebnis aus
+   :ref:`der zurückliegenden Übung <hs-cli-pwm-led>` mit den PWM
+   Zugriffen auf LEDs auf.
 
    Du hattest gelernt, dass die **externe LED** am Steckverbinder **GROVE 3**
    nur durch einen erweiterten Devicetree über den **PWM Kanal 5** erreicht

@@ -26,9 +26,9 @@ direkt in deinem West Workspace anzulegen.
    :devicetree:`gpios = <&gpio0 3 GPIO_ACTIVE_HIGH>;` spezifiziert die Lage der
    externen Taste an **GP3** und dass der *assertion level* für die Darstellung
    des logischen Werts '1' auch dem elektrischen Pegel *high* entspricht – also
-   keine Negation statt finden muss. Das wusstest du schon aus der
-   :ref:`zurückliegenden Übung <hs-cli-gpio>`, als du den Eingang **GP3** mit
-   dem Zephyr Shell Kommando :bcy:`gpio` untersucht hast.
+   keine Negation statt finden muss. Das wusstest du schon aus
+   :ref:`der zurückliegenden Übung <hs-cli-gpio>`, als du den Eingang **GP3**
+   mit dem Zephyr Shell Kommando :bcy:`gpio` untersucht hast.
 
    Viel interessanter ist hier der Knoten :ref:`aliases <zephyr:dt-alias-chosen>`.
    Dieser dient dazu, andere Knoten im Devicetree als einen vereinheitlichten
