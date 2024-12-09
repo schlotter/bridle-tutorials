@@ -20,10 +20,14 @@ Testen der Benutzer-LED und Taste
    - UF2 Firmware in den Permanentspeicher (Flash) laden, und
    - und mit der Firmware über einen UART kommunizieren.
 
+   .. rubric:: Arbeitsablauf
+
    In dieser Übung wollen wir den Arbeitsablauf für die Entwicklung von Zephyr
    Applikationen auf deinem Host-PC erlernen. Auch hier werden wir zunächst nur
    die absoluten Grundlagen kennenlernen sowie Begriffe, Verfahren und Vorgehen
    klären und nicht gleich die großen "Hacks" bewegen.
+
+   .. rubric:: Grundlegende Beispiele
 
    Was liegt da näher, als sich des umfangreichen Fundus an Beispielen von
    Zephyr direkt zu bedienen? In dieser Übung wirst du deine ersten Erfahrungen
@@ -44,6 +48,8 @@ Testen der Benutzer-LED und Taste
       | Dokumentation: :doc:`zephyr:samples/basic/button/README`
         (:doc:`upstream <zephyr-us:samples/basic/button/README>`)
 
+   .. rubric:: Online IDE
+
    .. attention::
 
       Wenn du die Übungen mit uns durchführst, bekommst du einen Zugang zu
@@ -58,29 +64,35 @@ Testen der Benutzer-LED und Taste
       :ref:`Bridle Dokumentation <bridle:gs_installing>` und im
       :ref:`Zephyr Getting Started Guide <zephyr:getting_started>`
 
-.. rubric:: Wissenswertes
+.. admonition:: Wissenswertes
+   :class: worth-knowing note
+   :collapsible:
 
-Wenn du dich zunehmend mit Zephyr beschäftigst, wirst du lernen, dass hinter dem
-:ref:`Zephyr Projekt <zephyr:zephyr-home>` weit mehr als nur ein RTOS für 32-bit
-Mikrocontroller und Computer steckt. Vielmehr handelt es sich um ein ganzes
-Ökosystem an Softwarequellen, Bibliotheken, Subsystemen, Werkzeugen, Regeln und
-Projektstrukturen sowie der dazugehörigen Dokumentation.
-Das :ref:`Zephyr Glossar <zephyr:glossary>` bietet dir zu den wichtigsten, auch
-von uns hier benutzten, Begriffen einen ersten kompakten Überblick. Wir wollen
-an dieser Stelle die wichtigsten Begriffe und damit verbundenen Methoden
-:spelling:ignore:`bzw.` Funktionen kurz erläutern.
+   Wenn du dich zunehmend mit Zephyr beschäftigst, wirst du lernen, dass
+   hinter dem :ref:`Zephyr Projekt <zephyr:zephyr-home>` weit mehr als
+   nur ein RTOS für 32-bit Mikrocontroller und Computer steckt. Vielmehr
+   handelt es sich um ein ganzes Ökosystem an Softwarequellen, Bibliotheken,
+   Subsystemen, Werkzeugen, Regeln und Projektstrukturen sowie der
+   dazugehörigen Dokumentation. Das :ref:`Zephyr Glossar <zephyr:glossary>`
+   bietet dir zu den wichtigsten, auch von uns hier benutzten, Begriffen
+   einen ersten kompakten Überblick. Wir wollen an dieser Stelle die
+   wichtigsten Begriffe und damit verbundenen Methoden :spelling:ignore:`bzw.`
+   Funktionen kurz erläutern.
 
-:Applikation :spelling:ignore:`vs.` Board:
+.. admonition:: Applikation :spelling:ignore:`vs.` Board
+   :class: good-to-know note
+   :collapsible:
+
    Zephyr unterscheidet strikt zwischen (1) den Softwarequellen für eine
    :term:`Applikation <zephyr:application>` und (2) den hardwarespezifischen
    Softwarequellen, die allgemein einem :term:`Board <zephyr:board>`
-   zugeordnet sind. Diese hardwarespezifische Software kann nicht alleinstehend
-   ausgeführt werden. Stattdessen wird immer ein applikativer Softwareteil
-   benötigt, eine Applikation, auch wenn diese nur aus einer leeren ``main()``
-   Funktion besteht. Eine **gewöhliche Zephyr Firmware** muss unter **Benennung
-   eines Boards und einer Applikation** übersetzt werden. Die Dokumentation von
-   Bridle und Zephyr pflegt Listen über unterstützte Boards und
-   Beispiel-Applikationen:
+   zugeordnet sind. Diese hardwarespezifische Software kann nicht
+   alleinstehend ausgeführt werden. Stattdessen wird immer ein applikativer
+   Softwareteil benötigt, eine Applikation, auch wenn diese nur aus einer
+   leeren ``main()`` Funktion besteht. Eine **gewöhliche Zephyr Firmware**
+   muss unter **Benennung eines Boards und einer Applikation** übersetzt
+   werden. Die Dokumentation von Bridle und Zephyr pflegt Listen über
+   unterstützte Boards und Beispiel-Applikationen:
 
    #. Beispiele und Demonstrationen:
 
@@ -94,14 +106,20 @@ an dieser Stelle die wichtigsten Begriffe und damit verbundenen Methoden
       - von :ref:`Bridle's Zephyr unterstützt<zephyr:boards>`
       - von :ref:`Zephyr upstream unterstützt<zephyr-us:boards>`
 
-:West Meta Tool:
-   Softwareentwicklung wird immer durch Technologie getrieben. Ein Informatiker,
-   also auch du, muss die folgenden Prozessschritte aus der Softwaretechnologie
-   kennen und in seiner eigenen Produktentwicklung zuordnen können:
+.. admonition:: :spelling:ignore:`West Meta Tool`
+   :class: good-to-know note
+   :collapsible:
+
+   Softwareentwicklung wird immer durch Technologie getrieben. Ein
+   Informatiker, also auch du, muss die folgenden Prozessschritte
+   aus der Softwaretechnologie kennen und in seiner eigenen
+   Produktentwicklung zuordnen können:
 
    - Software Configuration Management (SCM) – Baselines, Revisionen
-   - Software Capability Management – Umfang und Variation (feature toggle)
+   - Software Capability Management – Umfang und Variation
+     (feature toggle)
    - Pre-processing – Vorbereitung von Quellcode, Konverter
+     (:spelling:ignore:`meta-programming`)
    - Source Compilation – Assembler Mnemonic oder Bytecode generieren
    - Machine Code Assembly – nativ ausführbare Binär-Artefakte
    - Linker Stage – Binär-Artefakte zu finaler Firmware
@@ -114,13 +132,13 @@ an dieser Stelle die wichtigsten Begriffe und damit verbundenen Methoden
    Makrokosmos ein. Dir soll nur bewusst sein, dass sich hinter all diesen
    essentiell wichtigen und **notwendigen Schritten** eine Reihe
    **bewährter Verfahren (best practices)** dazu gehörende **Werkzeuge und
-   Vorgehensmodelle** etabliert haben. Diese variieren gegebenenfalls je nach
-   Art deiner Applikation und der Zielarchitektur (Hardware-Vorgaben).
+   Vorgehensmodelle** etabliert haben. Diese variieren gegebenenfalls je
+   nach Art deiner Applikation und der Zielarchitektur (Hardware-Vorgaben).
 
-   Jeder Punkt für sich stellt prinzipbedingt verschiedene Schnittstellen für
-   die Bedienung bereit. Diese Schnittstellen müssen erlernt werden, was zum
-   Teil eine längerfristige und mit unter frustrierende Angelegenheit sein
-   kann (z.B. GNU C/C++ :spelling:ignore:`vs.` LLVM/Clang oder Doxygen
+   Jeder Punkt für sich stellt prinzipbedingt verschiedene Schnittstellen
+   für die Bedienung bereit. Diese Schnittstellen müssen erlernt werden, was
+   zum Teil eine längerfristige und mit unter frustrierende Angelegenheit
+   sein kann (z.B. GNU C/C++ :spelling:ignore:`vs.` LLVM/Clang oder Doxygen
    :spelling:ignore:`vs.` Sphinx).
 
    Das Zephyr-Ökosystem umfasst unter anderem das **Meta-Werkzeug**
@@ -130,14 +148,17 @@ an dieser Stelle die wichtigsten Begriffe und damit verbundenen Methoden
    - eine Zephyr Firmware "zu bauen": :program:`west build …`
    - eine Zephyr Firmware "auszuliefern": :program:`west flash …`
 
-   Darüber hinaus gibt es viele weitere *Standardeinstiege* über West, so
-   z.B. :program:`west manifest` für das Thema SCM oder :program:`west twister`
-   für Softwaretests, egal welchen Typs.
+   Darüber hinaus gibt es viele weitere *Standardeinstiege* über West,
+   so z.B. :program:`west manifest` für das Thema SCM oder
+   :program:`west twister` für Softwaretests, egal welchen Typs.
 
-   Es sei an dieser Stelle nur kurz auf die entsprechende Passage in der Zephyr
-   Dokumentation verwiesen: :ref:`zephyr:getting_started_run_sample`.
+   Es sei an dieser Stelle nur kurz auf die entsprechende Passage in der
+   Zephyr Dokumentation verwiesen: :ref:`zephyr:getting_started_run_sample`.
 
-:West Workspace:
+.. admonition:: :spelling:ignore:`West Workspace`
+   :class: good-to-know note
+   :collapsible:
+
    Das ist **dein lokaler Arbeitsbereich in einem Verzeichnis auf** deinem
    Host-PC. Genau diesen wirst du mit **unserer virtuellen VS Code Instanz**
    automatisch erhalten – ohne Setup oder langwierigen Downloads. Wenn du
@@ -148,15 +169,24 @@ an dieser Stelle die wichtigsten Begriffe und damit verbundenen Methoden
 
 .. include:: bom.rsti
 .. include:: assembly.rsti
-.. include:: doing.rsti
+
+.. toctree::
+   :caption: Anleitungen
+   :maxdepth: 1
+
+   ide
+   doing
 
 .. toctree::
    :caption: Zephyr Beispiele
    :maxdepth: 1
-   :glob:
 
    samples/blinky
    samples/fade
    samples/button
+
+.. only:: rinoh
+
+   .. include:: samples/yourspace.rsti
 
 .. vi: ft=rst ai ts=3 et sw=3 sta
