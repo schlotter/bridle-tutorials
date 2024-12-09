@@ -1,23 +1,20 @@
-.. rst-class:: page-break
+Durchführung
+************
 
-   .. only:: rinoh
-
-      |nbsp|
-.. QUIRKS: Only with this dummy paragraph, the special rinohtype class
-   'page-break-paragraph' react as expected. But the '.. rubric::' directive
-   should also be handled as a 'ParagraphStyle' and trigger that class, But
-   it doesn't work as expected. Fix this later!
-
-.. rubric:: Durchführung
+Extra Devicetree Overlay für die ADC Kanäle 2 und 3
+===================================================
 
 Du beginnst mit dem speziellen Devicetree Overlay. Du hast das Prinzip ja schon
 in der :ref:`zurückliegenden Übung <hs-cli-sensor-bmp280>` durchlaufen. Wir
-nutzen hier den Dateinamen :file:`rp2040-adc23.overlay`. Diese Datei entsteht
-wieder in deinem West Workspace und enthält folgendes:
+nutzen hier den Dateinamen :file:`rp2040-adc23.overlay`.
 
-.. literalinclude:: /_assets/rp2040-adc23.overlay
-   :language: DTS
-   :lines: 6-
+.. compound::
+
+   Diese Datei entsteht wieder in deinem West Workspace und enthält folgendes:
+
+   .. literalinclude:: /_assets/rp2040-adc23.overlay
+      :language: DTS
+      :lines: 6-
 
 **Eine kurze Erläuterung dazu:** Die beiden ADC Kanäle 2 (Potentiometer am
 Steckverbinder **GROVE 7**) und 3 (halbe Motorspannung) werden dem **höchst
@@ -29,16 +26,18 @@ parametrisieren. Der Rest sind notwendige Konfigurationen für die zu benutzende
 ADC Kanäle, die man ebenso deklarativ aufschreibt.
 
 .. admonition:: Gut zu wissen
-   :class: info
+   :class: good-to-know info
 
    *Damit ist der funktionale Code auf seiner Werkzeugebene, der Compiler,
-   komplett von der Hardware entkoppelt und die Hardware für sich, in ihrer
-   Ebene, zu anderen und eigenständigen Werkzeugen überführt, oder besser
-   gesagt weg abstrahiert!*
+   komplett von der Hardware entkoppelt. Hardware wird nicht mehr als C-Code
+   definiert!*
 
-   **– Stimmt der Devicetree, dann funktioniert die Software! –**
+   **– Wenn der Devicetree stimmt, dann funktioniert die Software! –**
 
-.. rst-class:: page-break
+Zephyr UF2 Firmware mit extra Devicetree Overlay bauen und laden
+================================================================
+
+Hole deine **Online-Sitzung von VS Code** wieder in den Vordergrund.
 
 -----------------------------------------------------------------------------
 
@@ -47,13 +46,17 @@ ADC Kanäle, die man ebenso deklarativ aufschreibt.
 .. image:: /_images/symbol-coder-server-bl.*
    :class: sidecar
 
-Hole deine **Online-Sitzung von VS Code** wieder in den Vordergrund und **baue
-die Zephyr UF2 Firmware** ``zephyr/samples/drivers/adc/adc_dt`` zusammen mit
-dem Devicetree Overlay :file:`rp2040-adc23.overlay`, gib ein::
+.. compound::
 
-   west build -p -b cytron_maker_pi_rp2040        -S usb-console \
-              zephyr/samples/drivers/adc/adc_dt                  \
-           -- -DEXTRA_DTC_OVERLAY_FILE=$(pwd)/rp2040-adc23.overlay
+   **Baue die Zephyr UF2 Firmware** ``zephyr/samples/drivers/adc/adc_dt``
+   zusammen mit dem Devicetree Overlay :file:`rp2040-adc23.overlay`, gib ein:
+
+   .. parsed-literal::
+      :class: code
+
+      west build -p -b cytron_maker_pi_rp2040        -S usb-console \\
+                 **zephyr/samples/drivers/adc/adc_dt**                  \\
+              **-- -DEXTRA_DTC_OVERLAY_FILE=$(pwd)/rp2040-adc23.overlay**
 
 -----------------------------------------------------------------------------
 
@@ -65,6 +68,11 @@ dem Devicetree Overlay :file:`rp2040-adc23.overlay`, gib ein::
 **Lade** dir die **Zephyr UF2 Firmware** herunter und lade diese anschließend
 **auf dein MCU-Board**.
 
+Neue Zephyr UF2 Firmware mit extra Devicetree Overlay benutzen
+==============================================================
+
+Hole deinen **Terminalemulator** in den Vordergrund.
+
 -----------------------------------------------------------------------------
 
 .. ..... RESULT .............................................................
@@ -72,60 +80,56 @@ dem Devicetree Overlay :file:`rp2040-adc23.overlay`, gib ein::
 .. image:: /_images/symbol-observe-or.*
    :class: sidecar
 
-.. rubric:: Neue Zephyr UF2 Firmware mit extra Devicetree Overlay benutzen
+.. compound::
 
-Hole deinen **Terminalemulator** in den Vordergrund und **beobachte die
-Ausgaben**, folgendes muss zu sehen sein:
+   **Beobachte die Ausgaben**, folgendes muss zu sehen sein:
 
-.. parsed-literal::
-   :class: code
+   .. parsed-literal::
+      :class: code
 
-   \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
-   \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
-   ADC reading[0]:
-   - adc@4004c000, channel 2: 1192 = 960 mV
-   - adc@4004c000, channel 3: 2947 = 2374 mV
-   ADC reading[1]:
-   - adc@4004c000, channel 2: 1171 = 943 mV
-   - adc@4004c000, channel 3: 2954 = 2379 mV
+      \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
+      \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
+      ADC reading[0]:
+      - adc@4004c000, channel 2: 1192 = 960 mV
+      - adc@4004c000, channel 3: 2947 = 2374 mV
+      ADC reading[1]:
+      - adc@4004c000, channel 2: 1171 = 943 mV
+      - adc@4004c000, channel 3: 2954 = 2379 mV
 
-Drehe nun wieder an dem Potentiometer und beobachte:
+.. compound::
 
-.. parsed-literal::
-   :class: code
+   Drehe nun wieder an dem Potentiometer und beobachte:
 
-   ADC reading[2]:
-   - adc@4004c000, channel 2: 1185 = 954 mV
-   - adc@4004c000, channel 3: 2954 = 2379 mV
-   ADC reading[3]:
-   - adc@4004c000, channel 2: 1535 = 1236 mV
-   - adc@4004c000, channel 3: 2955 = 2380 mV
-   ADC reading[4]:
-   - adc@4004c000, channel 2: 2018 = 1625 mV
-   - adc@4004c000, channel 3: 2953 = 2379 mV
-   ADC reading[5]:
-   - adc@4004c000, channel 2: 2456 = 1978 mV
-   - adc@4004c000, channel 3: 2957 = 2382 mV
-   ADC reading[6]:
-   - adc@4004c000, channel 2: 3334 = 2686 mV
-   - adc@4004c000, channel 3: 2952 = 2378 mV
-   ADC reading[7]:
-   - adc@4004c000, channel 2: 4095 = 3299 mV
-   - adc@4004c000, channel 3: 2953 = 2379 mV
-   ADC reading[8]:
-   - adc@4004c000, channel 2: 5 = 4 mV
-   - adc@4004c000, channel 3: 2954 = 2379 mV
-   ADC reading[9]:
-   - adc@4004c000, channel 2: 3 = 2 mV
-   - adc@4004c000, channel 3: 2956 = 2381 mV
+   .. parsed-literal::
+      :class: code
 
-.. rst-class:: page-break
+      ADC reading[2]:
+      - adc@4004c000, channel 2: 1185 = 954 mV
+      - adc@4004c000, channel 3: 2954 = 2379 mV
+      ADC reading[3]:
+      - adc@4004c000, channel 2: 1535 = 1236 mV
+      - adc@4004c000, channel 3: 2955 = 2380 mV
+      ADC reading[4]:
+      - adc@4004c000, channel 2: 2018 = 1625 mV
+      - adc@4004c000, channel 3: 2953 = 2379 mV
+      ADC reading[5]:
+      - adc@4004c000, channel 2: 2456 = 1978 mV
+      - adc@4004c000, channel 3: 2957 = 2382 mV
+      ADC reading[6]:
+      - adc@4004c000, channel 2: 3334 = 2686 mV
+      - adc@4004c000, channel 3: 2952 = 2378 mV
+      ADC reading[7]:
+      - adc@4004c000, channel 2: 4095 = 3299 mV
+      - adc@4004c000, channel 3: 2953 = 2379 mV
+      ADC reading[8]:
+      - adc@4004c000, channel 2: 5 = 4 mV
+      - adc@4004c000, channel 3: 2954 = 2379 mV
+      ADC reading[9]:
+      - adc@4004c000, channel 2: 3 = 2 mV
+      - adc@4004c000, channel 3: 2956 = 2381 mV
 
------------------------------------------------------------------------------
-
-.. ..... INFO ...............................................................
-
-.. rubric:: Experimente mit einem NTC Widerstand
+Experimente mit einem NTC Widerstand
+====================================
 
 In deiner Box befindet sich noch das Modul **Seeed Studio – Grove - Temperature
 Sensor V1.2**. Dieses besitzt einen Temperatur veränderlichen Widerstand (NTC)
@@ -139,7 +143,7 @@ Siehst du die Veränderungen? Wir haben Werte von **1680 mV** (Raumtemperatur)
 bis **1920 mV** (Körpertemperatur) registriert.
 
 .. admonition:: Hinweis
-   :class: info
+   :class: good-to-know info
 
    .. image:: /_images/assemblies/zd-hw-setup-adc-ntc.*
       :align: center
