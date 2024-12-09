@@ -1,4 +1,10 @@
-.. rubric:: Durchführung
+Durchführung
+************
+
+Zephyr UF2 Firmware mit extra Snippet bauen und laden
+=====================================================
+
+Hole deine **Online-Sitzung von VS Code** wieder in den Vordergrund.
 
 -----------------------------------------------------------------------------
 
@@ -7,13 +13,17 @@
 .. image:: /_images/symbol-coder-server-bl.*
    :class: sidecar
 
-Hole deine **Online-Sitzung von VS Code** wieder in den Vordergrund und **baue
-die Zephyr UF2 Firmware** ``zephyr/samples/basic/servo_motor`` zusammen mit dem
-Snippet ``pwm-servo``, gib ein::
+.. compound::
 
-   west build -p -b cytron_maker_pi_rp2040        -S usb-console \
-                                                  -S pwm-servo   \
-              zephyr/samples/basic/servo_motor
+   **Baue die Zephyr UF2 Firmware** ``zephyr/samples/basic/servo_motor``
+   zusammen mit dem Snippet ``pwm-servo``, gib ein:
+
+   .. parsed-literal::
+      :class: code
+
+      west build -p -b cytron_maker_pi_rp2040        -S usb-console \\
+                                                     **-S pwm-servo**   \\
+                 **zephyr/samples/basic/servo_motor**
 
 -----------------------------------------------------------------------------
 
@@ -25,6 +35,11 @@ Snippet ``pwm-servo``, gib ein::
 **Lade** dir die **Zephyr UF2 Firmware** herunter und lade diese anschließend
 **auf dein MCU-Board**.
 
+Zephyr UF2 Firmware mit extra Snippet benutzen
+==============================================
+
+Hole deinen **Terminalemulator** in den Vordergrund.
+
 -----------------------------------------------------------------------------
 
 .. ..... RESULT .............................................................
@@ -32,17 +47,16 @@ Snippet ``pwm-servo``, gib ein::
 .. image:: /_images/symbol-observe-or.*
    :class: sidecar
 
-.. rubric:: Neue Zephyr UF2 Firmware mit extra Snippet benutzen
+.. compound::
 
-Hole deinen **Terminalemulator** in den Vordergrund und **beobachte die
-Ausgaben**, folgendes muss zu sehen sein:
+   **Beobachte die Ausgaben**, folgendes muss zu sehen sein:
 
-.. parsed-literal::
-   :class: code
+   .. parsed-literal::
+      :class: code
 
-   \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
-   \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
-   Servomotor control
+      \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
+      \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
+      Servomotor control
 
 Dein erster Servomotor an **GP12** :spelling:ignore:`bzw.` dem **PWM Kanal 12**
 ändert stetig, je nach angeschlossenem Typ, entweder die Winkelposition oder
@@ -50,11 +64,8 @@ die Drehrichtung und Drehgeschwindigkeit.
 
 .. rst-class:: page-break
 
------------------------------------------------------------------------------
-
-.. ..... INFO ...............................................................
-
-.. rubric:: Experimente mit einem anderen Servomotor
+Experimente mit einem anderen Servomotor
+========================================
 
 Hast du die Prinzipien der neuen Snippets und von Devicetree Overlays schon
 durchschaut? Wenn ja, dann ist es dir sicher möglich, auch einen anderen
