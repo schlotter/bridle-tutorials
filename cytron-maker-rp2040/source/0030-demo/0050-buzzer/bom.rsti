@@ -1,21 +1,23 @@
-.. rubric:: Ausrüstung
+.. admonition:: Ausrüstung (die selben Dinge wie zuvor)
+   :class: page-break note
+   :collapsible:
 
-.. list-table::
-   :class: longtable
-   :align: center
-   :width: 100%
-   :widths: 20, 80
-   :header-rows: 1
+   .. list-table::
+      :class: longtable
+      :align: center
+      :width: 100%
+      :widths: 20, 80
+      :header-rows: 1
 
-   * - Material
-     -
+      * - Material
+        -
 
-   * - **Hardware:**
-     - Du benötigst exakt die selben Dinge wie in der
-       :ref:`Übung zuvor <demo-zephyr-basic-servo>`.
+      * - **Hardware:**
+        - Du benötigst exakt die selben Dinge wie in der
+          :ref:`Übung zuvor <demo-zephyr-basic-servo>`.
 
-   * - **Software:**
-     - Du wirst eine neue Zephyr UF2 Firmware bauen, das Bridle Beispiel
-       :ref:`bridle:buzzer`.
+      * - **Software:**
+        - Du wirst eine neue Zephyr UF2 Firmware bauen, das Bridle Beispiel
+          :ref:`bridle:buzzer`.
 
 .. vi: ft=rst ai ts=3 et sw=3 sta

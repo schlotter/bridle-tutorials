@@ -1,14 +1,10 @@
-.. rst-class:: page-break
+Durchführung
+************
 
-   .. only:: rinoh
+Zephyr UF2 Firmware aus dem Bridle Beispiel ``buzzer`` bauen und laden
+======================================================================
 
-      |nbsp|
-.. QUIRKS: Only with this dummy paragraph, the special rinohtype class
-   'page-break-paragraph' react as expected. But the '.. rubric::' directive
-   should also be handled as a 'ParagraphStyle' and trigger that class, But
-   it doesn't work as expected. Fix this later!
-
-.. rubric:: Durchführung
+Hole deine **Online-Sitzung von VS Code** in den Vordergrund.
 
 -----------------------------------------------------------------------------
 
@@ -17,11 +13,15 @@
 .. image:: /_images/symbol-coder-server-bl.*
    :class: sidecar
 
-Hole deine **Online-Sitzung von VS Code** wieder in den Vordergrund und **baue
-die Zephyr UF2 Firmware** ``bridle/samples/buzzer``, gib ein::
+.. compound::
 
-   west build -p -b cytron_maker_pi_rp2040        -S usb-console \
-              bridle/samples/buzzer
+   **Baue die Zephyr UF2 Firmware** ``bridle/samples/buzzer``, gib ein:
+
+   .. parsed-literal::
+      :class: code
+
+      west build -p -b cytron_maker_pi_rp2040        -S usb-console \\
+                 **bridle/samples/buzzer**
 
 -----------------------------------------------------------------------------
 
@@ -33,6 +33,11 @@ die Zephyr UF2 Firmware** ``bridle/samples/buzzer``, gib ein::
 **Lade** dir die **Zephyr UF2 Firmware** herunter und lade diese anschließend
 **auf dein MCU-Board**.
 
+Zephyr UF2 Firmware aus dem Bridle Beispiel ``buzzer`` benutzen
+===============================================================
+
+Hole deinen **Terminalemulator** in den Vordergrund.
+
 -----------------------------------------------------------------------------
 
 .. ..... RESULT .............................................................
@@ -40,32 +45,46 @@ die Zephyr UF2 Firmware** ``bridle/samples/buzzer``, gib ein::
 .. image:: /_images/symbol-observe-or.*
    :class: sidecar
 
-Hole deinen **Terminalemulator** in den Vordergrund und **beobachte die
-Ausgaben**, folgendes muss zu sehen sein:
+.. compound::
 
-.. parsed-literal::
-   :class: code
+   **Beobachte die Ausgaben**, folgendes muss zu sehen sein:
 
-   \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
-   [00:00:00.381,000] :byl:`<wrn> udc_rpi: BUS RESET`
-   [00:00:00.465,000] :byl:`<wrn> udc_rpi: BUS RESET`
-   \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
-   [00:00:04.003,000] <inf> buzzersh: Buzzer shell is ready!
-   :bgn:`uart:~$` _
+   .. parsed-literal::
+      :class: code
 
-Bereits mit dem Start des Beispiels solltest du einen *Beep* gehört haben. Du
-kannst den gleichen Ton auch selber erzeugen. Gib einfach mal ein::
+      \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
+      [00:00:00.381,000] :byl:`<wrn> udc_rpi: BUS RESET`
+      [00:00:00.465,000] :byl:`<wrn> udc_rpi: BUS RESET`
+      \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
+      [00:00:04.003,000] <inf> buzzersh: Buzzer shell is ready!
+      :bgn:`uart:~$` _
 
-   buzzer beep
+.. compound::
 
-So wie alle anderen Zephyr Shell Kommandos besitzt natürlich auch das neue
-Kommando :bcy:`buzzer` eine eingebaute Hilfe und wird durch die Command-line
-completion der Zephyr Shell unterstützt. Spiele einfach ein wenig damit, z.B.::
+   Bereits mit dem Start des Beispiels solltest du einen *Beep* gehört haben.
+   Du kannst den gleichen Ton auch selber erzeugen. Gib einfach mal ein::
 
-   buzzer play funkytown
-   buzzer play folksong
+      buzzer beep
+
+.. compound::
+
+   So wie alle anderen Zephyr Shell Kommandos besitzt natürlich auch das neue
+   Kommando :bcy:`buzzer` eine eingebaute Hilfe und wird durch die *Command-line
+   TAB-Completion* der Zephyr Shell unterstützt. Spiele einfach ein wenig damit,
+   z.B.::
+
+      buzzer play funkytown
+      buzzer play folksong
 
 .. rst-class:: page-break
+
+:spelling:ignore:`Happy Hacking – Happy Coding`
+===============================================
+
+Lass uns nun einfach mal die Ausgabe hinter dem Unterkommando :bcy:`buzzer beep`
+mit einer eigenen Sequenz *"überschreiben"*. Das geht natürlich (noch) nicht life
+auf dem Zielsystem. Dafür müssen wir die C-Implementierung verändern, neu bauen
+und testen.
 
 -----------------------------------------------------------------------------
 
@@ -73,13 +92,6 @@ completion der Zephyr Shell unterstützt. Spiele einfach ein wenig damit, z.B.::
 
 .. image:: /_images/symbol-coder-server-bl.*
    :class: sidecar
-
-.. rubric:: Happy Hacking – Happy Coding
-
-Lass uns nun einfach mal die Ausgabe hinter dem Unterkommando :bcy:`buzzer beep`
-mit einer eigenen Sequenz *"überschreiben"*. Das geht natürlich (noch) nicht life
-auf dem Zielsystem. Dafür müssen wir die C-Implementierung verändern, neu bauen
-und testen.
 
 Lass uns die Quellen schnell ändern. Hole deine **Online-Sitzung von VS Code**
 wieder in den Vordergrund und öffne aus deinem West Workspace die folgende
@@ -89,57 +101,65 @@ C-Datei:
 
 Ändere nun den Inhalt des Arrays :code:`song_beep[]` nach gleichem Schema. Die
 Tonhöhe (*note*) und Tonlängen (*duration*) der jeweiligen Musiknoten sind in
-der Header-Datei :file:`songs.h` im gleichen Verzeichnis definiert. Du wirst
-diese aber kaum brauchen, da dir die folgende Abbildung die notwendigen Codes
-für die englische Benennung von Noten verrät. Genau diese brauchst du für die
-Tonhöhe (*note*).
+der Header-Datei :file:`songs.h` im gleichen Verzeichnis definiert.
+
+Du wirst diese aber kaum brauchen, da dir die folgende Abbildung die notwendigen
+Codes für die englische Benennung von Noten verrät. Genau diese brauchst du für
+die Tonhöhe (*note*).
 
 .. image:: /_images/doing/cmajor_scale.*
    :align: center
 
-Gegenüber gestellt (NACHHER/VORHER) wirst du folgenden Inhalt erhalten:
+.. compound::
 
-.. list-table::
-   :align: center
-   :width: 100%
-   :widths: 50, 50
-   :header-rows: 1
+   .. rst-class:: page-break
 
-   * - NACHHER
-     - VORHER
+   Gegenüber gestellt (NACHHER/VORHER) wirst du folgenden Inhalt erhalten:
 
-   * - .. code-block:: C
+   .. list-table::
+      :align: center
+      :width: 100%
+      :widths: 50, 50
+      :header-rows: 1
 
-          #include "songs.h"
+      * - NACHHER
+        - VORHER
 
-          const struct note_duration
-          song_beep[] =
-          {
-              {.note = C4, .duration = eigth},
-              {.note = D4, .duration = eigth},
-              {.note = E4, .duration = eigth},
-              {.note = F4, .duration = eigth},
-              {.note = G4, .duration = eigth},
-              {.note = A4, .duration = eigth},
-              {.note = B4, .duration = eigth},
-              {.note = C5, .duration = eigth},
-          };
-          const size_t song_beep_notes =
-                       ARRAY_SIZE(song_beep);
+      * - .. code-block:: C
 
-     - .. code-block:: C
+             #include "songs.h"
 
-          #include "songs.h"
+             const struct note_duration
+             song_beep[] =
+             {
+                 {.note = C4, .duration = eigth},
+                 {.note = D4, .duration = eigth},
+                 {.note = E4, .duration = eigth},
+                 {.note = F4, .duration = eigth},
+                 {.note = G4, .duration = eigth},
+                 {.note = A4, .duration = eigth},
+                 {.note = B4, .duration = eigth},
+                 {.note = C5, .duration = eigth},
+             };
+             const size_t song_beep_notes =
+                          ARRAY_SIZE(song_beep);
 
-          const struct note_duration
-          song_beep[] =
-          {
-              {.note = Db6, .duration = eigth},
-          };
-          const size_t song_beep_notes =
-                       ARRAY_SIZE(song_beep);
+        - .. code-block:: C
 
-.. rst-class:: page-break
+             #include "songs.h"
+
+             const struct note_duration
+             song_beep[] =
+             {
+                 {.note = Db6, .duration = eigth},
+             };
+             const size_t song_beep_notes =
+                          ARRAY_SIZE(song_beep);
+
+Neue Zephyr UF2 Firmware mit Tonleiter als :spelling:ignore:`Beep` bauen und laden
+----------------------------------------------------------------------------------
+
+Hole deine **Online-Sitzung von VS Code** wieder in den Vordergrund.
 
 -----------------------------------------------------------------------------
 
@@ -148,11 +168,16 @@ Gegenüber gestellt (NACHHER/VORHER) wirst du folgenden Inhalt erhalten:
 .. image:: /_images/symbol-coder-server-bl.*
    :class: sidecar
 
-Hole deine **Online-Sitzung von VS Code** wieder in den Vordergrund und **baue
-die Zephyr UF2 Firmware** ``bridle/samples/buzzer`` noch einmal, gib ein::
+.. compound::
 
-   west build -p -b cytron_maker_pi_rp2040        -S usb-console \
-              bridle/samples/buzzer
+   **Baue die Zephyr UF2 Firmware** ``bridle/samples/buzzer`` noch einmal,
+   gib ein:
+
+   .. parsed-literal::
+      :class: code
+
+      west build -p -b cytron_maker_pi_rp2040        -S usb-console \\
+                 bridle/samples/buzzer
 
 -----------------------------------------------------------------------------
 
@@ -164,6 +189,11 @@ die Zephyr UF2 Firmware** ``bridle/samples/buzzer`` noch einmal, gib ein::
 **Lade** dir die **Zephyr UF2 Firmware** herunter und lade diese anschließend
 **auf dein MCU-Board**.
 
+Neue Zephyr UF2 Firmware mit Tonleiter als :spelling:ignore:`Beep` benutzen
+---------------------------------------------------------------------------
+
+Hole deinen **Terminalemulator** in den Vordergrund.
+
 -----------------------------------------------------------------------------
 
 .. ..... RESULT .............................................................
@@ -171,20 +201,19 @@ die Zephyr UF2 Firmware** ``bridle/samples/buzzer`` noch einmal, gib ein::
 .. image:: /_images/symbol-observe-or.*
    :class: sidecar
 
-.. rubric:: Neue Zephyr UF2 Firmware mit Tonleiter als Beep benutzen
+.. compound::
 
-Hole deinen **Terminalemulator** in den Vordergrund und **beobachte die
-Ausgaben**, folgendes muss zu sehen sein:
+   **Beobachte die Ausgaben**, folgendes muss zu sehen sein:
 
-.. parsed-literal::
-   :class: code
+   .. parsed-literal::
+      :class: code
 
-   \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
-   [00:00:00.381,000] :byl:`<wrn> udc_rpi: BUS RESET`
-   [00:00:00.465,000] :byl:`<wrn> udc_rpi: BUS RESET`
-   \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
-   [00:00:04.003,000] <inf> buzzersh: Buzzer shell is ready!
-   :bgn:`uart:~$` _
+      \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
+      [00:00:00.381,000] :byl:`<wrn> udc_rpi: BUS RESET`
+      [00:00:00.465,000] :byl:`<wrn> udc_rpi: BUS RESET`
+      \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
+      [00:00:04.003,000] <inf> buzzersh: Buzzer shell is ready!
+      :bgn:`uart:~$` _
 
 .. include:: yourspace.rsti
 
