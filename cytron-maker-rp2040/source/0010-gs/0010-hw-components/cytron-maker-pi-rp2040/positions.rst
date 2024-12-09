@@ -18,12 +18,24 @@ Positionen
        #.  | **RESET-Taste**
        #.  | **BOOT-Taste**
            | bei RESET drücken, um in den UF2 Upload-Modus zu gelangen
-       #.  | **Grove Port 1~7**
+     - 12. | **LiPo/-Ion Batterie-Anschluss**
+           | MX1.25-Steckverbinder für 3,7-V-Lithium-Batterie;
+             gleichzeitig Laden und Stromversorgung
+       #.  | **Motor Spannungsklemme**
+           | Schraubklemmenblock: für 3,6~6V Alkalibatterien oder Akkus
+
+   * - 4.  | **Grove Port 1~7**
            | wahlweise UART, I²C, SPI, ADC, GPIO/PWM
        #.  | **WS2812B**
            | 2 RGB-LED an Spezial-PIO
        #.  | **Benutzer-Tasten**
-       #.  | **Piezo-Summer**
+     - 14. | **CT2105**
+           | Lithium-Akku, einzellig, hochpräzises Ladegerät mit
+             Überladeschutz für Spannung und Strom
+       #.  | **MCP7381T-2ACI**
+           | Lithium-Akku, einzellig, 500mA @ 4,20V Laderegler
+
+   * - 7.  | **Piezo-Summer**
            | 2,730kHz mit 80~87dB
        #.  | **Benutzer-LEDs (einfarbig)**
            | für Diagnosezwecke (keine Spannungsanzeige)
@@ -33,17 +45,7 @@ Positionen
            | NOR Flash: 2MB (permanent)
        #.  | **On/Off Schalter**
            | Haupt-Stromversorgungsschalter
-     - 12. | **LiPo/-Ion Batterie-Anschluss**
-           | MX1.25-Steckverbinder für 3,7-V-Lithium-Batterie;
-             gleichzeitig Laden und Stromversorgung
-       #.  | **Motor Spannungsklemme**
-           | Schraubklemmenblock: für 3,6~6V Alkalibatterien oder Akkus
-       #.  | **CT2105**
-           | Lithium-Akku, einzellig, hochpräzises Ladegerät mit
-             Überladeschutz für Spannung und Strom
-       #.  | **MCP7381T-2ACI**
-           | Lithium-Akku, einzellig, 500mA @ 4,20V Laderegler
-       #.  | **MT3608** (oder **SY7208**)
+     - 16. | **MT3608** (oder **SY7208**)
            | 2A DC/DC Abwärts-/Aufwärtswandler, 1~1,2MHz
        #.  | **MX1515** (oder **MX1508**/**MX1208**)
            | 1,5A @ 2~10V Zweikanal H-Brücke für Bürsten-DC-Motoren

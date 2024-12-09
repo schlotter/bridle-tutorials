@@ -1,3 +1,5 @@
+.. rst-class:: page-break
+
 Referenzen
 ##########
 

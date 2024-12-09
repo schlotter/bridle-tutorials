@@ -7,7 +7,7 @@ Anschlüsse
 
    Anschlüsse und Optionen am *Raspberry Pi – Debug Probe*
 
-.. list-table::
+.. list-table:: Anschlüsse und Optionen am *Raspberry Pi – Debug Probe*
    :align: center
    :width: 100%
    :widths: 10, 40, 40
