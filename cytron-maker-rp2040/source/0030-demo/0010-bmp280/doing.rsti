@@ -1,9 +1,15 @@
-.. rubric:: Durchführung
+Durchführung
+************
 
 Du wirst das bereits vorhandene Devicetree Overlay :file:`rp2040-adc23.overlay`
 aus der :ref:`vorherigen Übung <hs-cli-sensor-bmp280>` noch einmal benutzen,
 um dir eine komplett neue **Zephyr UF2 Firmware** zu bauen und diese dann im
 Anschluss zu benutzen.
+
+Zephyr UF2 Firmware mit extra Devicetree Overlay bauen und laden
+================================================================
+
+Hole deine **Online-Sitzung von VS Code** wieder in den Vordergrund.
 
 -----------------------------------------------------------------------------
 
@@ -12,13 +18,17 @@ Anschluss zu benutzen.
 .. image:: /_images/symbol-coder-server-bl.*
    :class: sidecar
 
-Hole deine **Online-Sitzung von VS Code** wieder in den Vordergrund und **baue
-die Zephyr UF2 Firmware** ``zephyr/samples/sensor/bme280`` zusammen mit dem
-Devicetree Overlay :file:`grove_i2c-bmp280@77.overlay`, gib ein::
+.. compound::
 
-   west build -p -b cytron_maker_pi_rp2040        -S usb-console \
-              zephyr/samples/sensor/bme280                       \
-           -- -DEXTRA_DTC_OVERLAY_FILE=$(pwd)/grove_i2c-bmp280@77.overlay
+   **Baue die Zephyr UF2 Firmware** ``zephyr/samples/sensor/bme280`` zusammen
+   mit dem Devicetree Overlay :file:`grove_i2c-bmp280@77.overlay`, gib ein:
+
+   .. parsed-literal::
+      :class: code
+
+      west build -p -b cytron_maker_pi_rp2040        -S usb-console \\
+                 **zephyr/samples/sensor/bme280**                       \\
+              -- -DEXTRA_DTC_OVERLAY_FILE=$(pwd)/grove_i2c-bmp280@77.overlay
 
 -----------------------------------------------------------------------------
 
@@ -30,7 +40,10 @@ Devicetree Overlay :file:`grove_i2c-bmp280@77.overlay`, gib ein::
 **Lade** dir die **Zephyr UF2 Firmware** herunter und lade diese anschließend
 **auf dein MCU-Board**.
 
-.. rst-class:: page-break
+Neue Zephyr UF2 Firmware mit extra Devicetree Overlay benutzen
+==============================================================
+
+Hole deinen **Terminalemulator** in den Vordergrund.
 
 -----------------------------------------------------------------------------
 
@@ -39,26 +52,25 @@ Devicetree Overlay :file:`grove_i2c-bmp280@77.overlay`, gib ein::
 .. image:: /_images/symbol-observe-or.*
    :class: sidecar
 
-.. rubric:: Neue Zephyr UF2 Firmware mit extra Devicetree Overlay benutzen
+.. compound::
 
-Hole deinen **Terminalemulator** in den Vordergrund und **beobachte die
-Ausgaben**, folgendes muss zu sehen sein:
+   **Beobachte die Ausgaben**, folgendes muss zu sehen sein:
 
-.. parsed-literal::
-   :class: code
+   .. parsed-literal::
+      :class: code
 
-   [00:00:00.002,000] <dbg> BME280: bme280_chip_init: ID OK (BMP280)
-   [00:00:00.012,000] <dbg> BME280: bme280_chip_init: "bmp280@77" OK
-   \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
-   [00:00:00.343,000] :byl:`<wrn> udc_rpi: BUS RESET`
-   [00:00:00.423,000] :byl:`<wrn> udc_rpi: BUS RESET`
-   \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
-   Found device "bmp280@77", getting sensor data
-   temp: 26.880000; press: 98.530789; humidity: 0.000001
-   temp: 26.890000; press: 98.529882; humidity: 0.000001
-   temp: 26.890000; press: 98.530378; humidity: 0.000001
-   temp: 26.890000; press: 98.530617; humidity: 0.000001
-   temp: 26.900000; press: 98.531652; humidity: 0.000001
+      [00:00:00.002,000] <dbg> BME280: bme280_chip_init: ID OK (BMP280)
+      [00:00:00.012,000] <dbg> BME280: bme280_chip_init: "bmp280@77" OK
+      \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
+      [00:00:00.343,000] :byl:`<wrn> udc_rpi: BUS RESET`
+      [00:00:00.423,000] :byl:`<wrn> udc_rpi: BUS RESET`
+      \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
+      Found device "bmp280@77", getting sensor data
+      temp: 26.880000; press: 98.530789; humidity: 0.000001
+      temp: 26.890000; press: 98.529882; humidity: 0.000001
+      temp: 26.890000; press: 98.530378; humidity: 0.000001
+      temp: 26.890000; press: 98.530617; humidity: 0.000001
+      temp: 26.900000; press: 98.531652; humidity: 0.000001
 
 Das war irgendwie nicht so schwer, oder? Mehr kann man in dieser Übung nicht
 machen; dafür hast du aber gelernt: **Ein Devicetree Overlay mit Deklarationen
