@@ -210,7 +210,7 @@ rst_epilog = '''
 numfig = True
 numfig_format = {
     'code-block': 'Listing %s',
-    'sections': 'Abschnitt %s',
+    'section': 'Abschnitt %s',
     'figure': 'Abbildung %s',
     'table': 'Tabelle %s',
 }
