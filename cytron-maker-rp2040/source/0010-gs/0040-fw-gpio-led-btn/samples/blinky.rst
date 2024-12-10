@@ -29,7 +29,7 @@ Hole deine **Online-Sitzung von VS Code** in den Vordergrund.
    .. parsed-literal::
       :class: code
 
-      west build -p **-b** |BOARD_st| **zephyr/samples/basic/blinky**
+      west build -p **-b** |BOARD_st| |BLINKY_st|
 
 -----------------------------------------------------------------------------
 
@@ -60,10 +60,7 @@ Hole deinen **Terminalemulator** in den Vordergrund.
    .. parsed-literal::
       :class: code
 
-      \*\*\* Booting Zephyr OS build zephyr-v3.6… \*\*\*
-      LED state: OFF
-      LED state: ON
-      LED state: … … …
+      |BOOTMSG_UART_ZS_BLINKY|
 
 Die **Benutzer-LED an GP7 blinkt**, in etwa im Sekundentakt.
 

@@ -29,7 +29,7 @@ Hole deine **Online-Sitzung von VS Code** in den Vordergrund.
    .. parsed-literal::
       :class: code
 
-      west build -p -b |BOARD| **zephyr/samples/basic/fade_led**
+      west build -p -b |BOARD| |FADE_LED_st|
 
 -----------------------------------------------------------------------------
 
@@ -60,8 +60,7 @@ Hole deinen **Terminalemulator** in den Vordergrund.
    .. parsed-literal::
       :class: code
 
-      \*\*\* Booting Zephyr OS build zephyr-v3.6… \*\*\*
-      PWM-based LED fade
+      |BOOTMSG_UART_ZS_FADE_LED|
 
 Die **Benutzer-LED an GP7 "faded"**, in etwa im Sekundentakt.
 

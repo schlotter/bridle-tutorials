@@ -26,15 +26,15 @@ Hole deine **Online-Sitzung von VS Code** in den Vordergrund.
 
 .. compound::
 
-   **Baue die Zephyr UF2 Firmware** erneut, **jetzt aber mit** dem
-   zusätzlichen Parameter :program:`-S usb-console` beim Aufruf von
+   **Baue die Zephyr UF2 Firmware** erneut, **jetzt aber mit**
+   dem zusätzlichen Parameter |USB_CONSOLE_pr| beim Aufruf von
    :program:`west build …`, gib ein:
 
    .. parsed-literal::
       :class: code
 
-      west build -p -b |BOARD|        **-S usb-console** \\
-                 zephyr/samples/basic/button
+      west build -p -b |BOARD|        |USB_CONSOLE_st| \\
+                 |BUTTON|
 
 -----------------------------------------------------------------------------
 
@@ -68,15 +68,7 @@ Verbindung** über die neu entstandene serielle Schnittstelle (.z.B. ``COM4``).
    .. parsed-literal::
       :class: code
 
-      \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
-      \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
-      Set up button at gpio@40014000 pin 20
-      Set up LED at gpio@40014000 pin 7
-      Press the button
-      Button pressed at 1750227124
-      Button pressed at 99850305
-      Button pressed at 4185249554
-      Button pressed at 4720712
+      |BOOTMSG_USB_ZS_BUTTON|
 
 Die **Benutzer-LED an GP7 leuchtet, wenn**
 die **Benutzer-Taste an GP20 gedrückt** ist.

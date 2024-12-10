@@ -29,7 +29,7 @@ Hole deine **Online-Sitzung von VS Code** in den Vordergrund.
    .. parsed-literal::
       :class: code
 
-      west build -p -b |BOARD| **zephyr/samples/basic/button**
+      west build -p -b |BOARD| |BUTTON_st|
 
 -----------------------------------------------------------------------------
 
@@ -60,12 +60,7 @@ Hole deinen **Terminalemulator** in den Vordergrund.
    .. parsed-literal::
       :class: code
 
-      \*\*\* Booting Zephyr OS build zephyr-v3.6… \*\*\*
-      Set up button at gpio@40014000 pin 20
-      Set up LED at gpio@40014000 pin 7
-      Press the button
-      Button pressed at 1750227124
-      Button pressed at … … …
+      |BOOTMSG_UART_ZS_BUTTON|
 
 Die **Benutzer-LED an GP7 leuchtet, wenn**
 die **Benutzer-Taste an GP20 gedrückt** ist.

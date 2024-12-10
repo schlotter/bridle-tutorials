@@ -26,13 +26,13 @@ Hole deine **Online-Sitzung von VS Code** in den Vordergrund.
 .. compound::
 
    **Baue die Zephyr UF2 Firmware** mit dem zusätzlichen Parameter
-   :program:`-S usb-console`, gib ein:
+   |USB_CONSOLE_pr|, gib ein:
 
    .. parsed-literal::
       :class: code
 
-      west build -p -b |BOARD|        **-S usb-console** \\
-                 zephyr/samples/drivers/led_strip
+      west build -p -b |BOARD|        |USB_CONSOLE_st| \\
+                 |LED_STRIP|
 
 -----------------------------------------------------------------------------
 
@@ -63,12 +63,7 @@ Hole deinen **Terminalemulator** in den Vordergrund.
    .. parsed-literal::
       :class: code
 
-      \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
-      [00:00:00.208,000] :yl:`<wrn> udc_rpi: BUS RESET`
-      [00:00:00.288,000] :yl:`<wrn> udc_rpi: BUS RESET`
-      \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
-      [00:00:04.002,000] <inf> main: Found LED strip device ws2812
-      [00:00:04.002,000] <inf> main: Displaying pattern on strip
+      |BOOTMSG_USB_ZS_LED_STRIP|
 
 Die **beiden RGB-LEDs** (``0`` und ``1``) an den Rändern deines MCU-Boards
 **leuchten abwechselnd in roter, grüner und blauer Farbe**.

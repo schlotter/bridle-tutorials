@@ -5,4 +5,94 @@
 .. |BOARD_st| replace:: **cytron_maker_pi_rp2040**
 .. |BOARD_em| replace:: *cytron_maker_pi_rp2040*
 
+.. Zephyr snippet arguments:
+
+.. |USB_CONSOLE| replace:: -S usb-console
+.. |USB_CONSOLE_tt| replace:: ``-S usb-console``
+.. |USB_CONSOLE_st| replace:: **-S usb-console**
+.. |USB_CONSOLE_em| replace:: *-S usb-console*
+.. |USB_CONSOLE_pr| replace:: :program:`-S usb-console`
+
+.. Zephyr sample (application) folders:
+
+.. |BLINKY| replace:: zephyr/samples/basic/blinky
+.. |BLINKY_tt| replace:: ``zephyr/samples/basic/blinky``
+.. |BLINKY_st| replace:: **zephyr/samples/basic/blinky**
+.. |BLINKY_em| replace:: *zephyr/samples/basic/blinky*
+
+.. |FADE_LED| replace:: zephyr/samples/basic/fade_led
+.. |FADE_LED_tt| replace:: ``zephyr/samples/basic/fade_led``
+.. |FADE_LED_st| replace:: **zephyr/samples/basic/fade_led**
+.. |FADE_LED_em| replace:: *zephyr/samples/basic/fade_led*
+
+.. |BUTTON| replace:: zephyr/samples/basic/button
+.. |BUTTON_tt| replace:: ``zephyr/samples/basic/button``
+.. |BUTTON_st| replace:: **zephyr/samples/basic/button**
+.. |BUTTON_em| replace:: *zephyr/samples/basic/button*
+
+.. |LED_STRIP| replace:: zephyr/samples/drivers/led_strip
+.. |LED_STRIP_tt| replace:: ``zephyr/samples/drivers/led_strip``
+.. |LED_STRIP_st| replace:: **zephyr/samples/drivers/led_strip**
+.. |LED_STRIP_em| replace:: *zephyr/samples/drivers/led_strip*
+
+.. Zephyr boot banner strings:
+
+.. |BOOT_BANNER_STRING| replace:: Booting Zephyr OS build
+.. |BOOT_BANNER_VERSION| replace:: |zephyr_release_em|\ …
+.. |BOOT_BANNER_POSTFIX| replace:: |nbsp|
+.. |BOOT_BANNER_POSTFIX_DELAYED| replace::
+   |BOOT_BANNER_POSTFIX|\ (delayed boot |BOOT_DELAY_STR|\ ms)
+
+.. |BOOT_DELAY_STR| replace:: 4000
+.. |BOOT_DELAYED| replace::
+   \*\*\*\*\* delaying boot |BOOT_DELAY_STR|\ ms (per build configuration) \*\*\*\*\*
+
+.. |BOOT_BANNER| replace::
+   \*\*\* |BOOT_BANNER_STRING| |BOOT_BANNER_VERSION|\ |BOOT_BANNER_POSTFIX|\ \*\*\*
+
+.. |BOOT_BANNER_DELAYED| replace::
+   \*\*\* |BOOT_BANNER_STRING| |BOOT_BANNER_VERSION|\ |BOOT_BANNER_POSTFIX_DELAYED|\ \*\*\*
+
+.. Zephyr application boot messages:
+
+.. |BOOTMSG_UART_ZS_BLINKY| replace::
+   |BOOT_BANNER|
+   LED state: OFF
+   LED state: ON
+   LED state: … … …
+
+.. |BOOTMSG_UART_ZS_FADE_LED| replace::
+   |BOOT_BANNER|
+   PWM-based LED fade
+   Using pulse width 0%
+   Using pulse width 2%
+   Using pulse width … … …
+
+.. |BOOTMSG_UART_ZS_BUTTON| replace::
+   |BOOT_BANNER|
+   Set up button at gpio@40014000 pin 20
+   Set up LED at gpio@40014000 pin 7
+   Press the button
+   Button pressed at 1750227124
+   Button pressed at … … …
+
+.. |BOOTMSG_USB_ZS_BUTTON| replace::
+   |BOOT_DELAYED|
+   |BOOT_BANNER_DELAYED|
+   Set up button at gpio@40014000 pin 20
+   Set up LED at gpio@40014000 pin 7
+   Press the button
+   Button pressed at 1750227124
+   Button pressed at 99850305
+   Button pressed at 4185249554
+   Button pressed at 4720712
+
+.. |BOOTMSG_USB_ZS_LED_STRIP| replace::
+   |BOOT_DELAYED|
+   [00:00:00.179,000] :byl:`<wrn> udc_rpi: BUS RESET`
+   [00:00:00.259,000] :byl:`<wrn> udc_rpi: BUS RESET`
+   |BOOT_BANNER_DELAYED|
+   [00:00:04.002,000] <inf> main: Found LED strip device ws2812
+   [00:00:04.002,000] <inf> main: Displaying pattern on strip
+
 .. vi: ft=rst ai ts=3 et sw=3 sta
