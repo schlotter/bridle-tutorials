@@ -13,12 +13,23 @@
 .. |USB_CONSOLE_em| replace:: *-S usb-console*
 .. |USB_CONSOLE_pr| replace:: :program:`-S usb-console`
 
+.. |PWM_SERVO| replace:: -S pwm-servo
+.. |PWM_SERVO_tt| replace:: ``-S pwm-servo``
+.. |PWM_SERVO_st| replace:: **-S pwm-servo**
+.. |PWM_SERVO_em| replace:: *-S pwm-servo*
+.. |PWM_SERVO_pr| replace:: :program:`-S pwm-servo`
+
 .. Zephyr sample (application) folders:
 
 .. |BLINKY| replace:: zephyr/samples/basic/blinky
 .. |BLINKY_tt| replace:: ``zephyr/samples/basic/blinky``
 .. |BLINKY_st| replace:: **zephyr/samples/basic/blinky**
 .. |BLINKY_em| replace:: *zephyr/samples/basic/blinky*
+
+.. |BLINKY_PWM| replace:: zephyr/samples/basic/blinky_pwm
+.. |BLINKY_PWM_tt| replace:: ``zephyr/samples/basic/blinky_pwm``
+.. |BLINKY_PWM_st| replace:: **zephyr/samples/basic/blinky_pwm**
+.. |BLINKY_PWM_em| replace:: *zephyr/samples/basic/blinky_pwm*
 
 .. |FADE_LED| replace:: zephyr/samples/basic/fade_led
 .. |FADE_LED_tt| replace:: ``zephyr/samples/basic/fade_led``
@@ -30,15 +41,35 @@
 .. |BUTTON_st| replace:: **zephyr/samples/basic/button**
 .. |BUTTON_em| replace:: *zephyr/samples/basic/button*
 
+.. |SERVO_MOTOR| replace:: zephyr/samples/basic/servo_motor
+.. |SERVO_MOTOR_tt| replace:: ``zephyr/samples/basic/servo_motor``
+.. |SERVO_MOTOR_st| replace:: **zephyr/samples/basic/servo_motor**
+.. |SERVO_MOTOR_em| replace:: *zephyr/samples/basic/servo_motor*
+
 .. |LED_STRIP| replace:: zephyr/samples/drivers/led_strip
 .. |LED_STRIP_tt| replace:: ``zephyr/samples/drivers/led_strip``
 .. |LED_STRIP_st| replace:: **zephyr/samples/drivers/led_strip**
 .. |LED_STRIP_em| replace:: *zephyr/samples/drivers/led_strip*
 
+.. |ADC_DT| replace:: zephyr/samples/drivers/adc/adc_dt
+.. |ADC_DT_tt| replace:: ``zephyr/samples/drivers/adc/adc_dt``
+.. |ADC_DT_st| replace:: **zephyr/samples/drivers/adc/adc_dt**
+.. |ADC_DT_em| replace:: *zephyr/samples/drivers/adc/adc_dt*
+
+.. |BME280| replace:: zephyr/samples/sensor/bme280
+.. |BME280_tt| replace:: ``zephyr/samples/sensor/bme280``
+.. |BME280_st| replace:: **zephyr/samples/sensor/bme280**
+.. |BME280_em| replace:: *zephyr/samples/sensor/bme280*
+
 .. |HELLOSHELL| replace:: bridle/samples/helloshell
 .. |HELLOSHELL_tt| replace:: ``bridle/samples/helloshell``
 .. |HELLOSHELL_st| replace:: **bridle/samples/helloshell**
 .. |HELLOSHELL_em| replace:: *bridle/samples/helloshell*
+
+.. |BUZZER| replace:: bridle/samples/buzzer
+.. |BUZZER_tt| replace:: ``bridle/samples/buzzer``
+.. |BUZZER_st| replace:: **bridle/samples/buzzer**
+.. |BUZZER_em| replace:: *bridle/samples/buzzer*
 
 .. Zephyr boot banner strings:
 
@@ -97,6 +128,11 @@
    Button pressed at 4185249554
    Button pressed at 4720712
 
+.. |BOOTMSG_USB_ZS_SERVO_MOTOR| replace::
+   |BOOT_DELAYED|
+   |BOOT_BANNER_DELAYED|
+   Servomotor control
+
 .. |BOOTMSG_USB_ZS_LED_STRIP| replace::
    |BOOT_DELAYED|
    [00:00:00.179,000] :byl:`<wrn> udc_rpi: BUS RESET`
@@ -105,12 +141,120 @@
    [00:00:04.002,000] <inf> main: Found LED strip device ws2812
    [00:00:04.002,000] <inf> main: Displaying pattern on strip
 
+.. |BOOTMSG_USB_ZS_BLINKY_GROVE| replace::
+   |BOOT_DELAYED|
+   |BOOT_BANNER_DELAYED|
+   LED state: OFF
+   LED state: ON
+   LED state: OFF
+   LED state: ON
+   LED state: OFF
+   LED state: … … …
+
+.. |BOOTMSG_USB_ZS_BLINKY_PWM_GROVE| replace::
+   |BOOT_DELAYED|
+   [00:00:00.262,000] :byl:`<wrn> udc_rpi: BUS RESET`
+   [00:00:00.346,000] :byl:`<wrn> udc_rpi: BUS RESET`
+   |BOOT_BANNER_DELAYED|
+   PWM-based blinky
+   Calibrating for channel 5...
+   Done calibrating; maximum/minimum periods 125000000/7812500 nsec
+   Using period 125000000
+   Using period 62500000
+   Using period 31250000
+   Using period 15625000
+   Using period 7812500
+   Using period … … …
+
+.. |BOOTMSG_USB_ZS_FADE_LED_GROVE| replace::
+   |BOOT_DELAYED|
+   [00:00:00.224,000] :byl:`<wrn> udc_rpi: BUS RESET`
+   [00:00:00.304,000] :byl:`<wrn> udc_rpi: BUS RESET`
+   |BOOT_BANNER_DELAYED|
+   PWM-based LED fade
+   Using pulse width 0%
+   Using pulse width 2%
+   Using pulse width 4%
+   Using pulse width 6%
+   Using pulse width 8%
+   Using pulse width … … …
+
+.. |BOOTMSG_USB_ZS_BUTTON_GROVE| replace::
+   |BOOT_DELAYED|
+   |BOOT_BANNER_DELAYED|
+   Set up button at gpio@40014000 pin 3
+   Set up LED at gpio@40014000 pin 5
+   Press the button
+   Button pressed at 2784536426
+   Button pressed at 3125707073
+   Button pressed at 3382275062
+   Button pressed at 3408247578
+   Button pressed at … … …
+
+.. |BOOTMSG_USB_ZS_ADC_DT| replace::
+   |BOOT_DELAYED|
+   |BOOT_BANNER_DELAYED|
+   ADC reading[0]:
+   - adc@4004c000, channel 2: 1192 = 960 mV
+   - adc@4004c000, channel 3: 2947 = 2374 mV
+   ADC reading[1]:
+   - adc@4004c000, channel 2: 1171 = 943 mV
+   - adc@4004c000, channel 3: 2954 = 2379 mV
+
+.. |BOOTMSG_USB_ZS_ADC_DT_CH2_UPDOWN| replace::
+   ADC reading[2]:
+   - adc@4004c000, channel 2: 1185 = 954 mV
+   - adc@4004c000, channel 3: 2954 = 2379 mV
+   ADC reading[3]:
+   - adc@4004c000, channel 2: 1535 = 1236 mV
+   - adc@4004c000, channel 3: 2955 = 2380 mV
+   ADC reading[4]:
+   - adc@4004c000, channel 2: 2018 = 1625 mV
+   - adc@4004c000, channel 3: 2953 = 2379 mV
+   ADC reading[5]:
+   - adc@4004c000, channel 2: 2456 = 1978 mV
+   - adc@4004c000, channel 3: 2957 = 2382 mV
+   ADC reading[6]:
+   - adc@4004c000, channel 2: 3334 = 2686 mV
+   - adc@4004c000, channel 3: 2952 = 2378 mV
+   ADC reading[7]:
+   - adc@4004c000, channel 2: 4095 = 3299 mV
+   - adc@4004c000, channel 3: 2953 = 2379 mV
+   ADC reading[8]:
+   - adc@4004c000, channel 2: 5 = 4 mV
+   - adc@4004c000, channel 3: 2954 = 2379 mV
+   ADC reading[9]:
+   - adc@4004c000, channel 2: 3 = 2 mV
+   - adc@4004c000, channel 3: 2956 = 2381 mV
+
+.. |BOOTMSG_USB_ZS_BME280| replace::
+   [00:00:00.002,000] <dbg> BME280: bme280_chip_init: ID OK (BMP280)
+   [00:00:00.011,000] <dbg> BME280: bme280_chip_init: "bmp280@77" OK
+   |BOOT_DELAYED|
+   [00:00:00.382,000] :byl:`<wrn> udc_rpi: BUS RESET`
+   [00:00:00.465,000] :byl:`<wrn> udc_rpi: BUS RESET`
+   |BOOT_BANNER_DELAYED|
+   Found device "bmp280@77", getting sensor data
+   temp: 26.880000; press: 98.530789; humidity: 4194303.984375
+   temp: 26.890000; press: 98.529882; humidity: 4194303.984375
+   temp: 26.890000; press: 98.530378; humidity: 4194303.984375
+   temp: 26.890000; press: 98.530617; humidity: 4194303.984375
+   temp: 26.900000; press: 98.531652; humidity: 4194303.984375
+
 .. |BOOTMSG_USB_BS_HELLOSHELL| replace::
    |BOOT_DELAYED|
    [00:00:00.172,000] :byl:`<wrn> udc_rpi: BUS RESET`
    [00:00:00.252,000] :byl:`<wrn> udc_rpi: BUS RESET`
    |BOOT_BANNER_DELAYED|
    Hello World! I'm THE SHELL from |BOARD|
+   |SHELL_PS1_INPUT|
+
+.. |BOOTMSG_USB_BS_BUZZER| replace::
+   |BOOT_DELAYED|
+   [00:00:00.175,000] :byl:`<wrn> udc_rpi: BUS RESET`
+   [00:00:00.255,000] :byl:`<wrn> udc_rpi: BUS RESET`
+   |BOOT_BANNER_DELAYED|
+   [00:00:04.003,000] <inf> buzzersh: Buzzer shell is ready!
    |SHELL_PS1_INPUT|
 
 .. Bridle helloshell application messages:

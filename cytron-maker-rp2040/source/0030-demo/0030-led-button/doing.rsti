@@ -128,8 +128,8 @@ Hole deine **Online-Sitzung von VS Code** wieder in den Vordergrund.
    .. parsed-literal::
       :class: code
 
-      west build -p -b |BOARD|        -S usb-console \\
-                 **zephyr/samples/basic/blinky**                        \\
+      west build -p -b |BOARD|        |USB_CONSOLE| \\
+                 |BLINKY_st|                        \\
               **-- -DEXTRA_DTC_OVERLAY_FILE=$(pwd)/makerpi-led_gp5.overlay**
 
 -----------------------------------------------------------------------------
@@ -161,14 +161,7 @@ Hole deinen **Terminalemulator** in den Vordergrund.
    .. parsed-literal::
       :class: code
 
-      \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
-      \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
-      LED state: OFF
-      LED state: ON
-      LED state: OFF
-      LED state: ON
-      LED state: OFF
-      LED state: … … …
+      |BOOTMSG_USB_ZS_BLINKY_GROVE|
 
 .. rst-class:: page-break
 
@@ -201,8 +194,8 @@ Hole deine **Online-Sitzung von VS Code** wieder in den Vordergrund.
    .. parsed-literal::
       :class: code
 
-      west build -p -b |BOARD|        -S usb-console \\
-                 **zephyr/samples/basic/blinky_pwm**                    \\
+      west build -p -b |BOARD|        |USB_CONSOLE| \\
+                 |BLINKY_PWM_st|                    \\
               **-- -DEXTRA_DTC_OVERLAY_FILE="**                         \\
                     **$(pwd)/makerpi-led_gp5.overlay**                  \\
                     **$(pwd)/makerpi-pwm_gp5.overlay**                  \\
@@ -237,13 +230,7 @@ Hole deinen **Terminalemulator** in den Vordergrund.
    .. parsed-literal::
       :class: code
 
-      \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
-      [00:00:00.193,000] :byl:`<wrn> udc_rpi: BUS RESET`
-      [00:00:00.273,000] :byl:`<wrn> udc_rpi: BUS RESET`
-      \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
-      PWM-based blinky
-      Calibrating for channel 5...
-      Done calibrating; maximum/minimum periods 125000000/7812500 nsec
+      |BOOTMSG_USB_ZS_BLINKY_PWM_GROVE|
 
 .. rst-class:: page-break
 
@@ -276,8 +263,8 @@ Hole deine **Online-Sitzung von VS Code** wieder in den Vordergrund.
    .. parsed-literal::
       :class: code
 
-      west build -p -b |BOARD|        -S usb-console \\
-                 **zephyr/samples/basic/fade_led**                      \\
+      west build -p -b |BOARD|        |USB_CONSOLE| \\
+                 |FADE_LED_st|                      \\
               **-- -DEXTRA_DTC_OVERLAY_FILE="**                         \\
                     **$(pwd)/makerpi-led_gp5.overlay**                  \\
                     **$(pwd)/makerpi-pwm_gp5.overlay**                  \\
@@ -312,11 +299,7 @@ Hole deinen **Terminalemulator** in den Vordergrund.
    .. parsed-literal::
       :class: code
 
-      \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
-      [00:00:00.193,000] :byl:`<wrn> udc_rpi: BUS RESET`
-      [00:00:00.273,000] :byl:`<wrn> udc_rpi: BUS RESET`
-      \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
-      PWM-based LED fade
+      |BOOTMSG_USB_ZS_FADE_LED_GROVE|
 
 .. rst-class:: page-break
 
@@ -350,8 +333,8 @@ Hole deine **Online-Sitzung von VS Code** wieder in den Vordergrund.
    .. parsed-literal::
       :class: code
 
-      west build -p -b |BOARD|        -S usb-console \\
-                 **zephyr/samples/basic/button**                        \\
+      west build -p -b |BOARD|        |USB_CONSOLE| \\
+                 |BUTTON_st|                        \\
               **-- -DEXTRA_DTC_OVERLAY_FILE="**                         \\
                     **$(pwd)/makerpi-led_gp5.overlay**                  \\
                     **$(pwd)/makerpi-btn_gp3.overlay**                  \\
@@ -386,16 +369,7 @@ Hole deinen **Terminalemulator** in den Vordergrund.
    .. parsed-literal::
       :class: code
 
-      \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
-      \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
-      Set up button at gpio@40014000 pin 3
-      Set up LED at gpio@40014000 pin 5
-      Press the button
-      Button pressed at 2784536426
-      Button pressed at 3125707073
-      Button pressed at 3382275062
-      Button pressed at 3408247578
-      Button pressed at … … …
+      |BOOTMSG_USB_ZS_BUTTON_GROVE|
 
 .. include:: yourspace.rsti
 

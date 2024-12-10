@@ -21,9 +21,9 @@ Hole deine **Online-Sitzung von VS Code** wieder in den Vordergrund.
    .. parsed-literal::
       :class: code
 
-      west build -p -b |BOARD|        -S usb-console \\
-                                                     **-S pwm-servo**   \\
-                 **zephyr/samples/basic/servo_motor**
+      west build -p -b |BOARD|        |USB_CONSOLE| \\
+                                                     |PWM_SERVO_st|   \\
+                 |SERVO_MOTOR_st|
 
 -----------------------------------------------------------------------------
 
@@ -54,9 +54,7 @@ Hole deinen **Terminalemulator** in den Vordergrund.
    .. parsed-literal::
       :class: code
 
-      \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
-      \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
-      Servomotor control
+      |BOOTMSG_USB_ZS_SERVO_MOTOR|
 
 Dein erster Servomotor an **GP12** :spelling:ignore:`bzw.` dem **PWM Kanal 12**
 ändert stetig, je nach angeschlossenem Typ, entweder die Winkelposition oder

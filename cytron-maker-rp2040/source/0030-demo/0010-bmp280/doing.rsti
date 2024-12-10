@@ -26,8 +26,8 @@ Hole deine **Online-Sitzung von VS Code** wieder in den Vordergrund.
    .. parsed-literal::
       :class: code
 
-      west build -p -b |BOARD|        -S usb-console \\
-                 **zephyr/samples/sensor/bme280**                       \\
+      west build -p -b |BOARD|        |USB_CONSOLE| \\
+                 |BME280_st|                       \\
               -- -DEXTRA_DTC_OVERLAY_FILE=$(pwd)/grove_i2c-bmp280@77.overlay
 
 -----------------------------------------------------------------------------
@@ -59,18 +59,7 @@ Hole deinen **Terminalemulator** in den Vordergrund.
    .. parsed-literal::
       :class: code
 
-      [00:00:00.002,000] <dbg> BME280: bme280_chip_init: ID OK (BMP280)
-      [00:00:00.012,000] <dbg> BME280: bme280_chip_init: "bmp280@77" OK
-      \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
-      [00:00:00.343,000] :byl:`<wrn> udc_rpi: BUS RESET`
-      [00:00:00.423,000] :byl:`<wrn> udc_rpi: BUS RESET`
-      \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
-      Found device "bmp280@77", getting sensor data
-      temp: 26.880000; press: 98.530789; humidity: 0.000001
-      temp: 26.890000; press: 98.529882; humidity: 0.000001
-      temp: 26.890000; press: 98.530378; humidity: 0.000001
-      temp: 26.890000; press: 98.530617; humidity: 0.000001
-      temp: 26.900000; press: 98.531652; humidity: 0.000001
+      |BOOTMSG_USB_ZS_BME280|
 
 Das war irgendwie nicht so schwer, oder? Mehr kann man in dieser Übung nicht
 machen; dafür hast du aber gelernt: **Ein Devicetree Overlay mit Deklarationen

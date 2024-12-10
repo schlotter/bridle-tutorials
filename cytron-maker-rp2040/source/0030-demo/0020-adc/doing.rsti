@@ -54,8 +54,8 @@ Hole deine **Online-Sitzung von VS Code** wieder in den Vordergrund.
    .. parsed-literal::
       :class: code
 
-      west build -p -b |BOARD|        -S usb-console \\
-                 **zephyr/samples/drivers/adc/adc_dt**                  \\
+      west build -p -b |BOARD|        |USB_CONSOLE| \\
+                 |ADC_DT_st|                  \\
               **-- -DEXTRA_DTC_OVERLAY_FILE=$(pwd)/rp2040-adc23.overlay**
 
 -----------------------------------------------------------------------------
@@ -87,14 +87,7 @@ Hole deinen **Terminalemulator** in den Vordergrund.
    .. parsed-literal::
       :class: code
 
-      \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
-      \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
-      ADC reading[0]:
-      - adc@4004c000, channel 2: 1192 = 960 mV
-      - adc@4004c000, channel 3: 2947 = 2374 mV
-      ADC reading[1]:
-      - adc@4004c000, channel 2: 1171 = 943 mV
-      - adc@4004c000, channel 3: 2954 = 2379 mV
+      |BOOTMSG_USB_ZS_ADC_DT|
 
 .. compound::
 
@@ -103,30 +96,7 @@ Hole deinen **Terminalemulator** in den Vordergrund.
    .. parsed-literal::
       :class: code
 
-      ADC reading[2]:
-      - adc@4004c000, channel 2: 1185 = 954 mV
-      - adc@4004c000, channel 3: 2954 = 2379 mV
-      ADC reading[3]:
-      - adc@4004c000, channel 2: 1535 = 1236 mV
-      - adc@4004c000, channel 3: 2955 = 2380 mV
-      ADC reading[4]:
-      - adc@4004c000, channel 2: 2018 = 1625 mV
-      - adc@4004c000, channel 3: 2953 = 2379 mV
-      ADC reading[5]:
-      - adc@4004c000, channel 2: 2456 = 1978 mV
-      - adc@4004c000, channel 3: 2957 = 2382 mV
-      ADC reading[6]:
-      - adc@4004c000, channel 2: 3334 = 2686 mV
-      - adc@4004c000, channel 3: 2952 = 2378 mV
-      ADC reading[7]:
-      - adc@4004c000, channel 2: 4095 = 3299 mV
-      - adc@4004c000, channel 3: 2953 = 2379 mV
-      ADC reading[8]:
-      - adc@4004c000, channel 2: 5 = 4 mV
-      - adc@4004c000, channel 3: 2954 = 2379 mV
-      ADC reading[9]:
-      - adc@4004c000, channel 2: 3 = 2 mV
-      - adc@4004c000, channel 3: 2956 = 2381 mV
+      |BOOTMSG_USB_ZS_ADC_DT_CH2_UPDOWN|
 
 Experimente mit einem NTC Widerstand
 ====================================
