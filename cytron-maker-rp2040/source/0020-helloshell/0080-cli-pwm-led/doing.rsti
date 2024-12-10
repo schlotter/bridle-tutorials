@@ -7,12 +7,7 @@ das du nach einem Reset (``RST`` Taste kurz gedrückt), folgendes siehst:
 .. parsed-literal::
    :class: code
 
-   \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
-   [00:00:00.179,000] :byl:`<wrn> udc_rpi: BUS RESET`
-   [00:00:00.267,000] :byl:`<wrn> udc_rpi: BUS RESET`
-   \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
-   Hello World! I'm THE SHELL from |BOARD|
-   :bgn:`uart:~$` _
+   |BOOTMSG_USB_BS_HELLOSHELL|
 
 .. admonition:: Beachte bitte!
    :class: red-thick-border failure
@@ -52,12 +47,7 @@ das du nach einem Reset (``RST`` Taste kurz gedrückt), folgendes siehst:
    .. parsed-literal::
       :class: code
 
-      pwm - PWM shell commands
-      Subcommands:
-        cycles  : <device> <channel> <period in cycles> <pulse width in cycles>
-                  [flags]
-        usec    : <device> <channel> <period in usec> <pulse width in usec> [flags]
-        nsec    : <device> <channel> <period in nsec> <pulse width in nsec> [flags]
+      |BS_HELLOSHELL_PWM_HELP|
 
 MCU-Board Diagnose-LED an **GP7**
 =================================
@@ -98,12 +88,14 @@ müssen wir zunächst gedanklich auf die notwendigen PWM Parameter der Periode
 .. image:: /_images/symbol-doing-vi.*
    :class: sidecar
 
-Gib nacheinander ein und beobachte::
+.. compound::
 
-   pwm usec pwm@40050000 7 20000 2000
-   pwm usec pwm@40050000 7 20000 10000
-   pwm usec pwm@40050000 7 20000 20000
-   pwm usec pwm@40050000 7 20000 0
+   Gib nacheinander ein und beobachte::
+
+      pwm usec pwm@40050000 7 20000 2000
+      pwm usec pwm@40050000 7 20000 10000
+      pwm usec pwm@40050000 7 20000 20000
+      pwm usec pwm@40050000 7 20000 0
 
 -----------------------------------------------------------------------------
 

@@ -7,12 +7,7 @@ das du nach einem Reset (``RST`` Taste kurz gedrückt), folgendes siehst:
 .. parsed-literal::
    :class: code
 
-   \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
-   [00:00:00.179,000] :byl:`<wrn> udc_rpi: BUS RESET`
-   [00:00:00.267,000] :byl:`<wrn> udc_rpi: BUS RESET`
-   \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
-   Hello World! I'm THE SHELL from |BOARD|
-   :bgn:`uart:~$` _
+   |BOOTMSG_USB_BS_HELLOSHELL|
 
 -----------------------------------------------------------------------------
 
@@ -41,22 +36,7 @@ das du nach einem Reset (``RST`` Taste kurz gedrückt), folgendes siehst:
    .. parsed-literal::
       :class: code
 
-      i2c - I2C commands
-      Subcommands:
-        scan        : Scan I2C devices
-                      Usage: scan <device>
-        recover     : Recover I2C bus
-                      Usage: recover <device>
-        read        : Read bytes from an I2C device
-                      Usage: read <device> <addr> <reg> [<bytes>]
-        read_byte   : Read a byte from an I2C device
-                      Usage: read_byte <device> <addr> <reg>
-        write       : Write bytes to an I2C device
-                      Usage: write <device> <addr> <reg> [<byte1>, ...]
-        write_byte  : Write a byte to an I2C device
-                      Usage: write_byte <device> <addr> <reg> <value>
-        speed       : Configure I2C bus speed
-                      Usage: speed <device> <speed>
+      |BS_HELLOSHELL_I2C_HELP|
 
 .. rst-class:: page-break
 
@@ -92,16 +72,7 @@ Legen wir nun mit einem I²C Bus Scan los.
    .. parsed-literal::
       :class: code
 
-           0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
-      00:             -- -- -- -- -- -- -- -- -- -- -- --
-      10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-      20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-      30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-      40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-      50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-      60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-      70: -- -- -- -- -- -- -- 77
-      1 devices found on i2c@40044000
+      |BS_HELLOSHELL_I2C_SCAN_I2C0_77|
 
 **Kontrolliere**, dass du auch die Hexadezimalzahl **77** angezeigt bekommst.
 Sollte das bei dir nicht der Fall sein, dann frage bitte uns Mentoren.
@@ -183,16 +154,7 @@ Wiederholen wir den I²C Bus Scan mit dem veränderten Hardware-Aufbau.
    .. parsed-literal::
       :class: code
 
-           0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
-      00:             -- -- -- -- -- -- -- -- -- -- -- --
-      10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-      20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-      30: -- -- -- -- -- -- -- -- 38 -- -- -- -- -- -- --
-      40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-      50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-      60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-      70: -- -- -- -- -- -- -- --
-      1 devices found on i2c@40044000
+      |BS_HELLOSHELL_I2C_SCAN_I2C0_38|
 
 **Kontrolliere**, dass du auch die Hexadezimalzahl **38** angezeigt bekommst.
 Sollte das bei dir nicht der Fall sein, dann frage bitte uns Mentoren.
@@ -261,16 +223,7 @@ Wiederholen wir den I²C Bus Scan mit dem veränderten Hardware-Aufbau.
    .. parsed-literal::
       :class: code
 
-           0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
-      00:             -- -- -- -- -- -- -- -- -- -- -- --
-      10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-      20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-      30: -- -- -- -- -- -- -- -- 38 -- -- -- -- -- -- --
-      40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-      50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-      60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-      70: -- -- -- -- -- -- -- 77
-      2 devices found on i2c@40044000
+      |BS_HELLOSHELL_I2C_SCAN_I2C0_38_77|
 
 **Kontrolliere**, dass du die beiden Hexadezimalzahlen **38** und **77**
 angezeigt bekommst. Sollte das bei dir nicht der Fall sein, dann frage

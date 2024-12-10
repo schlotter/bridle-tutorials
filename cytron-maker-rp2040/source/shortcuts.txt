@@ -35,6 +35,11 @@
 .. |LED_STRIP_st| replace:: **zephyr/samples/drivers/led_strip**
 .. |LED_STRIP_em| replace:: *zephyr/samples/drivers/led_strip*
 
+.. |HELLOSHELL| replace:: bridle/samples/helloshell
+.. |HELLOSHELL_tt| replace:: ``bridle/samples/helloshell``
+.. |HELLOSHELL_st| replace:: **bridle/samples/helloshell**
+.. |HELLOSHELL_em| replace:: *bridle/samples/helloshell*
+
 .. Zephyr boot banner strings:
 
 .. |BOOT_BANNER_STRING| replace:: Booting Zephyr OS build
@@ -52,6 +57,11 @@
 
 .. |BOOT_BANNER_DELAYED| replace::
    \*\*\* |BOOT_BANNER_STRING| |BOOT_BANNER_VERSION|\ |BOOT_BANNER_POSTFIX_DELAYED|\ \*\*\*
+
+.. Zephyr shell prompts:
+
+.. |SHELL_PS1| replace:: :bgn:`uart:~$`
+.. |SHELL_PS1_INPUT| replace:: |SHELL_PS1| █
 
 .. Zephyr application boot messages:
 
@@ -94,5 +104,460 @@
    |BOOT_BANNER_DELAYED|
    [00:00:04.002,000] <inf> main: Found LED strip device ws2812
    [00:00:04.002,000] <inf> main: Displaying pattern on strip
+
+.. |BOOTMSG_USB_BS_HELLOSHELL| replace::
+   |BOOT_DELAYED|
+   [00:00:00.172,000] :byl:`<wrn> udc_rpi: BUS RESET`
+   [00:00:00.252,000] :byl:`<wrn> udc_rpi: BUS RESET`
+   |BOOT_BANNER_DELAYED|
+   Hello World! I'm THE SHELL from |BOARD|
+   |SHELL_PS1_INPUT|
+
+.. Bridle helloshell application messages:
+
+.. |nbln| replace:: |nbsp|
+
+.. |BS_HELLOSHELL_TAB| replace::
+   \   :bcy:`adc        bridle     clear      dac        device     devmem     eeprom`
+   \   :bcy:`flash      gpio       hello      help       history    hwinfo     i2c`
+   \   :bcy:`kernel     led        log        pwm        regulator  rem        resize`
+   \   :bcy:`retval     rtc        sensor     shell      timer`
+   |SHELL_PS1_INPUT|
+
+.. |BS_HELLOSHELL_HE_TAB| replace::
+   |SHELL_PS1| he
+   \   :bcy:`hello  help`
+   |SHELL_PS1| hel
+
+.. |BS_HELLOSHELL_HELP| replace::
+   Please press the <Tab> button to see all available commands.
+   You can also use the <Tab> button to prompt or auto-complete all commands
+   or its subcommands. You can try to call commands with <-h> or <--help>
+   parameter for more information.
+   |nbln|
+   Shell supports following meta-keys:
+   \   Ctrl + (a key from: abcdefklnpuw)
+   \   Alt  + (a key from: bf)
+   Please refer to shell documentation for more details.
+   |nbln|
+   Available commands:
+   \   adc        : ADC commands
+   \   bridle     : Bridle commands.
+   \   clear      : Clear screen.
+   \   dac        : DAC shell commands
+   \   device     : Device commands
+   \   devmem     : Read/write physical memory
+   \                Usage:
+   \                Read memory at address with optional width:
+   \                devmem address [width]
+   \                Write memory at address with mandatory width and value:
+   \                devmem address <width> <value>
+   \   eeprom     : EEPROM shell commands
+   \   flash      : Flash shell commands
+   \   gpio       : GPIO commands
+   \   hello      : say hello
+   \   help       : Prints the help message.
+   \   history    : Command history.
+   \   hwinfo     : HWINFO commands
+   \   i2c        : I2C commands
+   \   kernel     : Kernel commands
+   \   led        : LED commands
+   \   log        : Commands for controlling logger
+   \   pwm        : PWM shell commands
+   \   regulator  : Regulator playground
+   \   rem        : Ignore lines beginning with 'rem '
+   \   resize     : Console gets terminal screen size or assumes default in case
+   \                the readout fails. It must be executed after each terminal
+   \                width change to ensure correct text display.
+   \   retval     : Print return value of most recent command
+   \   rtc        : RTC commands
+   \   sensor     : Sensor commands
+   \   shell      : Useful, not Unix-like shell commands.
+   \   timer      : Timer commands
+   |SHELL_PS1_INPUT|
+
+.. |BS_HELLOSHELL_SHELL_HELP| replace::
+   shell - Useful, not Unix-like shell commands.
+   Subcommands:
+   \   backends        : List active shell backends.
+   |nbln|
+   \   backspace_mode  : Toggle backspace key mode.
+   \                     Some terminals are not sending separate escape code for
+   \                     backspace and delete button. This command forces shell
+   \                     to interpret delete key as backspace.
+   \   colors          : Toggle colored syntax.
+   \   vt100           : Toggle vt100 commands.
+   \   prompt          : Toggle prompt.
+   \   echo            : Toggle shell echo.
+   \   stats           : Shell statistics.
+   |SHELL_PS1_INPUT|
+
+.. |BS_HELLOSHELL_SHELL_BACKENDS| replace::
+   Active shell backends:
+   \     0. :uart:~$  (shell_uart)
+   |SHELL_PS1_INPUT|
+
+.. |BS_HELLOSHELL_LOG_BACKEND| replace::
+   backend - Logger backends commands.
+   Subcommands:
+   \   shell_uart_backend
+   |SHELL_PS1_INPUT|
+
+.. |BS_HELLOSHELL_HELLO_HELP| replace::
+   hello - say hello
+   |SHELL_PS1_INPUT|
+
+.. |BS_HELLOSHELL_HELLO| replace::
+   Hello from shell.
+   |SHELL_PS1_INPUT|
+
+.. |BS_HELLOSHELL_HISTORY| replace::
+   [  0] history
+   [  1] hello
+   [  2] hello -h
+   [  3] log backend
+   [  4] shell backends
+   [  5] shell --help
+   [  6] help
+   |SHELL_PS1_INPUT|
+
+.. |BS_HELLOSHELL_KERNEL_VERSION| replace::
+   Zephyr version |zephyr_release_number_em|\ …
+
+.. |BS_HELLOSHELL_BRIDLE_VERSION| replace::
+   Bridle version |bridle_release_number_em|\ …
+
+.. |BS_HELLOSHELL_BRIDLE_INFO_SHORT| replace::
+   Zephyr: |zephyr_release_number_em|\ …
+   Bridle: |bridle_release_number_em|\ …
+
+.. |BS_HELLOSHELL_KERNEL_UPTIME| replace::
+   Uptime: 7164258 ms
+
+.. |BS_HELLOSHELL_KERNEL_THREADS| replace::
+   Scheduler: 896 since last call
+   Threads:
+   \  0x200014d0
+   \         options: 0x0, priority: -16 timeout: 0
+   \         state: pending, entry: 0x1000314d
+   \         stack size 2048, unused 1864, usage 184 / 2048 (8 %)
+   |nbln|
+   \*0x20001138 **shell_uart**
+   \         options: 0x0, priority: 14 timeout: 0
+   \         state: queued, entry: 0x1000742d
+   \         stack size 2048, unused 864, usage 1184 / 2048 (57 %)
+   |nbln|
+   \  0x20001590 usb_rpi
+   \         options: 0x0, priority: -14 timeout: 0
+   \         state: pending, entry: 0x10008d0d
+   \         stack size 1024, unused 608, usage 416 / 1024 (40 %)
+   |nbln|
+   \  0x20001e60 sysworkq
+   \         options: 0x1, priority: -1 timeout: 0
+   \         state: pending, entry: 0x1000ff25
+   \         stack size 1024, unused 808, usage 216 / 1024 (21 %)
+   |nbln|
+   \  0x20001058 usbworkq
+   \         options: 0x0, priority: -1 timeout: 0
+   \         state: pending, entry: 0x1000ff25
+   \         stack size 1024, unused 760, usage 264 / 1024 (25 %)
+   |nbln|
+   \  0x20000b58 logging
+   \         options: 0x0, priority: 14 timeout: 0
+   \         state: pending, entry: 0x10003cd9
+   \         stack size 768, unused 512, usage 256 / 768 (33 %)
+   |nbln|
+   \  0x20001c00 idle
+   \         options: 0x1, priority: 15 timeout: 0
+   \         state: , entry: 0x10016be3
+   \         stack size 256, unused 168, usage 88 / 256 (34 %)
+
+.. |BS_HELLOSHELL_DEVICE_LIST| replace::
+   devices:
+   - clock-controller@40008000 (READY)
+   \   DT node labels: clocks
+   - reset-controller@4000c000 (READY)
+   \   DT node labels: reset
+   - snippet_cdc_acm_console_uart (READY)
+   \   DT node labels: snippet_cdc_acm_console_uart
+   - uart@40034000 (READY)
+   \   DT node labels: uart0  **grove_serial**
+   - timer@40054000 (READY)
+   \   DT node labels: timer
+   - pio@50200000 (READY)
+   \   DT node labels: ((pio_hw_t \*)0x50200000u)
+   - gpio@40014000 (READY)
+   \   DT node labels: gpio0
+   - adc@4004c000 (READY)
+   \   DT node labels: adc
+   - flash-controller@18000000 (READY)
+   \   DT node labels: ssi
+   - i2c@40044000 (READY)
+   \   DT node labels: i2c0   **grove_i2c**
+   - pwm@40050000 (READY)
+   \   DT node labels: pwm    **grove_pwm_d0**  **grove_pwm_d1**  **grove_pwm_d2**
+   \                          **grove_pwm_d3**  **grove_pwm_d4**  **grove_pwm_d5**
+   \                          **grove_pwm_d6**  **grove_pwm_d7**  **grove_pwm_d16**
+   \                          **grove_pwm_d17** **grove_pwm_d26** **grove_pwm_d27**
+   \                          **grove_pwm_d28**
+   - vreg@40064000 (READY)
+   \   DT node labels: vreg
+   - pwm_leds (READY)
+   \   DT node labels: pwm_leds
+
+.. |BS_HELLOSHELL_GPIO_HELP| replace::
+   gpio - GPIO commands
+   Subcommands:
+   \   conf     : Configure GPIO pin
+   \              Usage: gpio conf <device> <pin>
+   \                               <configuration <i|o>[u|d][h|l][0|1]>
+   \                               [vendor specific]
+   \              <i|o> - input | output
+   \              [u|d] - pull up | pull down,
+   \                      otherwise open
+   \              [h|l] - active high | active low,
+   \                      otherwise defaults to active high
+   \              [0|1] - initialise to logic 0 | logic 1,
+   \                      otherwise defaults to logic 0
+   \              [vendor specific] - configuration flags within the mask 0xFF00
+   \                                  see include/zephyr/dt-bindings/gpio/
+   \   get      : Get GPIO pin value
+   \              Usage: gpio get <device> <pin>
+   \   set      : Set GPIO pin value
+   \              Usage: gpio set <device> <pin> <level 0|1>
+   \   toggle   : Toggle GPIO pin
+   \              Usage: gpio toggle <device> <pin>
+   \   devices  : List all GPIO devices
+   \              Usage: gpio devices
+   \   blink    : Blink GPIO pin
+   \              Usage: gpio blink <device> <pin>
+   \   info     : GPIO Information
+   \              Usage: gpio info [device]
+
+.. |BS_HELLOSHELL_GPIO_INFO| replace::
+   \   Line         Reserved Device           Pin
+   \                 \*        gpio@40014000    19
+   \                 \*        gpio@40014000    23
+   \                 \*        gpio@40014000    24
+   \                 \*        gpio@40014000    25
+   \    BUZZER_PWM6           gpio@40014000    22
+   \    DCM1A_PWM8            gpio@40014000     8
+   \    DCM1B_PWM9            gpio@40014000     9
+   \    DCM2A_PWM10           gpio@40014000    10
+   \    DCM2B_PWM11           gpio@40014000    11
+   \    GROVE13_TX0           gpio@40014000     0
+   \    GROVE14_RX0           gpio@40014000     1
+   \    GROVE23_SCK0          gpio@40014000     2
+   \    GROVE24_SDO0          gpio@40014000     3
+   \    GROVE33_SDI0          gpio@40014000     4
+   \    GROVE34_CSN0          gpio@40014000     5
+   \    GROVE43_SDA0          gpio@40014000    16
+   \    GROVE44_SCL0          gpio@40014000    17
+   \    GROVE53               gpio@40014000     6
+   \    GROVE54_ADC0          gpio@40014000    26
+   \    GROVE64_ADC1          gpio@40014000    27
+   \    GROVE73ULED0          gpio@40014000     7
+   \    GROVE74_ADC2          gpio@40014000    28
+   \    RGB_PIO0              gpio@40014000    18
+   \    SRVM1_PWM12           gpio@40014000    12
+   \    SRVM2_PWM13           gpio@40014000    13
+   \    SRVM3_PWM14           gpio@40014000    14
+   \    SRVM4_PWM15           gpio@40014000    15
+   \    UBTN0                 gpio@40014000    20
+   \    UBTN1                 gpio@40014000    21
+   \    VMOTOR_ADC3           gpio@40014000    29
+
+.. |BS_HELLOSHELL_GPIO_INFO_GPIO0| replace::
+   \  ngpios: 30
+   \  Reserved pin mask: 0xC3880000
+   |nbln|
+   \  Reserved  Pin  Line Name
+   \             0    GROVE13_TX0
+   \             1    GROVE14_RX0
+   \             2    GROVE23_SCK0
+   \             3    GROVE24_SDO0
+   \             4    GROVE33_SDI0
+   \             5    GROVE34_CSN0
+   \             6    GROVE53
+   \             7    GROVE73ULED0
+   \             8    DCM1A_PWM8
+   \             9    DCM1B_PWM9
+   \            10    DCM2A_PWM10
+   \            11    DCM2B_PWM11
+   \            12    SRVM1_PWM12
+   \            13    SRVM2_PWM13
+   \            14    SRVM3_PWM14
+   \            15    SRVM4_PWM15
+   \            16    GROVE43_SDA0
+   \            17    GROVE44_SCL0
+   \            18    RGB_PIO0
+   \      \*     19
+   \            20    UBTN0
+   \            21    UBTN1
+   \            22    BUZZER_PWM6
+   \      \*     23
+   \      \*     24
+   \      \*     25
+   \            26    GROVE54_ADC0
+   \            27    GROVE64_ADC1
+   \            28    GROVE74_ADC2
+   \            29    VMOTOR_ADC3
+
+.. |BS_HELLOSHELL_LED_HELP| replace::
+   led - LED commands
+   Subcommands:
+   \   off             : <device> <led>
+   \   on              : <device> <led>
+   \   get_info        : <device> <led>
+   \   set_brightness  : <device> <led> <value [0-100]>
+   \   set_color       : <device> <led> <color 0 [0-255]> ... <color N>
+   \   set_channel     : <device> <channel> <value [0-255]>
+   \   write_channels  : <device> <chan> <value 0 [0-255]> ... <value N>
+
+.. |BS_HELLOSHELL_ADC_HELP| replace::
+   adc@4004c000 - Select subcommand for ADC property label.
+   Subcommands:
+   \   acq_time    : Configure acquisition time.
+   \                 Usage: acq_time <time> <unit>
+   \                 units: us, ns, ticks
+   \   channel     : Configure ADC channel
+   \   gain        : Configure gain.
+   \   print       : Print current configuration
+   \   read        : Read adc value
+   \                 Usage: read <channel>
+   \   reference   : Configure reference
+   \   resolution  : Configure resolution
+   \                 Usage: resolution <resolution>
+
+.. |BS_HELLOSHELL_ADC_PRINT_RST| replace::
+   adc@4004c000:
+   Gain: 1
+   Reference: INTERNAL
+   Acquisition Time: 0
+   Channel ID: 0
+   Differential: 0
+   Resolution: **0**
+
+.. |BS_HELLOSHELL_ADC_PRINT_R12| replace::
+   adc@4004c000:
+   Gain: 1
+   Reference: INTERNAL
+   Acquisition Time: 0
+   Channel ID: 0
+   Differential: 0
+   Resolution: **12**
+
+.. |BS_HELLOSHELL_ADC_READ_CH3| replace::
+   read: 2988
+   read: 2972
+   read: 2973
+   read: 2964
+   read: 2974
+
+.. |BS_HELLOSHELL_ADC_READ_CH2| replace::
+   read: 4095
+   read: 3182
+   read: 2034
+   read: 1496
+   read: 998
+   read: 621
+   read: 57
+   read: 12
+   read: 0
+
+.. |BS_HELLOSHELL_PWM_HELP| replace::
+   pwm - PWM shell commands
+   Subcommands:
+   \   cycles  : <device> <channel> <period in cycles> <pulse width in cycles>
+   \             [flags]
+   \   usec    : <device> <channel> <period in usec> <pulse width in usec> [flags]
+   \   nsec    : <device> <channel> <period in nsec> <pulse width in nsec> [flags]
+
+.. |BS_HELLOSHELL_I2C_HELP| replace::
+   i2c - I2C commands
+   Subcommands:
+   \   scan         : Scan I2C devices
+   \                  Usage: scan <device>
+   \   recover      : Recover I2C bus
+   \                  Usage: recover <device>
+   \   read         : Read bytes from an I2C device
+   \                  Usage: read <device> <addr> <reg> [<bytes>]
+   \   read_byte    : Read a byte from an I2C device
+   \                  Usage: read_byte <device> <addr> <reg>
+   \   direct_read  : Read byte stream directly from an I2C device
+   \                  without writing a register address first
+   \                  Usage: direct_read <device> <addr> [<bytes>]
+   \   write        : Write bytes to an I2C device
+   \                  Usage: write <device> <addr> <reg> [<byte1>, ...]
+   \   write_byte   : Write a byte to an I2C device
+   \                  Usage: write_byte <device> <addr> <reg> <value>
+   \   speed        : Configure I2C bus speed
+   \                  Usage: speed <device> <speed>
+
+.. |BS_HELLOSHELL_I2C_SCAN_I2C0_77| replace::
+   \      0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+   00:             -- -- -- -- -- -- -- -- -- -- -- --
+   10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+   20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+   30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+   40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+   50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+   60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+   70: -- -- -- -- -- -- -- 77
+   1 devices found on i2c@40044000
+
+.. |BS_HELLOSHELL_I2C_SCAN_I2C0_38| replace::
+   \      0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+   00:             -- -- -- -- -- -- -- -- -- -- -- --
+   10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+   20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+   30: -- -- -- -- -- -- -- -- 38 -- -- -- -- -- -- --
+   40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+   50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+   60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+   70: -- -- -- -- -- -- -- --
+   1 devices found on i2c@40044000
+
+.. |BS_HELLOSHELL_I2C_SCAN_I2C0_38_77| replace::
+   \      0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+   00:             -- -- -- -- -- -- -- -- -- -- -- --
+   10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+   20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+   30: -- -- -- -- -- -- -- -- 38 -- -- -- -- -- -- --
+   40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+   50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+   60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+   70: -- -- -- -- -- -- -- 77
+   2 devices found on i2c@40044000
+
+.. |BS_HELLOSHELL_SENSOR_HELP| replace::
+   sensor - Sensor commands
+   Subcommands:
+   \   get       : Get sensor data. Channel names are optional. All channels are
+   \               read when no channels are provided. Syntax:
+   \               <device_name> <channel name 0> .. <channel name N>
+   \   attr_set  : Set the sensor's channel attribute.
+   \               <device_name> <channel_name> <attribute_name> <value>
+   \   attr_get  : Get the sensor's channel attribute. Syntax:
+   \               <device_name> [<channel_name 0> <attribute_name 0> ..
+   \                              <channel_name N> <attribute_name N>]
+   \   info      : Get sensor info, such as vendor and model name, for all sensors.
+   \   trig      : Get or set the trigger type on a sensor.
+   \               Currently only supports `data_ready`.
+   \               <device_name> <on/off> <trigger_name>
+
+.. |BS_HELLOSHELL_SENSOR_INFO| replace::
+   \   device name: bmp280@77,
+   \        vendor: Bosch Sensortec GmbH,
+   \         model: bme280,
+   \ friendly name: air pressure
+
+.. |BS_HELLOSHELL_SENSOR_GET_BMP280@77_PRESS| replace::
+   :bgn:`channel type=14(press) index=0 shift=24 num_samples=1`
+   \         :bgn:`value=26671703585ns (100.742187)`
+
+.. |BS_HELLOSHELL_SENSOR_GET_BMP280@77_AMBIENT_TEMP| replace::
+   :bgn:`channel type=13(ambient_temp) index=0 shift=24 num_samples=1`
+   \         :bgn:`value=229837203585ns (25.529999)`
 
 .. vi: ft=rst ai ts=3 et sw=3 sta

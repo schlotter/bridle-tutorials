@@ -7,12 +7,7 @@ das du nach einem Reset (``RST`` Taste kurz gedrückt), folgendes siehst:
 .. parsed-literal::
    :class: code
 
-   \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
-   [00:00:00.179,000] :byl:`<wrn> udc_rpi: BUS RESET`
-   [00:00:00.267,000] :byl:`<wrn> udc_rpi: BUS RESET`
-   \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
-   Hello World! I'm THE SHELL from |BOARD|
-   :bgn:`uart:~$` _
+   |BOOTMSG_USB_BS_HELLOSHELL|
 
 Zephyr kennt ein umfangreiches und sehr flexibles Gerätetreiber Modell, siehe
 auch :ref:`zephyr:device_model_api` in der Zephyr Dokumentation. Wie viele und
@@ -46,20 +41,7 @@ Unterkommando :bcy:`device list`.
    .. parsed-literal::
       :class: code
 
-      devices:
-      - clock-controller@40008000 (READY)
-      - reset-controller@4000c000 (READY)
-      - snippet_cdc_acm_console_uart (READY)
-      - uart@40034000 (READY)
-      - timer@40054000 (READY)
-      - pio@50200000 (READY)
-      - gpio@40014000 (READY)
-      - adc@4004c000 (READY)
-      - flash-controller@18000000 (READY)
-      - i2c@40044000 (READY)
-      - pwm@40050000 (READY)
-      - vreg@40064000 (READY)
-      - pwm_leds (READY)
+      |BS_HELLOSHELL_DEVICE_LIST|
 
 Die zurückgegebene Liste entspricht im Großen und Ganzen genau jenen Knoten
 (HW-Instanzen), welche im zugrundeliegenden :ref:`zephyr:devicetree` deines

@@ -7,12 +7,7 @@ das du nach einem Reset (``RST`` Taste kurz gedrückt), folgendes siehst:
 .. parsed-literal::
    :class: code
 
-   \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
-   [00:00:00.179,000] :byl:`<wrn> udc_rpi: BUS RESET`
-   [00:00:00.267,000] :byl:`<wrn> udc_rpi: BUS RESET`
-   \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
-   Hello World! I'm THE SHELL from |BOARD|
-   :bgn:`uart:~$` _
+   |BOOTMSG_USB_BS_HELLOSHELL|
 
 Der kleine Auszug aus dem Devicetree weiter oben zeigt dir, dass du in deiner
 aktuellen Zephyr Laufzeitumgebung einen Gerätenamen für die im Mikrocontroller
@@ -49,30 +44,12 @@ Kommando device <hs-cli-device>` zeigt uns, dass der Name dieses ADC-Gerätes
    .. parsed-literal::
       :class: code
 
-      adc@4004c000 - Select subcommand for ADC property label.
-      Subcommands:
-        acq_time    : Configure acquisition time.
-                      Usage: acq_time <time> <unit>
-                      units: us, ns, ticks
-        channel     : Configure ADC channel
-        gain        : Configure gain.
-        print       : Print current configuration
-        read        : Read adc value
-                      Usage: read <channel>
-        reference   : Configure reference
-        resolution  : Configure resolution
-                      Usage: resolution <resolution>
+      |BS_HELLOSHELL_ADC_HELP|
 
    .. parsed-literal::
       :class: code
 
-      adc@4004c000:
-      Gain: 1
-      Reference: INTERNAL
-      Acquisition Time: 0
-      Channel ID: 0
-      Differential: 0
-      Resolution: 0
+      |BS_HELLOSHELL_ADC_PRINT_RST|
 
 Was sagt uns das nun? Die ADC wird jeden einzelnen Kanal mit einer
 Signalverstärkung von '1' gegen eine interne Referenzspannung mit einer
@@ -113,13 +90,7 @@ wir einfach eine Auflösung von 12-bit an und kontrollieren unsere Änderung.
    .. parsed-literal::
       :class: code
 
-      adc@4004c000:
-      Gain: 1
-      Reference: INTERNAL
-      Acquisition Time: 0
-      Channel ID: 0
-      Differential: 0
-      Resolution: 12
+      |BS_HELLOSHELL_ADC_PRINT_R12|
 
 Das sieht schon besser aus. Wir könnten nun schon Wandlung durchführen.
 
@@ -253,11 +224,7 @@ Motorspannung *Uₘ ≈ 4,8V*, ist konstant und kann mit dem äquivalenten Zahle
    .. parsed-literal::
       :class: code
 
-      read: 2988
-      read: 2972
-      read: 2973
-      read: 2964
-      read: 2974
+      |BS_HELLOSHELL_ADC_READ_CH3|
 
 **Das entspricht unserer Erwartung.**
 Die Motorspannung ist :spelling:ignore:`ca.` 4,8V.
@@ -298,15 +265,7 @@ Kontakten können diesen Bereich minimal einschränken.
    .. parsed-literal::
       :class: code
 
-      read: 4095
-      read: 3182
-      read: 2034
-      read: 1496
-      read: 998
-      read: 621
-      read: 57
-      read: 12
-      read: 0
+      |BS_HELLOSHELL_ADC_READ_CH2|
 
 .. include:: yourspace.rsti
 

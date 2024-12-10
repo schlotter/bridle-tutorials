@@ -7,12 +7,7 @@ das du nach einem Reset (``RST`` Taste kurz gedrückt), folgendes siehst:
 .. parsed-literal::
    :class: code
 
-   \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
-   [00:00:00.179,000] :byl:`<wrn> udc_rpi: BUS RESET`
-   [00:00:00.267,000] :byl:`<wrn> udc_rpi: BUS RESET`
-   \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
-   Hello World! I'm THE SHELL from |BOARD|
-   :bgn:`uart:~$` _
+   |BOOTMSG_USB_BS_HELLOSHELL|
 
 Versionsnummern
 ===============
@@ -50,7 +45,7 @@ von Zephyr verschaffen.
    .. parsed-literal::
       :class: code
 
-      Zephyr version 3.6…
+      |BS_HELLOSHELL_KERNEL_VERSION|
 
 Bridle Projekt
 --------------
@@ -87,7 +82,7 @@ Ermittlung dessen aktuell benutzter Version zur Verfügung
    .. parsed-literal::
       :class: code
 
-      Bridle version 3.6…
+      |BS_HELLOSHELL_BRIDLE_VERSION|
 
 Informationen aus Bridle-Sicht
 ------------------------------
@@ -122,8 +117,7 @@ die Version des aktuell laufenden Kerns von Zephyr ermitteln und anzeigen.
    .. parsed-literal::
       :class: code
 
-      Zephyr: 3.6…
-      Bridle: 3.6…
+      |BS_HELLOSHELL_BRIDLE_INFO_SHORT|
 
 Aktuelle Betriebszeit
 =====================
@@ -160,7 +154,7 @@ initialen Start läuft. Hierfür bietet sich das Unterkommando
    .. parsed-literal::
       :class: code
 
-      Uptime: 1182430 ms
+      |BS_HELLOSHELL_KERNEL_UPTIME|
 
 Der zurückgegebene Wert in Millisekunden entspricht exakt dem Rückgabewert
 der Zephyr Kern-Funktion :ref:`k_uptime_get() <zephyr:kernel_timing_uptime>`
@@ -209,37 +203,7 @@ das Unterkommando :bcy:`kernel threads`.
    .. parsed-literal::
       :class: code
 
-      Scheduler: 1234 since last call
-      Threads:
-       0x20001450 usb_rpi
-              options: 0x0, priority: -14 timeout: 0
-              state: pending, entry: 0x100084a1
-              stack size 1024, unused 624, usage 400 / 1024 (39 %)
-
-       0x20001c18 sysworkq
-              options: 0x0, priority: -1 timeout: 0
-              state: pending, entry: 0x1000f615
-              stack size 1024, unused 816, usage 208 / 1024 (20 %)
-
-       0x20000fe8 usbworkq
-              options: 0x0, priority: -1 timeout: 0
-              state: pending, entry: 0x1000f615
-              stack size 1024, unused 760, usage 264 / 1024 (25 %)
-
-      \*0x200010c0 **shell_uart**
-              options: 0x0, priority: 14 timeout: 0
-              state: queued, entry: 0x10006f09
-              stack size 2048, unused 880, usage 1168 / 2048 (57 %)
-
-       0x20000af0 logging
-              options: 0x0, priority: 14 timeout: 0
-              state: pending, entry: 0x100036fd
-              stack size 768, unused 536, usage 232 / 768 (30 %)
-
-       0x20001a88 idle
-              options: 0x1, priority: 15 timeout: 0
-              state: , entry: 0x100159d5
-              stack size 256, unused 168, usage 88 / 256 (34 %)
+      |BS_HELLOSHELL_KERNEL_THREADS|
 
 Für die Interpretation dieser Liste bedarf es eines tieferen Verständnis für
 die vielen verschiedenen Möglichkeiten wie der Scheduler von Zephyr eingestellt

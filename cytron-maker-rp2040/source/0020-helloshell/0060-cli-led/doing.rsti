@@ -7,12 +7,7 @@ das du nach einem Reset (``RST`` Taste kurz gedrückt), folgendes siehst:
 .. parsed-literal::
    :class: code
 
-   \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
-   [00:00:00.179,000] :byl:`<wrn> udc_rpi: BUS RESET`
-   [00:00:00.267,000] :byl:`<wrn> udc_rpi: BUS RESET`
-   \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
-   Hello World! I'm THE SHELL from |BOARD|
-   :bgn:`uart:~$` _
+   |BOOTMSG_USB_BS_HELLOSHELL|
 
 .. admonition:: Beachte bitte!
    :class: red-thick-border failure
@@ -59,15 +54,7 @@ das du nach einem Reset (``RST`` Taste kurz gedrückt), folgendes siehst:
    .. parsed-literal::
       :class: code
 
-      led - LED commands
-      Subcommands:
-        off             : <device> <led>
-        on              : <device> <led>
-        get_info        : <device> <led>
-        set_brightness  : <device> <led> <value [0-100]>
-        set_color       : <device> <led> <color 0 [0-255]> ... <color N>
-        set_channel     : <device> <channel> <value [0-255]>
-        write_channels  : <device> <chan> <value 0 [0-255]> ... <value N>
+      |BS_HELLOSHELL_LED_HELP|
 
 .. rst-class:: page-break
 

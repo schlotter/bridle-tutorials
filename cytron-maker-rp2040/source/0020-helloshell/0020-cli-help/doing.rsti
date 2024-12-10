@@ -7,12 +7,7 @@ das du nach einem Reset (``RST`` Taste kurz gedrückt), folgendes siehst:
 .. parsed-literal::
    :class: code
 
-   \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
-   [00:00:00.179,000] :byl:`<wrn> udc_rpi: BUS RESET`
-   [00:00:00.267,000] :byl:`<wrn> udc_rpi: BUS RESET`
-   \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
-   Hello World! I'm THE SHELL from |BOARD|
-   :bgn:`uart:~$` _
+   |BOOTMSG_USB_BS_HELLOSHELL|
 
 Schnell-Hilfe
 =============
@@ -46,11 +41,7 @@ zurückgegeben wird.
    .. parsed-literal::
       :class: code
 
-        :bcy:`adc        bridle     clear      dac        device     devmem     flash`
-        :bcy:`gpio       hello      help       history    hwinfo     i2c        kernel`
-        :bcy:`led        log        pwm        regulator  rem        resize     retval`
-        :bcy:`rtc        sensor     shell      timer`
-      :bgn:`uart:~$` _
+      |BS_HELLOSHELL_TAB|
 
 Damit hast du jetzt schon die in der Zephyr Shell eingebaute (optionale)
 *TAB-Completion* kennengelernt.
@@ -81,9 +72,7 @@ beginnen.
    .. parsed-literal::
       :class: code
 
-      :bgn:`uart:~$` he
-        :bcy:`hello  help`
-      :bgn:`uart:~$` hel
+      |BS_HELLOSHELL_HE_TAB|
 
 Du musst das Kommando :bcy:`help` also wirklich ausschreiben, da es da noch
 ein Kommando :bcy:`hello` gibt, ein spezielles Kommando, das es nur in diesem
@@ -103,50 +92,7 @@ Beispiel ``helloshell`` aus dem Bridle Projekt gibt.
    .. parsed-literal::
       :class: code
 
-      Please press the <Tab> button to see all available commands.
-      You can also use the <Tab> button to prompt or auto-complete all commands
-      or its subcommands. You can try to call commands with <-h> or <--help>
-      parameter for more information.
-
-      Shell supports following meta-keys:
-        Ctrl + (a key from: abcdefklnpuw)
-        Alt  + (a key from: bf)
-      Please refer to shell documentation for more details.
-
-      Available commands:
-        adc        : ADC commands
-        bridle     : Bridle commands.
-        clear      : Clear screen.
-        dac        : DAC shell commands
-        device     : Device commands
-        devmem     : Read/write physical memory
-                     Usage:
-                     Read memory at address with optional width:
-                     devmem address [width]
-                     Write memory at address with mandatory width and value:
-                     devmem address <width> <value>
-        flash      : Flash shell commands
-        gpio       : GPIO commands
-        hello      : say hello
-        help       : Prints the help message.
-        history    : Command history.
-        hwinfo     : HWINFO commands
-        i2c        : I2C commands
-        kernel     : Kernel commands
-        led        : LED commands
-        log        : Commands for controlling logger
-        pwm        : PWM shell commands
-        regulator  : Regulator playground
-        rem        : Ignore lines beginning with 'rem '
-        resize     : Console gets terminal screen size or assumes default in case
-                     the readout fails. It must be executed after each terminal
-                     width change to ensure correct text display.
-        retval     : Print return value of most recent command
-        rtc        : RTC commands
-        sensor     : Sensor commands
-        shell      : Useful, not Unix-like shell commands.
-        timer      : Timer commands
-      :bgn:`uart:~$` _
+      |BS_HELLOSHELL_HELP|
 
 .. rst-class:: page-break
 
@@ -189,20 +135,7 @@ oder ``--help`` (lange Schreibweise) heraus.
    .. parsed-literal::
       :class: code
 
-      shell - Useful, not Unix-like shell commands.
-      Subcommands:
-        backends        : List active shell backends.
-
-        backspace_mode  : Toggle backspace key mode.
-                          Some terminals are not sending separate escape code for
-                          backspace and delete button. This command forces shell
-                          to interpret delete key as backspace.
-        colors          : Toggle colored syntax.
-        vt100           : Toggle vt100 commands.
-        prompt          : Toggle prompt.
-        echo            : Toggle shell echo.
-        stats           : Shell statistics.
-      :bgn:`uart:~$` _
+      |BS_HELLOSHELL_SHELL_HELP|
 
 Shell Backend
 -------------
@@ -241,9 +174,7 @@ Umständen die nur einmalig vorhandene Hardware über die *Console* teilen.
    .. parsed-literal::
       :class: code
 
-      Active shell backends:
-          0. :uart:~$  (shell_uart)
-      :bgn:`uart:~$` _
+      |BS_HELLOSHELL_SHELL_BACKENDS|
 
 Das sieht **plausible** aus, ist die **Shell** ja gerade **an eine virtuelle
 UART** aus dem *Zephyr USB Stack*, die **USB-CDC/ACM Klasse**, gebunden.
@@ -281,10 +212,7 @@ das *Logging* benötigt einen Ausgabekanal für den Benutzer, ein *Backend*.
    .. parsed-literal::
       :class: code
 
-      backend - Logger backends commands.
-      Subcommands:
-        shell_uart_backend
-      :bgn:`uart:~$` _
+      |BS_HELLOSHELL_LOG_BACKEND|
 
 Das *Backend* vom *Logging* und der *Shell* kooperieren also mit- und
 untereinander. Sie sind der Unterbau für beide Dienste, um über die einmalig
@@ -330,8 +258,7 @@ wollen das aber genau wissen und befragen die Hilfe.
    .. parsed-literal::
       :class: code
 
-      hello - say hello
-      :bgn:`uart:~$` _
+      |BS_HELLOSHELL_HELLO_HELP|
 
 -----------------------------------------------------------------------------
 
@@ -360,8 +287,7 @@ wollen das aber genau wissen und befragen die Hilfe.
    .. parsed-literal::
       :class: code
 
-      Hello from shell.
-      :bgn:`uart:~$` _
+      |BS_HELLOSHELL_HELLO|
 
 Wenn dich die Implementierung dieses Kommandos interessiert, dann schaue dir
 später in aller Ruhe den Quellcode an – es ist nur eine kurze Datei:
@@ -404,13 +330,7 @@ Kommandozeilen anzeigen lassen.
    .. parsed-literal::
       :class: code
 
-      [  0] history
-      [  1] hello
-      [  2] hello -h
-      [  3] log backend
-      [  4] shell backends
-      [  5] shell --help
-      [  6] help
+      |BS_HELLOSHELL_HISTORY|
 
 .. admonition:: Gut zu wissen
    :class: good-to-know info

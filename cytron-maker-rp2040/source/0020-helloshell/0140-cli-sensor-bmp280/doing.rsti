@@ -7,12 +7,7 @@ das du nach einem Reset (``RST`` Taste kurz gedrückt), folgendes siehst:
 .. parsed-literal::
    :class: code
 
-   \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
-   [00:00:00.179,000] :byl:`<wrn> udc_rpi: BUS RESET`
-   [00:00:00.267,000] :byl:`<wrn> udc_rpi: BUS RESET`
-   \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
-   Hello World! I'm THE SHELL from |BOARD|
-   :bgn:`uart:~$` _
+   |BOOTMSG_USB_BS_HELLOSHELL|
 
 -----------------------------------------------------------------------------
 
@@ -41,20 +36,7 @@ das du nach einem Reset (``RST`` Taste kurz gedrückt), folgendes siehst:
    .. parsed-literal::
       :class: code
 
-      sensor - Sensor commands
-      Subcommands:
-        get       : Get sensor data. Channel names are optional. All channels are
-                    read when no channels are provided. Syntax:
-                    <device_name> <channel name 0> .. <channel name N>
-        attr_set  : Set the sensor's channel attribute.
-                    <device_name> <channel_name> <attribute_name> <value>
-        attr_get  : Get the sensor's channel attribute. Syntax:
-                    <device_name> [<channel_name 0> <attribute_name 0> ..
-                                   <channel_name N> <attribute_name N>]
-        info      : Get all sensor info, such as vendor and model name.
-        trig      : Get or set the trigger type on a sensor.
-                    Currently only supports `data_ready`.
-                    <device_name> <on/off> <trigger_name>
+      |BS_HELLOSHELL_SENSOR_HELP|
 
 .. rubric:: Bestandsaufnahme:
 
@@ -171,8 +153,8 @@ Hole deine **Online-Sitzung von VS Code** wieder in den Vordergrund.
    .. parsed-literal::
       :class: code
 
-      west build -p -b |BOARD|        -S usb-console \\
-                 bridle/samples/helloshell                          \\
+      west build -p -b |BOARD|        |USB_CONSOLE| \\
+                 |HELLOSHELL|                          \\
               **-- -DEXTRA_DTC_OVERLAY_FILE=$(pwd)/grove_i2c-bmp280@77.overlay**
 
 -----------------------------------------------------------------------------
@@ -204,12 +186,7 @@ Hole deinen **Terminalemulator** in den Vordergrund.
    .. parsed-literal::
       :class: code
 
-      \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
-      [00:00:00.189,000] :yl:`<wrn> udc_rpi: BUS RESET`
-      [00:00:00.269,000] :yl:`<wrn> udc_rpi: BUS RESET`
-      \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
-      Hello World! I'm THE SHELL from |BOARD|
-      uart:~$ _
+      |BOOTMSG_USB_BS_HELLOSHELL|
 
 .. ..... INFO ...............................................................
 
@@ -251,10 +228,7 @@ Hole deinen **Terminalemulator** in den Vordergrund.
    .. parsed-literal::
       :class: code
 
-        device name: bmp280@77,
-             vendor: Bosch Sensortec GmbH,
-              model: bme280,
-      friendly name: air pressure
+      |BS_HELLOSHELL_SENSOR_INFO|
 
 Los geht's, lesen wir unseren ersten Sensor-Wert über die Zephyr Sensor API aus.
 Beginnen wir damit, wofür der Sensor BMP280 gemacht ist. Wir lesen den Kanal mit
@@ -289,7 +263,7 @@ dem **barometrischen Luftdruck** aus. Innerhalb der **Sensor API** ist das der
    .. parsed-literal::
       :class: code
 
-      channel idx=14 press shift=7 num_samples=1 value=1059494800000ns (98.335596)
+      |BS_HELLOSHELL_SENSOR_GET_BMP280@77_PRESS|
 
 Spiele nun einfach noch ein wenig mit dem Kommando :bcy:`sensor` herum. Versuche
 doch mal die **Umgebungstemperatur** (:spelling:ignore:`engl.` *ambient
@@ -309,7 +283,7 @@ temperature*) oder gleich alle Kanäle zu lesen.
    .. parsed-literal::
       :class: code
 
-      channel idx=13 ambient_temp shift=5 num_samples=1 value=1872464000000ns (25.529999)
+      |BS_HELLOSHELL_SENSOR_GET_BMP280@77_AMBIENT_TEMP|
 
 .. include:: yourspace.rsti
 

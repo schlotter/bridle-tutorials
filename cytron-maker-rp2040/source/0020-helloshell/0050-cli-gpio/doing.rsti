@@ -7,12 +7,7 @@ das du nach einem Reset (``RST`` Taste kurz gedrückt), folgendes siehst:
 .. parsed-literal::
    :class: code
 
-   \*\*\*\*\* delaying boot 4000ms (per build configuration) \*\*\*\*\*
-   [00:00:00.179,000] :byl:`<wrn> udc_rpi: BUS RESET`
-   [00:00:00.267,000] :byl:`<wrn> udc_rpi: BUS RESET`
-   \*\*\* Booting Zephyr OS build zephyr-v3.6… (delayed boot 4000ms) \*\*\*
-   Hello World! I'm THE SHELL from |BOARD|
-   :bgn:`uart:~$` _
+   |BOOTMSG_USB_BS_HELLOSHELL|
 
 -----------------------------------------------------------------------------
 
@@ -41,28 +36,7 @@ das du nach einem Reset (``RST`` Taste kurz gedrückt), folgendes siehst:
    .. parsed-literal::
       :class: code
 
-      gpio - GPIO commands
-      Subcommands:
-        conf   : Configure GPIO pin
-                 Usage: gpio conf <device> <pin>
-                                  <configuration <i|o>[u|d][h|l][0|1]>
-                                  [vendor specific]
-                 <i|o> - input | output
-                 [u|d] - pull up | pull down, otherwise open
-                 [h|l] - active high | active low,
-                         otherwise defaults to active high
-                 [0|1] - initialise to logic 0 | logic 1,
-                         otherwise defaults to logic 0
-                 [vendor specific] - configuration flags within the mask 0xFF00
-                                     see include/zephyr/dt-bindings/gpio/
-        get    : Get GPIO pin value
-                 Usage: gpio get <device> <pin>
-        set    : Set GPIO pin value
-                 Usage: gpio set <device> <pin> <level 0|1>
-        blink  : Blink GPIO pin
-                 Usage: gpio blink <device> <pin>
-        info   : GPIO Information
-                 Usage: gpio info [device]
+      |BS_HELLOSHELL_GPIO_HELP|
 
 .. rst-class:: page-break
 
@@ -99,37 +73,7 @@ verfügbaren GPIO Leitungen.
    .. parsed-literal::
       :class: code
 
-        Line         Reserved Device           Pin
-                      \*        gpio@40014000    19
-                      \*        gpio@40014000    23
-                      \*        gpio@40014000    24
-                      \*        gpio@40014000    25
-         BUZZER_PWM6           gpio@40014000    22
-         DCM1A_PWM8            gpio@40014000     8
-         DCM1B_PWM9            gpio@40014000     9
-         DCM2A_PWM10           gpio@40014000    10
-         DCM2B_PWM11           gpio@40014000    11
-         GROVE13_TX0           gpio@40014000     0
-         GROVE14_RX0           gpio@40014000     1
-         GROVE23_SCK0          gpio@40014000     2
-         GROVE24_SDO0          gpio@40014000     3
-         GROVE33_SDI0          gpio@40014000     4
-         GROVE34_CSN0          gpio@40014000     5
-         GROVE43_SDA0          gpio@40014000    16
-         GROVE44_SCL0          gpio@40014000    17
-         GROVE53               gpio@40014000     6
-         GROVE54_ADC0          gpio@40014000    26
-         GROVE64_ADC1          gpio@40014000    27
-         GROVE73ULED0          gpio@40014000     7
-         GROVE74_ADC2          gpio@40014000    28
-         RGB_PIO0              gpio@40014000    18
-         SRVM1_PWM12           gpio@40014000    12
-         SRVM2_PWM13           gpio@40014000    13
-         SRVM3_PWM14           gpio@40014000    14
-         SRVM4_PWM15           gpio@40014000    15
-         UBTN0                 gpio@40014000    20
-         UBTN1                 gpio@40014000    21
-         VMOTOR_ADC3           gpio@40014000    29
+      |BS_HELLOSHELL_GPIO_INFO|
 
 Sortiert nach spezifischen **Leitungsnamen** (*Line*), welche alle samt
 aus dem zugehörigen Devicetree des MCU-Boards stammen, zeigt diese Liste
@@ -161,7 +105,9 @@ kann ihn also in den folgenden Kommandos als Ersatz für eine konkrete
 *Pin*-Nummer benutzten, muss das aber nicht.
 
 **Ein Beispiel:** die Schreibweise ``gpio@40014000 GROVE53`` entspricht exakt
-der in aller Regel am häufigsten anzutreffenden ``gpio@40014000 6``.
+dem in aller Regel am häufigsten anzutreffenden Term ``gpio@40014000 6``.
+Ebenso kann der Term ``gpio@40014000`` durch das Devicetree Label ``gpio0``
+ersetzt werden, also auch ``gpio0 GROVE53`` entspricht ``gpio@40014000 6``.
 
 .. rst-class:: page-break
 
@@ -199,39 +145,7 @@ anzeigen lassen.
    .. parsed-literal::
       :class: code
 
-       ngpios: 30
-       Reserved pin mask: 0xC3880000
-       Reserved  Pin  Line Name
-                  0    GROVE13_TX0
-                  1    GROVE14_RX0
-                  2    GROVE23_SCK0
-                  3    GROVE24_SDO0
-                  4    GROVE33_SDI0
-                  5    GROVE34_CSN0
-                  6    GROVE53
-                  7    GROVE73ULED0
-                  8    DCM1A_PWM8
-                  9    DCM1B_PWM9
-                 10    DCM2A_PWM10
-                 11    DCM2B_PWM11
-                 12    SRVM1_PWM12
-                 13    SRVM2_PWM13
-                 14    SRVM3_PWM14
-                 15    SRVM4_PWM15
-                 16    GROVE43_SDA0
-                 17    GROVE44_SCL0
-                 18    RGB_PIO0
-           \*     19
-                 20    UBTN0
-                 21    UBTN1
-                 22    BUZZER_PWM6
-           \*     23
-           \*     24
-           \*     25
-                 26    GROVE54_ADC0
-                 27    GROVE64_ADC1
-                 28    GROVE74_ADC2
-                 29    VMOTOR_ADC3
+      |BS_HELLOSHELL_GPIO_INFO_GPIO0|
 
 Die Anzahl ist natürlich sie selbe, nur die Sortierung erfolgt nun nach
 tatsächlichen **Leitungsnummern** (*Pin*). Der symbolische Leitungsname,
