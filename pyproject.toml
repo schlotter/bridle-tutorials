@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "bridle-tutorials"
-version = "0.2.0"
+version = "0.3.0"
 description = "Bridle tutorials"
 authors = ["TiaC Systems"]
 license = "LICENSE"
